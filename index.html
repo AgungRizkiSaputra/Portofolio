@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="js/style.js" />
+    <script
+      defer
+      src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav
+      class="fixed w-full z-10 transition-all duration-300 bg-transparent"
+      id="navbar"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a
+          href="#home"
+          id="brand-text"
+          class="text-2xl font-bold text-white tracking-widest transition duration-300 hover:text-blue-400 hover:scale-105"
+        >
+          <span
+            class="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
+          >
+            PORTFOLIO
+          </span>
+        </a>
+
+        <button
+          class="lg:hidden text-white focus:outline-none"
+          id="menu-toggle"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+        <!-- Menu untuk desktop -->
+        <div class="hidden lg:flex space-x-6" id="menu">
+          <a href="#home" class="nav-link text-white hover:text-blue-500"
+            >Home</a
+          >
+          <a href="#about" class="nav-link text-white hover:text-blue-500"
+            >About</a
+          >
+          <a href="#services" class="nav-link text-white hover:text-blue-500"
+            >Service</a
+          >
+          <a href="#project" class="nav-link text-white hover:text-blue-500"
+            >Project</a
+          >
+          <a href="#contact" class="nav-link text-white hover:text-blue-500"
+            >Contact</a
+          >
+        </div>
+      </div>
+
+      <!-- Menu untuk mode mobile -->
+      <div
+        id="mobile-menu"
+        class="hidden fixed top-0 right-0 h-full w-1/2 bg-black/80 flex flex-col items-center justify-center space-y-6 text-white shadow-lg"
+      >
+        <a href="#home" class="text-xl hover:text-blue-500">Home</a>
+        <a href="#about" class="text-xl hover:text-blue-500">About</a>
+        <a href="#services" class="text-xl hover:text-blue-500">Service</a>
+        <a href="#project" class="text-xl hover:text-blue-500">Project</a>
+        <a href="#contact" class="text-xl hover:text-blue-500">Contact</a>
+        <button id="close-menu" class="absolute top-6 right-6 text-2xl">
+          &times;
+        </button>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Home Start -->
+    <div
+      id="home"
+      class="relative h-screen flex items-center justify-center bg-cover bg-center pt-20"
+      style="background-image: url('images/a.jpg')"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+      <div
+        class="relative text-center text-white px-6 max-w-3xl animate-fadeIn"
+      >
+        <h1 class="text-6xl font-extrabold mb-4 tracking-wide drop-shadow-lg">
+          Hello, I'm
+          <span
+            class="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
+          >
+            Agung Rizki Saputra
+          </span>
+        </h1>
+
+        <p class="text-xl mb-6 max-w-2xl mx-auto italic opacity-80">
+          "Welcome to My Personal Website🔥"
+        </p>
+        <h3 class="text-3xl font-semibold flex justify-center items-center">
+          <span class="mr-2">I'm a</span>
+          <span
+            id="dynamic-text"
+            class="font-bold text-blue-400 text-3xl animate-pulse"
+          ></span>
+        </h3>
+      </div>
+    </div>
+    <!-- Home End -->
+
+    <!-- About Start -->
+    <div class="about bg-gray-100 py-16 px-6" id="about">
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-14"
+      >
+        <!-- Bagian Gambar -->
+        <div class="w-full md:w-1/2 flex justify-center">
+          <div class="relative w-80 h-80 md:w-96 md:h-96">
+            <svg
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute w-full h-full animate-pulse"
+            >
+              <path
+                fill="url(#gradient)"
+                d="M42,-62.5C54.3,-54.9,65.3,-45.1,72.7,-32.8C80.2,-20.5,84,-5.8,82.4,9.1C80.8,24,73.9,38.9,62.5,48.7C51.1,58.6,35.2,63.5,20.2,65.7C5.2,68,-9,67.6,-23.2,63.8C-37.4,60.1,-51.5,53,-58.9,41.1C-66.4,29.3,-67.3,12.6,-68.8,-6.3C-70.4,-25.2,-72.6,-46.2,-62.7,-54.3C-52.8,-62.4,-30.9,-57.7,-14,-60.3C2.8,-62.9,21.5,-72.5,42,-62.5Z"
+                transform="translate(100 100)"
+              />
+              <defs>
+                <linearGradient id="gradient" gradientTransform="rotate(45)">
+                  <stop offset="0%" stop-color="#3b82f6" />
+                  <stop offset="100%" stop-color="#9333ea" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <img
+              src="images/p.jpg"
+              alt="Profile Image"
+              class="absolute inset-0 w-full h-full object-cover shadow-2xl border-8 border-gray-300"
+              style="clip-path: url(#blob); filter: grayscale(100%)"
+            />
+
+            <svg width="0" height="0">
+              <defs>
+                <clipPath id="blob" clipPathUnits="objectBoundingBox">
+                  <path
+                    d="M0.42,-0.625C0.543,-0.549,0.653,-0.451,0.727,-0.328C0.802,-0.205,0.84,-0.058,0.824,0.091C0.808,0.24,0.739,0.389,0.625,0.487C0.511,0.586,0.352,0.635,0.202,0.657C0.052,0.68,-0.09,0.676,-0.232,0.638C-0.374,0.601,-0.515,0.53,-0.589,0.411C-0.664,0.293,-0.673,0.126,-0.688,-0.063C-0.704,-0.252,-0.726,-0.462,-0.627,-0.543C-0.528,-0.624,-0.309,-0.577,-0.14,-0.603C0.028,-0.629,0.215,-0.725,0.42,-0.625Z"
+                    transform="scale(1.1) translate(0.05, 0.05)"
+                  ></path>
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Bagian Deskripsi -->
+        <div class="w-full md:w-1/2">
+          <h2
+            class="text-4xl font-extrabold text-transparent bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text mb-6"
+          >
+            About Me
+          </h2>
+          <p class="text-gray-600 text-lg leading-relaxed mb-6">
+            "Hello! I'm <span class="font-semibold">Agung Rizki Saputra</span>,
+            a 6th-semester student passionate about Web Development. With skills
+            in
+            <span class="text-blue-500 font-medium"
+              >HTML, CSS, JavaScript, Flutter,</span
+            >
+            and <span class="text-purple-500 font-medium">Figma</span>, I focus
+            on creating responsive, interactive, and user-friendly web
+            applications. I'm always open to new challenges and continuously
+            learning to become a better Web Developer every day!"
+          </p>
+
+          <!-- Progress Bars -->
+          <div class="space-y-5">
+            <div>
+              <div
+                class="flex justify-between text-sm font-medium text-gray-700"
+              >
+                <span>UI/UX Design</span><span>75%</span>
+              </div>
+              <div class="w-full bg-gray-300 h-2 rounded-full mt-1">
+                <div
+                  class="bg-blue-500 h-2 rounded-full"
+                  style="width: 75%"
+                ></div>
+              </div>
+            </div>
+            <div>
+              <div
+                class="flex justify-between text-sm font-medium text-gray-700"
+              >
+                <span>Web Design</span><span>85%</span>
+              </div>
+              <div class="w-full bg-gray-300 h-2 rounded-full mt-1">
+                <div
+                  class="bg-green-500 h-2 rounded-full"
+                  style="width: 85%"
+                ></div>
+              </div>
+            </div>
+            <div>
+              <div
+                class="flex justify-between text-sm font-medium text-gray-700"
+              >
+                <span>Android Development</span><span>65%</span>
+              </div>
+              <div class="w-full bg-gray-300 h-2 rounded-full mt-1">
+                <div
+                  class="bg-purple-500 h-2 rounded-full"
+                  style="width: 65%"
+                ></div>
+              </div>
+            </div>
+            <div>
+              <div
+                class="flex justify-between text-sm font-medium text-gray-700"
+              >
+                <span>Microsoft Office</span><span>90%</span>
+              </div>
+              <div class="w-full bg-gray-300 h-2 rounded-full mt-1">
+                <div
+                  class="bg-red-500 h-2 rounded-full"
+                  style="width: 90%"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tombol Download CV -->
+          <a
+            href="https://drive.google.com/file/d/1GCWTpDOGp6v9uZHK-SA2AmzJxLd8Rpui/view?usp=sharing"
+            class="inline-block mt-8 bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-8 rounded-full shadow-lg hover:opacity-90 transition"
+          >
+            Download CV
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Service Start -->
+    <div id="services" class="py-20 bg-gradient-to-b from-gray-100 to-gray-200">
+      <div class="container mx-auto text-center">
+        <h2
+          class="text-4xl font-extrabold text-transparent bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text mb-6"
+        >
+          What I Do
+        </h2>
+        <p class="text-lg text-gray-600 mb-12">Awesome Quality Services</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="group bg-white shadow-2xl rounded-3xl p-8 flex flex-col items-center text-center transition-all duration-300 transform hover:scale-105 hover:shadow-3xl hover:bg-blue-500 hover:text-white"
+          >
+            <div
+              class="p-5 bg-blue-500 text-white rounded-full group-hover:bg-white group-hover:text-blue-500"
+            >
+              <i class="lucide lucide-monitor text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mt-4">UI/UX Design</h3>
+            <p class="text-gray-600 group-hover:text-white mt-2">
+              Create stunning, modern, and intuitive mobile interfaces with
+              Figma. Design responsive, user-friendly, and visually appealing
+              experiences to enhance user engagement and satisfaction.
+            </p>
+          </div>
+          <div
+            class="group bg-white shadow-2xl rounded-3xl p-8 flex flex-col items-center text-center transition-all duration-300 transform hover:scale-105 hover:shadow-3xl hover:bg-green-500 hover:text-white"
+          >
+            <div
+              class="p-5 bg-green-500 text-white rounded-full group-hover:bg-white group-hover:text-green-500"
+            >
+              <i class="lucide lucide-code text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mt-4">Web Design</h3>
+            <p class="text-gray-600 group-hover:text-white mt-2">
+              Build a modern, efficient, and responsive web application using
+              HTML, CSS, and JavaScript. Create a fast, intuitive, and visually
+              appealing user experience while ensuring optimal performance
+              across various devices.
+            </p>
+          </div>
+          <div
+            class="group bg-white shadow-2xl rounded-3xl p-8 flex flex-col items-center text-center transition-all duration-300 transform hover:scale-105 hover:shadow-3xl hover:bg-purple-500 hover:text-white"
+          >
+            <div
+              class="p-5 bg-purple-500 text-white rounded-full group-hover:bg-white group-hover:text-purple-500"
+            >
+              <i class="lucide lucide-smartphone text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mt-4">Android Development</h3>
+            <p class="text-gray-600 group-hover:text-white mt-2">
+              Designing an intuitive, beautiful, and responsive mobile
+              application using Flutter. With this framework, create a seamless
+              user experience, high performance, and visually appealing
+              interfaces that run across multiple platforms with a single
+              codebase.
+            </p>
+          </div>
+          <div
+            class="group bg-white shadow-2xl rounded-3xl p-8 flex flex-col items-center text-center transition-all duration-300 transform hover:scale-105 hover:shadow-3xl hover:bg-red-500 hover:text-white"
+          >
+            <div
+              class="p-5 bg-red-500 text-white rounded-full group-hover:bg-white group-hover:text-red-500"
+            >
+              <i class="lucide lucide-apps text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mt-4">Microsoft Office</h3>
+            <p class="text-gray-600 group-hover:text-white mt-2">
+              Create professional, efficient, and visually appealing documents,
+              spreadsheets, and presentations using Microsoft Word, Excel, and
+              PowerPoint. Enhance productivity with advanced features, clean
+              designs, and collaboration tools that simplify tasks for various
+              needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Service End -->
+
+    <!-- Project Start -->
+    <div id="project" class="py-16 bg-gradient-to-b from-gray-200 to-gray-100">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h3
+            class="text-4xl font-bold text-transparent bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text mb-4"
+          >
+            My Recent Works
+          </h3>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div
+            class="relative group overflow-hidden rounded-xl shadow-xl bg-white/10 backdrop-blur-md"
+          >
+            <img
+              src="images/projects/Frame1.png"
+              class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              alt="Online Food"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <h4 class="text-xl font-semibold mb-2 text-white">Online Food</h4>
+              <div class="flex gap-4">
+                <a
+                  href="#"
+                  class="eye-icon text-white text-2xl hover:text-gray-300 transition-colors duration-200"
+                  data-title="UI/UX"
+                  data-description="These images provide a comprehensive visual representation of the user interface of the ZHHRresto mobile application, an online food ordering platform. It should be noted that the interface design was created using the popular UI/UX design software, Figma. Each screen displays different functions and information, designed to guide users through the process of ordering food easily and efficiently."
+                  data-image="images/projects/Frame1.png"
+                >
+                  <i class="fas fa-eye"></i>
+                </a>
+
+                <a
+                  href="#"
+                  class="text-white text-2xl hover:text-gray-300 transition-colors duration-200"
+                >
+                  <i class="fas fa-link"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- ------------------------------------------------------------------------------------ -->
+          <div
+            class="relative group overflow-hidden rounded-xl shadow-xl bg-white/10 backdrop-blur-md"
+          >
+            <img
+              src="images/projects/Mockup2.png"
+              class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              alt="News App"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <h4 class="text-xl font-semibold mb-2 text-white">News App</h4>
+              <div class="flex gap-4">
+                <a
+                  href="#"
+                  class="eye-icon text-white text-2xl hover:text-gray-300 transition-colors duration-200"
+                  data-title="News App"
+                  data-description="The 'Headline Hub' app features a modern, clean design with red accents for emphasis. Its intuitive layout ensures a smooth user experience, delivering news quickly and efficiently. Developed with Flutter, it enables fast and efficient cross-platform development."
+                  data-image="images/projects/Mockup2.png"
+                >
+                  <i class="fas fa-eye"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-white text-2xl hover:text-gray-300 transition-colors duration-200"
+                >
+                  <i class="fas fa-link"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- ------------------------------------------------------------------------------------ -->
+          <div
+            class="relative group overflow-hidden rounded-xl shadow-xl bg-white/10 backdrop-blur-md"
+          >
+            <img
+              src="images/projects/Frame1000005392.png"
+              class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              alt="Services Transportation"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <h4 class="text-xl font-semibold mb-2 text-white">
+                Digital Platform for Elections
+              </h4>
+              <div class="flex gap-4">
+                <a
+                  href="#"
+                  class="eye-icon text-white text-2xl hover:text-gray-300 transition-colors duration-200"
+                  data-title="Digital Platform for Elections"
+                  data-description="These images showcase the user interface of the 'Global Vote' mobile app, a digital platform for elections or voting. Designed with Figma, the app features a clean, modern look with bright yellow accents. Figma enables real-time collaboration and interactive prototyping, streamlining the design and development process."
+                  data-image="images/projects/Frame1000005392.png"
+                >
+                  <i class="fas fa-eye"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-white text-2xl hover:text-gray-300 transition-colors duration-200"
+                >
+                  <i class="fas fa-link"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- ------------------------------------------------------------------------------------ -->
+          <div
+            class="relative group overflow-hidden rounded-xl shadow-xl bg-white/10 backdrop-blur-md"
+          >
+            <img
+              src="images/projects/web.jpg"
+              class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              alt="Online Food Web"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <h4 class="text-xl font-semibold mb-2 text-white">
+                Online Food Web
+              </h4>
+              <div class="flex gap-4">
+                <a
+                  href="#"
+                  class="eye-icon text-white text-2xl hover:text-gray-300 transition-colors duration-200"
+                  data-title="Online Food web"
+                  data-description="This image showcases a modern restaurant website highlighting menu items like spicy fried chicken. The website is developed using PHP for dynamic content, with MySQL as the database. The interface is designed with HTML and CSS and can be enhanced using Tailwind for a more appealing look. Key features include an interactive menu, order buttons, and intuitive navigation to enhance the user experience."
+                  data-image="images/projects/web.jpg"
+                >
+                  <i class="fas fa-eye"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-white text-2xl hover:text-gray-300 transition-colors duration-200"
+                >
+                  <i class="fas fa-link"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- ------------------------------------------------------------------------------------ -->
+          <div
+            class="relative group overflow-hidden rounded-xl shadow-xl bg-white/10 backdrop-blur-md"
+          >
+            <img
+              src="images/projects/web2.jpg"
+              class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              alt="Services Transportation"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <h4 class="text-xl font-semibold mb-2 text-white">
+                Services Transportation
+              </h4>
+              <div class="flex gap-4">
+                <a
+                  href="#"
+                  class="eye-icon text-white text-2xl hover:text-gray-300 transition-colors duration-200"
+                  data-title="Services Transportation"
+                  data-description="This image showcases the landing page of ZHHRCar, a transportation service with a modern and professional design. The website is built using HTML, CSS, JavaScript, and Bootstrap, featuring a green color scheme and intuitive navigation. Its clean and user-friendly interface is designed to provide an optimal user experience for accessing transportation or car rental services."
+                  data-image="images/projects/web2.jpg"
+                >
+                  <i class="fas fa-eye"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-white text-2xl hover:text-gray-300 transition-colors duration-200"
+                >
+                  <i class="fas fa-link"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      id="modal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden"
+    >
+      <div
+        class="bg-white rounded-2xl shadow-2xl max-w-lg w-full relative overflow-hidden"
+      >
+        <button
+          id="closeModal"
+          class="absolute top-4 right-4 text-gray-600 hover:text-gray-900 transition transform hover:scale-110"
+        >
+          ✖
+        </button>
+        <img
+          id="modalImage"
+          src=""
+          alt="Project Image"
+          class="w-full rounded-t-2xl shadow-md"
+        />
+        <div class="p-4">
+          <h2
+            id="modalTitle"
+            class="text-2xl font-bold text-gray-800 mb-2 text-center"
+          ></h2>
+          <p id="modalDescription" class="text-gray-600 text-center"></p>
+          <!-- <div class="flex justify-center mt-4">
+            <button
+              id="modalAction"
+              class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full shadow-lg hover:opacity-80 transition"
+            >
+              Learn More
+            </button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <!-- Project End -->
+
+    <!-- Contact Start -->
+    <div
+      id="contact"
+      class="relative bg-gradient-to-b from-gray-100 to-gray-200 py-20 px-6 md:px-12 lg:px-24 text-gray-900"
+    >
+      <div class="max-w-4xl mx-auto text-center">
+        <h2
+          class="text-4xl font-extrabold mb-4 text-transparent bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text tracking-wide"
+        >
+          Let's Connect
+        </h2>
+        <p class="text-lg mb-10 text-gray-600">
+          Reach me through the platforms below
+        </p>
+
+        <!-- Social Cards -->
+        <div class="flex flex-wrap justify-center gap-8">
+          <!-- GitHub -->
+          <a
+            href="https://github.com/AgungRizkiSaputra"
+            target="_blank"
+            class="group relative flex flex-col items-center p-6 bg-white shadow-xl border border-gray-300 rounded-2xl transition hover:scale-105 hover:shadow-2xl"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-14 h-14 mb-2 text-gray-800 transition group-hover:text-gray-600 group-hover:scale-110"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.1 6.9 9.4.5.1.7-.2.7-.5v-1.7c-2.8.6-3.5-1.3-3.5-1.3-.5-1.2-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1 .1 1.6 1.1 1.6 1.1 .9 1.6 2.4 1.1 3 .9 .1-.7.4-1.1.8-1.4-2.5-.3-5.1-1.2-5.1-5.5 0-1.2.4-2.2 1.1-3 .1-.2-.2-1.2.1-2.5 0 0 .9-.3 2.8 1.1a9.5 9.5 0 0 1 5 0c1.9-1.4 2.8-1.1 2.8-1.1 .3 1.3 0 2.3.1 2.5 .7 .8 1.1 1.8 1.1 3 0 4.3-2.6 5.2-5 5.5 .4 .3 .8 .9 .8 2v3c0 .3.2 .6.7 .5a10 10 0 0 0 6.8-9.5c0-5.5-4.5-10-10-10z"
+              ></path>
+            </svg>
+            <span class="text-md font-semibold tracking-wide text-gray-800"
+              >GitHub</span
+            >
+          </a>
+
+          <!-- LinkedIn -->
+          <a
+            href="https://www.linkedin.com/in/agung-rizki-saputra-06051a2a7/"
+            target="_blank"
+            class="group relative flex flex-col items-center p-6 bg-white shadow-xl border border-gray-300 rounded-2xl transition hover:scale-105 hover:shadow-2xl"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-14 h-14 mb-2 text-blue-600 transition group-hover:text-blue-500 group-hover:scale-110"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-12h4v1a4 4 0 0 1 2-1zM2 9h4v12H2V9zM4 4a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"
+              ></path>
+            </svg>
+            <span class="text-md font-semibold tracking-wide text-blue-600"
+              >LinkedIn</span
+            >
+          </a>
+
+          <!-- Instagram -->
+          <a
+            href="https://www.instagram.com/agunggrzksptra_/"
+            target="_blank"
+            class="group relative flex flex-col items-center p-6 bg-white shadow-xl border border-gray-300 rounded-2xl transition hover:scale-105 hover:shadow-2xl"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-14 h-14 mb-2 text-pink-500 transition group-hover:scale-110"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm0 2h10c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3zm10.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"
+              ></path>
+            </svg>
+            <span class="text-md font-semibold tracking-wide text-pink-500"
+              >Instagram</span
+            >
+          </a>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="mt-12 flex justify-center">
+          <div
+            class="relative bg-white shadow-xl border border-gray-300 rounded-2xl p-6 w-full max-w-lg text-center transition hover:scale-105 hover:shadow-2xl"
+          >
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 tracking-wide">
+              Get In Touch
+            </h3>
+
+            <div class="relative z-10">
+              <p class="text-lg text-gray-600">Email me at:</p>
+              <a
+                href="mailto:agungriskisaputra64@gmail.com"
+                class="text-blue-500 hover:text-blue-600 transition font-semibold text-lg underline underline-offset-4"
+              >
+                agungriskisaputra64@gmail.com
+              </a>
+
+              <div class="w-full h-px bg-gray-300 my-4"></div>
+
+              <p class="text-lg text-gray-600">Or call me at:</p>
+              <span class="text-xl font-bold text-gray-900 tracking-wide">
+                +62 8569 5869 850
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Contact End -->
+
+    <footer class="p-4 bg-gray-900 text-center text-gray-400">
+      &copy; 2025 Agung Rizki Saputra. All Rights Reserved.
+    </footer>
+    <a
+      href="#home"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <script src="js/style.js"></script>
+  </body>
+</html>
