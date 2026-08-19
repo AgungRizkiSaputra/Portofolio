@@ -6,6 +6,7 @@ window.addEventListener("scroll", function () {
   const brandText = document.getElementById("brand-text"); // Ambil elemen teks "PORTFOLIO"
 
   if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
     navbar.classList.add("bg-white", "shadow-md");
     navbar.classList.remove("bg-transparent");
 
@@ -17,6 +18,7 @@ window.addEventListener("scroll", function () {
       link.classList.remove("text-white");
     });
   } else {
+    navbar.classList.remove("scrolled");
     navbar.classList.add("bg-transparent");
     navbar.classList.remove("bg-white", "shadow-md");
 
@@ -30,18 +32,26 @@ window.addEventListener("scroll", function () {
   }
 });
 
-document.getElementById("menu-toggle").addEventListener("click", function () {
-  document.getElementById("menu").classList.toggle("hidden");
-});
+window.dispatchEvent(new Event("scroll"));
 
-document.querySelectorAll(".nav-link").forEach((link) => {
+const navigationLinks = document.querySelectorAll("#menu a, #mobile-menu a");
+const setActiveNav = (targetId) => {
+  navigationLinks.forEach((link) => {
+    link.classList.toggle("is-active", link.getAttribute("href") === `#${targetId}`);
+  });
+};
+
+setActiveNav("home");
+
+navigationLinks.forEach((link) => {
   link.addEventListener("click", function (e) {
-    e.preventDefault(); // Mencegah navigasi default
+    e.preventDefault();
 
-    const targetId = this.getAttribute("href").substring(1); // Ambil ID dari href
+    const targetId = this.getAttribute("href").substring(1);
     const targetSection = document.getElementById(targetId);
 
     if (targetSection) {
+      setActiveNav(targetId);
       targetSection.scrollIntoView({
         behavior: "smooth",
         block: "start", // Sesuaikan posisi saat scroll berhenti
@@ -57,17 +67,18 @@ const mobileMenu = document.getElementById("mobile-menu");
 const desktopMenu = document.getElementById("menu");
 const closeMenu = document.getElementById("close-menu");
 
-menuToggle.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
+const setMobileMenu = (isOpen) => {
+  mobileMenu.classList.toggle("hidden", !isOpen);
+  mobileMenu.classList.toggle("mobile-menu-open", isOpen);
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+};
 
-  // Cek jika layar kurang dari 1024px, sembunyikan menu desktop
-  if (window.innerWidth < 1024) {
-    desktopMenu.classList.add("hidden");
-  }
+menuToggle.addEventListener("click", () => {
+  setMobileMenu(!mobileMenu.classList.contains("mobile-menu-open"));
 });
 
 closeMenu.addEventListener("click", () => {
-  mobileMenu.classList.add("hidden");
+  setMobileMenu(false);
 
   // Tampilkan kembali menu desktop hanya jika layar lebih dari 1024px
   if (window.innerWidth >= 1024) {
@@ -79,8 +90,22 @@ closeMenu.addEventListener("click", () => {
 window.addEventListener("resize", () => {
   if (window.innerWidth >= 1024) {
     desktopMenu.classList.remove("hidden");
-    mobileMenu.classList.add("hidden");
+    setMobileMenu(false);
+  } else {
+    desktopMenu.classList.add("hidden");
   }
+});
+
+window.dispatchEvent(new Event("resize"));
+
+mobileMenu.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    setMobileMenu(false);
+  });
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") setMobileMenu(false);
 });
 
 // ---------------------------------- //
@@ -150,11 +175,68 @@ if (scrollTop) {
   };
   window.addEventListener("load", togglescrollTop);
   document.addEventListener("scroll", togglescrollTop);
-  scrollTop.addEventListener(
-    "click",
+  scrollTop.addEventListener("click", () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
-    })
-  );
+    });
+  });
 }
+
+(() => {
+  const intro = document.getElementById("intro-screen");
+  const body = document.body;
+  let opening = false;
+  const openPortfolio = () => {
+    if (opening) return;
+    opening = true;
+    intro.classList.add("is-opening");
+    body.classList.remove("portfolio-locked");
+    body.classList.add("portfolio-entering");
+    setTimeout(() => body.classList.remove("portfolio-entering"), 1250);
+    setTimeout(() => {
+      intro.classList.remove("is-opening");
+      intro.classList.add("is-hidden");
+      setTimeout(() => intro.remove(), 750);
+    }, 1100);
+  };
+  intro.addEventListener("click", openPortfolio);
+  intro.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") openPortfolio();
+  });
+
+  const sections = document.querySelectorAll("#about, #education, #experience, #project, #contact");
+  sections.forEach((section) => {
+    section.classList.add("reveal-on-scroll");
+    const groups = section.querySelectorAll(".grid, .flex.flex-wrap, .max-w-7xl, .max-w-6xl");
+    groups.forEach((group) => group.classList.add("reveal-stagger"));
+  });
+  let previousScrollY = window.scrollY;
+  let scrollDirection = "down";
+
+  window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+    if (Math.abs(currentScrollY - previousScrollY) > 2) {
+      scrollDirection = currentScrollY < previousScrollY ? "up" : "down";
+      previousScrollY = currentScrollY;
+    }
+    if (currentScrollY < 100) setActiveNav("home");
+  }, { passive: true });
+
+  const replayAnimation = (element) => {
+    element.classList.remove("scroll-reveal-up", "scroll-reveal-down");
+    void element.offsetWidth;
+    element.classList.add(`scroll-reveal-${scrollDirection}`);
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        replayAnimation(entry.target);
+        if (entry.target.id) setActiveNav(entry.target.id);
+      }
+    });
+  }, { threshold: 0.14, rootMargin: "-8% 0px -8% 0px" });
+  document.querySelectorAll(".reveal-on-scroll, .reveal-stagger").forEach((element) => observer.observe(element));
+})();

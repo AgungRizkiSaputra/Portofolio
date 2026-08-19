@@ -3,10 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Agung Rizki Saputra | Creative Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="js/style.js" />
     <script
       defer
       src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
@@ -24,14 +23,22 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="portfolio-locked bg-[#0b1120] text-slate-900 antialiased selection:bg-cyan-300 selection:text-slate-950">
+    <div id="intro-screen" role="button" tabindex="0" aria-label="Buka portofolio">
+      <div class="intro-content">
+        <span class="intro-kicker">Agung Rizki Saputra</span>
+        <h1>My Portfolio</h1>
+        <p>Digital ideas, crafted with purpose.</p>
+        <p class="intro-hint">Enter experience <span class="intro-arrow">→</span></p>
+      </div>
+    </div>
     <!-- Navbar Start -->
     <nav
-      class="fixed w-full z-10 transition-all duration-300 bg-transparent"
+      class="fixed w-full z-50 transition-all duration-300 bg-[#0b1120]/60 backdrop-blur-md border-b border-cyan-300/10"
       id="navbar"
     >
       <div
-        class="container mx-auto px-6 py-4 flex justify-between items-center"
+        class="container mx-auto px-6 py-4 flex justify-between items-center max-w-7xl"
       >
         <a
           href="#home"
@@ -46,7 +53,7 @@
         </a>
 
         <button
-          class="lg:hidden text-white focus:outline-none"
+          class="lg:hidden text-white focus:outline-none rounded-lg p-2 hover:bg-white/10 transition"
           id="menu-toggle"
         >
           <svg
@@ -65,20 +72,23 @@
           </svg>
         </button>
         <!-- Menu untuk desktop -->
-        <div class="hidden lg:flex space-x-6" id="menu">
-          <a href="#home" class="nav-link text-white hover:text-blue-500"
+        <div class="hidden lg:flex items-center gap-2" id="menu">
+          <a href="#home" class="nav-link text-white/80 hover:text-white hover:bg-white/10 rounded-full px-4 py-2 transition"
             >Home</a
           >
-          <a href="#about" class="nav-link text-white hover:text-blue-500"
+          <a href="#about" class="nav-link text-white/80 hover:text-white hover:bg-white/10 rounded-full px-4 py-2 transition"
             >About</a
           >
-          <a href="#services" class="nav-link text-white hover:text-blue-500"
-            >Service</a
+          <a href="#education" class="nav-link text-white/80 hover:text-white hover:bg-white/10 rounded-full px-4 py-2 transition"
+            >Education</a
           >
-          <a href="#project" class="nav-link text-white hover:text-blue-500"
+          <a href="#experience" class="nav-link text-white/80 hover:text-white hover:bg-white/10 rounded-full px-4 py-2 transition"
+            >Experience</a
+          >
+          <a href="#project" class="nav-link text-white/80 hover:text-white hover:bg-white/10 rounded-full px-4 py-2 transition"
             >Project</a
           >
-          <a href="#contact" class="nav-link text-white hover:text-blue-500"
+          <a href="#contact" class="nav-link text-white/80 hover:text-white hover:bg-white/10 rounded-full px-4 py-2 transition"
             >Contact</a
           >
         </div>
@@ -87,11 +97,12 @@
       <!-- Menu untuk mode mobile -->
       <div
         id="mobile-menu"
-        class="hidden fixed top-0 right-0 h-full w-1/2 bg-black/80 flex flex-col items-center justify-center space-y-6 text-white shadow-lg"
+        class="hidden fixed top-0 right-0 h-full w-3/4 max-w-sm bg-slate-950/95 backdrop-blur-xl flex flex-col items-center justify-center space-y-6 text-white shadow-2xl border-l border-white/10"
       >
         <a href="#home" class="text-xl hover:text-blue-500">Home</a>
         <a href="#about" class="text-xl hover:text-blue-500">About</a>
-        <a href="#services" class="text-xl hover:text-blue-500">Service</a>
+        <a href="#education" class="text-xl hover:text-blue-500">Education</a>
+        <a href="#experience" class="text-xl hover:text-blue-500">Experience</a>
         <a href="#project" class="text-xl hover:text-blue-500">Project</a>
         <a href="#contact" class="text-xl hover:text-blue-500">Contact</a>
         <button id="close-menu" class="absolute top-6 right-6 text-2xl">
@@ -104,30 +115,40 @@
     <!-- Home Start -->
     <div
       id="home"
-      class="relative h-screen flex items-center justify-center bg-cover bg-center pt-20"
-      style="background-image: url('images/a.jpg')"
+      class="light-motion-bg relative min-h-screen flex items-center justify-center bg-cover bg-center pt-20 overflow-hidden"
     >
-      <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+      <div class="absolute inset-0 bg-gradient-to-br from-[#07111f]/95 via-slate-950/75 to-cyan-950/70"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-glow"></div>
+      <div class="hero-line top-[20%] left-0"></div>
+      <div class="hero-line hero-line-slow bottom-[22%] right-0"></div>
+      <span class="hero-particle hero-particle-one left-[12%] top-[68%]"></span>
+      <span class="hero-particle hero-particle-two left-[30%] top-[32%]"></span>
+      <span class="hero-particle hero-particle-three right-[18%] top-[72%]"></span>
+      <span class="hero-particle hero-particle-four right-[34%] top-[24%]"></span>
+      <div class="absolute top-1/4 right-1/4 w-3 h-3 rounded-full bg-blue-300 shadow-[0_0_25px_8px_rgba(96,165,250,0.5)] animate-ping"></div>
+      <div class="hero-ping-delay absolute bottom-1/3 left-1/4 w-2 h-2 rounded-full bg-purple-300 shadow-[0_0_20px_6px_rgba(192,132,252,0.5)] animate-ping"></div>
       <div
-        class="relative text-center text-white px-6 max-w-3xl animate-fadeIn"
+        class="relative text-center text-white px-6 max-w-4xl animate-fadeIn motion-safe:animate-[fadeIn_1s_ease-out]"
       >
-        <h1 class="text-6xl font-extrabold mb-4 tracking-wide drop-shadow-lg">
+        <p class="uppercase tracking-[0.35em] text-sm text-blue-300 mb-5">Creative developer & designer</p>
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold mb-6 tracking-tight leading-tight drop-shadow-lg hover:scale-[1.02] transition-transform duration-500">
           Hello, I'm
           <span
-            class="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
+            class="bg-gradient-to-r from-cyan-300 to-fuchsia-400 text-transparent bg-clip-text"
           >
             Agung Rizki Saputra
           </span>
         </h1>
 
-        <p class="text-xl mb-6 max-w-2xl mx-auto italic opacity-80">
+        <p class="inline-block text-lg sm:text-xl mb-8 max-w-2xl mx-auto italic text-slate-300 -rotate-2 hover:rotate-0 transition-transform duration-300">
           "Welcome to My Personal Website🔥"
         </p>
-        <h3 class="text-3xl font-semibold flex justify-center items-center">
+        <h3 class="text-2xl sm:text-3xl font-semibold flex justify-center items-center">
           <span class="mr-2">I'm a</span>
           <span
             id="dynamic-text"
-            class="font-bold text-blue-400 text-3xl animate-pulse"
+            class="font-bold text-cyan-300 text-3xl animate-pulse"
           ></span>
         </h3>
       </div>
@@ -135,17 +156,17 @@
     <!-- Home End -->
 
     <!-- About Start -->
-    <div class="about bg-gray-100 py-16 px-6" id="about">
+    <div class="about about-section light-motion-bg bg-[#f8fafc] py-24 px-6 relative overflow-hidden" id="about">
       <div
-        class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-14"
+          class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-14"
       >
         <!-- Bagian Gambar -->
         <div class="w-full md:w-1/2 flex justify-center">
-          <div class="relative w-80 h-80 md:w-96 md:h-96">
+          <div class="relative w-80 h-80 md:w-96 md:h-96 transition duration-700 hover:scale-105 hover:-rotate-2">
             <svg
               viewBox="0 0 200 200"
               xmlns="http://www.w3.org/2000/svg"
-              class="absolute w-full h-full animate-pulse"
+              class="absolute w-full h-full animate-[spin_18s_linear_infinite]"
             >
               <path
                 fill="url(#gradient)"
@@ -162,8 +183,7 @@
             <img
               src="images/p.jpg"
               alt="Profile Image"
-              class="absolute inset-0 w-full h-full object-cover shadow-2xl border-8 border-gray-300"
-              style="clip-path: url(#blob); filter: grayscale(100%)"
+              class="profile-image absolute inset-0 w-full h-full object-cover shadow-2xl border-8 border-gray-300 transition duration-700 hover:grayscale-0"
             />
 
             <svg width="0" height="0">
@@ -180,47 +200,33 @@
         </div>
 
         <!-- Bagian Deskripsi -->
-        <div class="w-full md:w-1/2">
+        <div class="about-copy w-full md:w-1/2 transition duration-700 hover:translate-x-2">
+          <p class="about-eyebrow">Profile / Fresh Graduate</p>
           <h2
             class="text-4xl font-extrabold text-transparent bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text mb-6"
           >
             About Me
           </h2>
-          <p class="text-gray-600 text-lg leading-relaxed mb-6">
-            "Hello! I'm <span class="font-semibold">Agung Rizki Saputra</span>,
-            a 6th-semester student passionate about Web Development. I have
-            experience working with various technologies including
-            <span class="text-orange-600 font-medium">HTML5</span>,
-            <span class="text-blue-600 font-medium">CSS3</span>,
-            <span class="text-indigo-600 font-medium">PHP</span>, and
-            <span class="text-yellow-500 font-medium">JavaScript</span> for
-            building dynamic and interactive websites. I also use design tools
-            like <span class="text-pink-500 font-medium">Figma</span> to create
-            intuitive UI/UX designs. On the frontend and mobile development
-            side, I'm proficient in
-            <span class="text-cyan-500 font-medium">Flutter</span>,
-            <span class="text-teal-500 font-medium">Tailwind CSS</span>, and
-            <span class="text-purple-600 font-medium">Bootstrap</span>. I'm
-            always eager to learn new technologies and take on exciting
-            challenges to grow as a professional Web Developer."
+          <p class="about-lead text-slate-600 text-lg leading-relaxed mb-6">
+            A recent Bachelor’s degree graduate in Informatics Engineering with strong interests and skills in Web Development, UI/UX Design, and Cybersecurity. Experienced in developing responsive websites using HTML, CSS, JavaScript, PHP, and Flutter, as well as conducting system security testing. Combines web development knowledge with Secure Coding principles to build applications that are not only interactive and user-friendly but also secure. Proficient in using Figma to design wireframes and prototypes, as well as Tailwind CSS and Bootstrap to create consistent and responsive user interfaces.
           </p>
 
           <!-- Progress Bars -->
 
           <!-- Ikon-ikon skill -->
-          <div class="flex flex-wrap gap-4 items-center">
+          <div class="about-skills flex flex-wrap gap-4 items-center">
             <!-- HTML -->
-            <i class="fab fa-html5 text-orange-600 text-3xl" title="HTML5"></i>
+            <i class="fab fa-html5 text-orange-600 text-3xl transition duration-300 hover:-translate-y-2 hover:scale-125" title="HTML5"></i>
 
             <!-- CSS -->
-            <i class="fab fa-css3-alt text-blue-600 text-3xl" title="CSS3"></i>
+            <i class="fab fa-css3-alt text-blue-600 text-3xl transition duration-300 hover:-translate-y-2 hover:scale-125" title="CSS3"></i>
 
             <!-- PHP -->
-            <i class="fab fa-php text-indigo-600 text-3xl" title="PHP"></i>
+            <i class="fab fa-php text-indigo-600 text-3xl transition duration-300 hover:-translate-y-2 hover:scale-125" title="PHP"></i>
 
             <!-- JavaScript -->
             <i
-              class="fab fa-js-square text-yellow-500 text-3xl"
+              class="fab fa-js-square text-yellow-500 text-3xl transition duration-300 hover:-translate-y-2 hover:scale-125"
               title="JavaScript"
             ></i>
 
@@ -253,7 +259,7 @@
           <!-- Tombol Download CV -->
           <a
             href="https://drive.google.com/file/d/1GCWTpDOGp6v9uZHK-SA2AmzJxLd8Rpui/view?usp=sharing"
-            class="inline-block mt-8 bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-8 rounded-full shadow-lg hover:opacity-90 transition animate-bounce"
+            class="inline-block mt-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-8 rounded-full shadow-lg shadow-blue-500/25 hover:-translate-y-1 hover:scale-105 hover:shadow-xl transition duration-300"
           >
             Download CV
           </a>
@@ -262,275 +268,152 @@
     </div>
     <!-- About End -->
 
-    <!-- Service Start -->
-    <div id="services" class="py-20 bg-gradient-to-b from-gray-100 to-gray-200">
-      <div class="container mx-auto text-center">
-        <h2
-          class="text-4xl font-extrabold text-transparent bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text mb-6"
-        >
-          What I Do
-        </h2>
-        <p class="text-lg text-gray-600 mb-12">Awesome Quality Services</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- UI/UX Design -->
-          <div
-            class="group bg-white shadow-2xl rounded-3xl p-8 flex flex-col items-center text-center transition-all duration-300 transform hover:scale-105 hover:shadow-3xl hover:bg-blue-500 hover:text-white"
-          >
-            <div
-              class="p-5 bg-blue-500 text-white rounded-full group-hover:bg-white group-hover:text-blue-500"
-            >
-              <i class="lucide lucide-monitor text-4xl"></i>
-            </div>
-            <h3 class="text-xl font-bold mt-4">UI/UX Design</h3>
-            <p class="text-gray-600 group-hover:text-white mt-2">
-              Design modern and user-friendly interfaces using
-              <span class="font-medium">Figma</span>. Focused on responsive
-              layouts, visual consistency, and intuitive experiences to boost
-              user satisfaction and engagement.
-            </p>
+    <!-- Education Start -->
+    <section id="education" class="relative overflow-hidden bg-slate-950 px-6 py-24 text-white">
+      <div class="absolute -left-32 top-10 h-96 w-96 rounded-full bg-cyan-500/20 blur-3xl"></div>
+      <div class="absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-fuchsia-600/20 blur-3xl"></div>
+      <div class="relative mx-auto max-w-6xl">
+        <div class="mb-16 flex flex-col justify-between gap-8 md:flex-row md:items-end">
+          <div class="max-w-2xl">
+            <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">My education journey</p>
+            <h2 class="text-4xl font-extrabold leading-tight sm:text-5xl">Learn, grow,<br /><span class="bg-gradient-to-r from-cyan-300 to-fuchsia-400 bg-clip-text text-transparent">create impact.</span></h2>
+            <p class="mt-5 text-lg leading-relaxed text-slate-400">Each stage of my education has helped me turn curiosity into meaningful digital work.</p>
           </div>
-
-          <!-- Web Development -->
-          <div
-            class="group bg-white shadow-2xl rounded-3xl p-8 flex flex-col items-center text-center transition-all duration-300 transform hover:scale-105 hover:shadow-3xl hover:bg-green-500 hover:text-white"
-          >
-            <div
-              class="p-5 bg-green-500 text-white rounded-full group-hover:bg-white group-hover:text-green-500"
-            >
-              <i class="lucide lucide-code text-4xl"></i>
-            </div>
-            <h3 class="text-xl font-bold mt-4">Web Development</h3>
-            <p class="text-gray-600 group-hover:text-white mt-2">
-              Build interactive and responsive websites using
-              <span class="font-medium">HTML</span>,
-              <span class="font-medium">CSS</span>,
-              <span class="font-medium">JavaScript</span>, and
-              <span class="font-medium">PHP</span>. Ensuring fast load times and
-              seamless cross-device performance.
-            </p>
+          <div class="grid grid-cols-2 gap-3 sm:gap-5">
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur transition hover:border-cyan-300/50"><p class="text-3xl font-bold text-cyan-300">2026</p><p class="mt-1 text-sm text-slate-400">Graduation</p></div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur transition hover:border-fuchsia-300/50"><p class="text-3xl font-bold text-fuchsia-300">4</p><p class="mt-1 text-sm text-slate-400">Education stages</p></div>
           </div>
-
-          <!-- Mobile App Development -->
-          <div
-            class="group bg-white shadow-2xl rounded-3xl p-8 flex flex-col items-center text-center transition-all duration-300 transform hover:scale-105 hover:shadow-3xl hover:bg-purple-500 hover:text-white"
-          >
-            <div
-              class="p-5 bg-purple-500 text-white rounded-full group-hover:bg-white group-hover:text-purple-500"
-            >
-              <i class="lucide lucide-smartphone text-4xl"></i>
-            </div>
-            <h3 class="text-xl font-bold mt-4">Mobile Development</h3>
-            <p class="text-gray-600 group-hover:text-white mt-2">
-              Develop cross-platform mobile apps using
-              <span class="font-medium">Flutter</span>. Delivering high
-              performance, smooth user experience, and visually appealing UI for
-              both Android and iOS from a single codebase.
-            </p>
-          </div>
-
-          <!-- Frontend Framework -->
-          <div
-            class="group bg-white shadow-2xl rounded-3xl p-8 flex flex-col items-center text-center transition-all duration-300 transform hover:scale-105 hover:shadow-3xl hover:bg-teal-500 hover:text-white"
-          >
-            <div
-              class="p-5 bg-teal-500 text-white rounded-full group-hover:bg-white group-hover:text-teal-500"
-            >
-              <i class="lucide lucide-layout-dashboard text-4xl"></i>
-            </div>
-            <h3 class="text-xl font-bold mt-4">Frontend Framework</h3>
-            <p class="text-gray-600 group-hover:text-white mt-2">
-              Build elegant and responsive UI components using
-              <span class="font-medium">Tailwind CSS</span> and
-              <span class="font-medium">Bootstrap</span>. Creating clean,
-              consistent, and scalable designs with modern utility-first
-              frameworks.
-            </p>
-          </div>
+        </div>
+        <div class="grid gap-5 md:grid-cols-4">
+          <div class="group rounded-3xl border border-white/10 bg-white/[0.06] p-6 transition duration-500 hover:-translate-y-2 hover:border-cyan-400/60 hover:bg-cyan-400/10"><div class="mb-8 flex items-center justify-between"><span class="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-400/15 text-cyan-300"><i class="fas fa-seedling"></i></span><span class="text-sm font-bold text-cyan-300">01</span></div><p class="text-xs font-bold uppercase tracking-widest text-slate-500">2010 – 2016</p><h3 class="mt-2 text-xl font-bold">Elementary School</h3><p class="mt-3 text-sm leading-relaxed text-slate-400">Built my foundation, curiosity, discipline, and courage to try new things.</p></div>
+          <div class="group rounded-3xl border border-white/10 bg-white/[0.06] p-6 transition duration-500 hover:-translate-y-2 hover:border-blue-400/60 hover:bg-blue-400/10"><div class="mb-8 flex items-center justify-between"><span class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-400/15 text-blue-300"><i class="fas fa-compass"></i></span><span class="text-sm font-bold text-blue-300">02</span></div><p class="text-xs font-bold uppercase tracking-widest text-slate-500">2016 – 2019</p><h3 class="mt-2 text-xl font-bold">Junior High School</h3><p class="mt-3 text-sm leading-relaxed text-slate-400">Started exploring technology, coding, and creative problem-solving.</p></div>
+          <div class="group rounded-3xl border border-white/10 bg-white/[0.06] p-6 transition duration-500 hover:-translate-y-2 hover:border-fuchsia-400/60 hover:bg-fuchsia-400/10"><div class="mb-8 flex items-center justify-between"><span class="flex h-11 w-11 items-center justify-center rounded-xl bg-fuchsia-400/15 text-fuchsia-300"><i class="fas fa-rocket"></i></span><span class="text-sm font-bold text-fuchsia-300">03</span></div><p class="text-xs font-bold uppercase tracking-widest text-slate-500">2019 – 2022</p><h3 class="mt-2 text-xl font-bold">Vocational High School</h3><p class="mt-3 text-sm leading-relaxed text-slate-400">Developed practical skills in web development, design, and digital projects.</p></div>
+          <div class="group rounded-3xl border border-emerald-400/30 bg-gradient-to-br from-emerald-400/20 to-slate-900 p-6 transition duration-500 hover:-translate-y-2 hover:shadow-[0_0_35px_rgba(16,185,129,0.2)]"><div class="mb-8 flex items-center justify-between"><span class="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-400/20 text-emerald-300"><i class="fas fa-bullseye"></i></span><span class="text-sm font-bold text-emerald-300">04</span></div><p class="text-xs font-bold uppercase tracking-widest text-emerald-300">2022 – 2026</p><h3 class="mt-2 text-xl font-bold">College</h3><p class="mt-3 text-sm leading-relaxed text-slate-300">Continuing to grow through Web, Mobile, and UI/UX projects that create value.</p></div>
         </div>
       </div>
-    </div>
-    <!-- Service End -->
+    </section>
+    <!-- Education End -->
 
-    <!-- Project Start -->
-    <div id="project" class="py-16 bg-gradient-to-b from-gray-200 to-gray-100">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-12">
-          <h3
-            class="text-4xl font-bold text-transparent bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text mb-4"
-          >
-            My Recent Works
-          </h3>
+    <!-- Experience Start -->
+    <section id="experience" class="experience-section relative overflow-hidden bg-slate-900 px-6 py-24 text-white">
+      <div class="experience-orb experience-orb-left"></div>
+      <div class="experience-orb experience-orb-right"></div>
+      <div class="relative mx-auto max-w-5xl">
+        <div class="mb-14 max-w-2xl">
+          <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">Project experience</p>
+          <h2 class="text-4xl font-extrabold leading-tight sm:text-5xl">Building ideas<br /><span class="bg-gradient-to-r from-cyan-300 to-fuchsia-400 bg-clip-text text-transparent">into useful products.</span></h2>
+          <p class="mt-5 text-lg leading-relaxed text-slate-400">Hands-on experience shaped through web, mobile, and interface projects.</p>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          <div
-            class="relative group overflow-hidden rounded-xl shadow-xl bg-white/10 backdrop-blur-md"
-          >
-            <img
-              src="images/projects/Frame1.png"
-              class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
-              alt="Online Food"
-            />
-            <div
-              class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            >
-              <h4 class="text-xl font-semibold mb-2 text-white">Online Food</h4>
-              <div class="flex gap-4">
-                <a
-                  href="#"
-                  class="eye-icon text-white text-2xl hover:text-gray-300 transition-colors duration-200"
-                  data-title="UI/UX"
-                  data-description="These images provide a comprehensive visual representation of the user interface of the ZHHRresto mobile application, an online food ordering platform. It should be noted that the interface design was created using the popular UI/UX design software, Figma. Each screen displays different functions and information, designed to guide users through the process of ordering food easily and efficiently."
-                  data-image="images/projects/Frame1.png"
-                >
-                  <i class="fas fa-eye"></i>
-                </a>
 
-                <a
-                  href="#"
-                  class="text-white text-2xl hover:text-gray-300 transition-colors duration-200"
-                >
-                  <i class="fas fa-link"></i>
-                </a>
+        <div class="experience-timeline">
+          <article class="experience-item experience-item-cyan">
+            <div class="experience-marker"><i class="fas fa-shield-halved"></i></div>
+            <div class="experience-card">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <p class="experience-period">Feb 2026 — Jun 2026</p>
+                  <h3 class="mt-2 text-2xl font-bold">Security Intern</h3>
+                </div>
+                <span class="experience-tag">PT Secunity Mitra Teknologi</span>
               </div>
+              <p class="mt-4 leading-relaxed text-slate-400">Performed penetration testing and vulnerability analysis on web applications and systems, identified security gaps, and prepared risk reports with improvement recommendations.</p>
+              <div class="experience-tools"><span>Penetration Testing</span><span>Vulnerability Analysis</span><span>Security Report</span><span>Web Security</span></div>
             </div>
-          </div>
-          <!-- ------------------------------------------------------------------------------------ -->
-          <div
-            class="relative group overflow-hidden rounded-xl shadow-xl bg-white/10 backdrop-blur-md"
-          >
-            <img
-              src="images/projects/Mockup2.png"
-              class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
-              alt="News App"
-            />
-            <div
-              class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            >
-              <h4 class="text-xl font-semibold mb-2 text-white">News App</h4>
-              <div class="flex gap-4">
-                <a
-                  href="#"
-                  class="eye-icon text-white text-2xl hover:text-gray-300 transition-colors duration-200"
-                  data-title="News App"
-                  data-description="The 'Headline Hub' app features a modern, clean design with red accents for emphasis. Its intuitive layout ensures a smooth user experience, delivering news quickly and efficiently. Developed with Flutter, it enables fast and efficient cross-platform development."
-                  data-image="images/projects/Mockup2.png"
-                >
-                  <i class="fas fa-eye"></i>
-                </a>
-                <a
-                  href="#"
-                  class="text-white text-2xl hover:text-gray-300 transition-colors duration-200"
-                >
-                  <i class="fas fa-link"></i>
-                </a>
+          </article>
+
+          <article class="experience-item experience-item-fuchsia">
+            <div class="experience-marker"><i class="fas fa-chalkboard-user"></i></div>
+            <div class="experience-card">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <p class="experience-period">Sep 2025 — Nov 2025</p>
+                  <h3 class="mt-2 text-2xl font-bold">UI/UX Design Mentor</h3>
+                </div>
+                <span class="experience-tag">Community Service</span>
               </div>
+              <p class="mt-4 leading-relaxed text-slate-400">Designed and delivered basic UI/UX lessons using Figma for Grade 10 vocational students, guided wireframes and interactive prototypes, and provided constructive feedback.</p>
+              <div class="experience-tools"><span>Figma</span><span>Wireframe</span><span>Prototype</span><span>Class Mentoring</span></div>
             </div>
-          </div>
-          <!-- ------------------------------------------------------------------------------------ -->
-          <div
-            class="relative group overflow-hidden rounded-xl shadow-xl bg-white/10 backdrop-blur-md"
-          >
-            <img
-              src="images/projects/Frame1000005392.png"
-              class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
-              alt="Services Transportation"
-            />
-            <div
-              class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            >
-              <h4 class="text-xl font-semibold mb-2 text-white">
-                Digital Platform for Elections
-              </h4>
-              <div class="flex gap-4">
-                <a
-                  href="#"
-                  class="eye-icon text-white text-2xl hover:text-gray-300 transition-colors duration-200"
-                  data-title="Digital Platform for Elections"
-                  data-description="These images showcase the user interface of the 'Global Vote' mobile app, a digital platform for elections or voting. Designed with Figma, the app features a clean, modern look with bright yellow accents. Figma enables real-time collaboration and interactive prototyping, streamlining the design and development process."
-                  data-image="images/projects/Frame1000005392.png"
-                >
-                  <i class="fas fa-eye"></i>
-                </a>
-                <a
-                  href="#"
-                  class="text-white text-2xl hover:text-gray-300 transition-colors duration-200"
-                >
-                  <i class="fas fa-link"></i>
-                </a>
+          </article>
+
+          <article class="experience-item experience-item-emerald">
+            <div class="experience-marker"><i class="fas fa-tree"></i></div>
+            <div class="experience-card">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <p class="experience-period">May 2022 — Jul 2022</p>
+                  <h3 class="mt-2 text-2xl font-bold">Production Intern</h3>
+                </div>
+                <span class="experience-tag">PT Interkayu Nusantara</span>
               </div>
+              <p class="mt-4 leading-relaxed text-slate-400">Participated directly in wood production, from raw material selection to processing and painting, while working with the production team to meet daily targets.</p>
+              <div class="experience-tools"><span>Production</span><span>Quality Process</span><span>Teamwork</span><span>Wood Processing</span></div>
             </div>
-          </div>
-          <!-- ------------------------------------------------------------------------------------ -->
-          <div
-            class="relative group overflow-hidden rounded-xl shadow-xl bg-white/10 backdrop-blur-md"
-          >
-            <img
-              src="images/projects/web.jpg"
-              class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
-              alt="Online Food Web"
-            />
-            <div
-              class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            >
-              <h4 class="text-xl font-semibold mb-2 text-white">
-                Online Food Web
-              </h4>
-              <div class="flex gap-4">
-                <a
-                  href="#"
-                  class="eye-icon text-white text-2xl hover:text-gray-300 transition-colors duration-200"
-                  data-title="Online Food web"
-                  data-description="This image showcases a modern restaurant website highlighting menu items like spicy fried chicken. The website is developed using PHP for dynamic content, with MySQL as the database. The interface is designed with HTML and CSS and can be enhanced using Tailwind for a more appealing look. Key features include an interactive menu, order buttons, and intuitive navigation to enhance the user experience."
-                  data-image="images/projects/web.jpg"
-                >
-                  <i class="fas fa-eye"></i>
-                </a>
-                <a
-                  href="#"
-                  class="text-white text-2xl hover:text-gray-300 transition-colors duration-200"
-                >
-                  <i class="fas fa-link"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- ------------------------------------------------------------------------------------ -->
-          <div
-            class="relative group overflow-hidden rounded-xl shadow-xl bg-white/10 backdrop-blur-md"
-          >
-            <img
-              src="images/projects/web2.jpg"
-              class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
-              alt="Services Transportation"
-            />
-            <div
-              class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            >
-              <h4 class="text-xl font-semibold mb-2 text-white">
-                Services Transportation
-              </h4>
-              <div class="flex gap-4">
-                <a
-                  href="#"
-                  class="eye-icon text-white text-2xl hover:text-gray-300 transition-colors duration-200"
-                  data-title="Services Transportation"
-                  data-description="This image showcases the landing page of ZHHRCar, a transportation service with a modern and professional design. The website is built using HTML, CSS, JavaScript, and Bootstrap, featuring a green color scheme and intuitive navigation. Its clean and user-friendly interface is designed to provide an optimal user experience for accessing transportation or car rental services."
-                  data-image="images/projects/web2.jpg"
-                >
-                  <i class="fas fa-eye"></i>
-                </a>
-                <a
-                  href="#"
-                  class="text-white text-2xl hover:text-gray-300 transition-colors duration-200"
-                >
-                  <i class="fas fa-link"></i>
-                </a>
-              </div>
-            </div>
-          </div>
+          </article>
         </div>
       </div>
-    </div>
+    </section>
+    <!-- Experience End -->
+
+    <!-- Selected Work Start -->
+    <section id="project" class="selected-work-section relative overflow-hidden bg-slate-950 px-6 py-24 text-white">
+      <div class="selected-work-grid"></div>
+      <div class="relative mx-auto max-w-7xl">
+        <div class="mb-14 flex flex-col justify-between gap-8 md:flex-row md:items-end">
+          <div class="max-w-2xl">
+            <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">Selected work</p>
+            <h2 class="text-4xl font-extrabold leading-tight sm:text-5xl">Ideas with<br /><span class="bg-gradient-to-r from-cyan-300 to-fuchsia-400 bg-clip-text text-transparent">a point of view.</span></h2>
+          </div>
+          <p class="max-w-sm text-base leading-relaxed text-slate-400">A curated look at digital products, interfaces, and web experiences created throughout my journey.</p>
+        </div>
+
+        <div class="selected-work-layout">
+          <article class="project-feature-card project-card group">
+            <img src="images/projects/Frame1.png" alt="Online food app interface" />
+            <div class="project-card-overlay"></div>
+            <div class="project-card-content">
+              <p class="project-number">01 / Featured</p>
+              <h3>Online Food App</h3>
+              <p>Restaurant ordering experience crafted in Figma.</p>
+              <button class="project-view-button eye-icon" type="button" data-title="Online Food App" data-description="A complete mobile food ordering interface designed in Figma, covering user flows, wireframes, and interactive screens for a restaurant platform." data-image="images/projects/Frame1.png" aria-label="View Online Food App project"><i class="fas fa-arrow-up-right-from-square"></i></button>
+            </div>
+          </article>
+
+          <div class="selected-work-stack">
+            <article class="project-card project-card-compact group">
+              <img src="images/projects/Mockup2.png" alt="Headline Hub news app" />
+              <div class="project-card-overlay"></div>
+              <div class="project-card-content">
+                <p class="project-number">02 / Mobile</p>
+                <h3>Headline Hub</h3>
+                <p>Cross-platform news app concept with Flutter.</p>
+                <button class="project-view-button eye-icon" type="button" data-title="Headline Hub" data-description="A clean cross-platform news app concept developed with Flutter, designed around clear content hierarchy and a smooth reading experience." data-image="images/projects/Mockup2.png" aria-label="View Headline Hub project"><i class="fas fa-arrow-up-right-from-square"></i></button>
+              </div>
+            </article>
+
+            <article class="project-card project-card-compact group">
+              <img src="images/projects/web2.jpg" alt="ZHHRCar transportation website" />
+              <div class="project-card-overlay"></div>
+              <div class="project-card-content">
+                <p class="project-number">03 / Web</p>
+                <h3>ZHHRCar Web</h3>
+                <p>Responsive landing page for a transportation service.</p>
+                <button class="project-view-button eye-icon" type="button" data-title="ZHHRCar Web" data-description="A responsive transportation service landing page built with HTML, CSS, JavaScript, and Bootstrap." data-image="images/projects/web2.jpg" aria-label="View ZHHRCar Web project"><i class="fas fa-arrow-up-right-from-square"></i></button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="project-bottom-strip">
+          <span>Figma</span><span>Flutter</span><span>HTML / CSS</span><span>JavaScript</span><span>Bootstrap</span>
+        </div>
+        <div class="mt-10 text-center">
+          <a class="all-projects-link" href="all-projects.html">
+            View all projects <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
 
     <!-- Modal -->
     <div
@@ -574,7 +457,7 @@
     <!-- Contact Start -->
     <div
       id="contact"
-      class="relative bg-gradient-to-b from-gray-100 to-gray-200 py-20 px-6 md:px-12 lg:px-24 text-gray-900"
+      class="light-motion-bg relative bg-white py-24 px-6 md:px-12 lg:px-24 text-gray-900 overflow-hidden"
     >
       <div class="max-w-4xl mx-auto text-center">
         <h2
