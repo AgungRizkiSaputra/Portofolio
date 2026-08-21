@@ -6,39 +6,164 @@
     <title>All Projects | Agung Rizki Saputra</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="all-projects-page bg-slate-950 text-white">
-    <main class="all-projects-shell">
-      <header class="all-projects-header">
-        <a class="back-to-portfolio" href="main.html"><i class="fas fa-arrow-left"></i> Back to portfolio</a>
-        <p class="project-number">Complete archive</p>
-        <h1>All Projects</h1>
-        <p>Selected academic and independent work across design, web, and mobile development.</p>
+  <body class="all-projects-page antialiased min-h-screen relative overflow-x-hidden font-['Poppins']">
+    
+    <main class="all-projects-shell relative z-10 max-w-7xl mx-auto px-6">
+      
+      <!-- Header Section -->
+      <header class="all-projects-header flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-slate-800/80">
+        <div>
+          <a class="back-to-portfolio group inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-slate-900/80 text-cyan-300 text-xs font-bold tracking-widest uppercase backdrop-blur-md transition-all duration-300 hover:bg-cyan-400 hover:text-slate-950 hover:border-cyan-400" href="main.html">
+            <i class="fas fa-arrow-left transition-transform group-hover:-translate-x-1"></i>
+            <span>Back to portfolio</span>
+          </a>
+
+          <p class="text-xs font-bold uppercase tracking-[0.3em] text-cyan-400 mb-1">Complete archive</p>
+          <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
+            All <span class="bg-gradient-to-r from-cyan-300 via-sky-300 to-blue-500 bg-clip-text text-transparent">Projects</span>
+          </h1>
+        </div>
+
+        <p class="max-w-md text-xs sm:text-sm text-slate-400 leading-relaxed mb-1">
+          Selected academic and independent work across design, web, and mobile development.
+        </p>
       </header>
 
-      <section class="all-projects-grid" aria-label="All projects">
-        <article class="archive-project-card">
+      <!-- Section Cards Grid Asimetris (Span 7, Span 5, Span 5, Span 7, Span 12) -->
+      <section class="all-projects-grid pt-8" aria-label="All projects">
+        
+        <!-- Article 01 (Span 7) -->
+        <article class="archive-project-card project-card group">
           <img src="images/projects/Frame1.png" alt="Online Food App" />
-          <div><p class="project-number">01 / UI UX</p><h2>Online Food App</h2><p>Mobile ordering experience designed in Figma.</p></div>
+          <div class="project-card-overlay"></div>
+          
+          <div class="project-card-content">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-3 py-1 text-[10px] font-semibold tracking-wider text-cyan-300 bg-slate-900/80 border border-cyan-500/30 rounded-full backdrop-blur-md">Figma UI/UX</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">Online Food App</h3>
+            <p class="text-xs sm:text-sm text-slate-300 mt-1">Mobile ordering experience crafted with interactive prototypes and user flows in Figma.</p>
+            
+            <button class="project-view-button eye-icon" type="button" data-title="Online Food App" data-description="A complete mobile food ordering interface designed in Figma, covering user flows, wireframes, and interactive screens for a restaurant platform." data-image="images/projects/Frame1.png" aria-label="View Online Food App project">
+              <i class="fas fa-arrow-up-right-from-square"></i>
+            </button>
+          </div>
         </article>
-        <article class="archive-project-card">
+
+        <!-- Article 02 (Span 5) -->
+        <article class="archive-project-card project-card group">
           <img src="images/projects/Mockup2.png" alt="Headline Hub" />
-          <div><p class="project-number">02 / Mobile</p><h2>Headline Hub</h2><p>Cross-platform news app concept built with Flutter.</p></div>
+          <div class="project-card-overlay"></div>
+          
+          <div class="project-card-content">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-3 py-1 text-[10px] font-semibold tracking-wider text-blue-300 bg-slate-900/80 border border-blue-500/30 rounded-full backdrop-blur-md">Flutter</span>
+            </div>
+            <h3 class="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">Headline Hub</h3>
+            <p class="text-xs text-slate-300 mt-1">Cross-platform news app concept built with Flutter for smooth reading.</p>
+            
+            <button class="project-view-button eye-icon" type="button" data-title="Headline Hub" data-description="A clean cross-platform news app concept developed with Flutter, designed around clear content hierarchy and a smooth reading experience." data-image="images/projects/Mockup2.png" aria-label="View Headline Hub project">
+              <i class="fas fa-arrow-up-right-from-square"></i>
+            </button>
+          </div>
         </article>
-        <article class="archive-project-card">
+
+        <!-- Article 03 (Span 5) -->
+        <article class="archive-project-card project-card group">
           <img src="images/projects/Frame1000005392.png" alt="Global Vote" />
-          <div><p class="project-number">03 / UI UX</p><h2>Global Vote</h2><p>Digital election platform concept focused on clear voting flows.</p></div>
+          <div class="project-card-overlay"></div>
+          
+          <div class="project-card-content">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-3 py-1 text-[10px] font-semibold tracking-wider text-cyan-300 bg-slate-900/80 border border-cyan-500/30 rounded-full backdrop-blur-md">Figma UI/UX</span>
+            </div>
+            <h3 class="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">Global Vote</h3>
+            <p class="text-xs text-slate-300 mt-1">Digital election platform concept focused on clear voting flows and security.</p>
+            
+            <button class="project-view-button eye-icon" type="button" data-title="Global Vote" data-description="Digital election platform concept focused on clear voting flows, security, and accessible user experience." data-image="images/projects/Frame1000005392.png" aria-label="View Global Vote project">
+              <i class="fas fa-arrow-up-right-from-square"></i>
+            </button>
+          </div>
         </article>
-        <article class="archive-project-card">
+
+        <!-- Article 04 (Span 7) -->
+        <article class="archive-project-card project-card group">
           <img src="images/projects/web.jpg" alt="Online Food Web" />
-          <div><p class="project-number">04 / Web</p><h2>Online Food Web</h2><p>Restaurant website concept with dynamic web experience.</p></div>
+          <div class="project-card-overlay"></div>
+          
+          <div class="project-card-content">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-3 py-1 text-[10px] font-semibold tracking-wider text-sky-300 bg-slate-900/80 border border-sky-500/30 rounded-full backdrop-blur-md">Web Dev</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">Online Food Web</h3>
+            <p class="text-xs sm:text-sm text-slate-300 mt-1">Restaurant website concept featuring dynamic ordering menus and interactive UI.</p>
+            
+            <button class="project-view-button eye-icon" type="button" data-title="Online Food Web" data-description="Restaurant website concept with dynamic web experience, interactive ordering menu, and modern design." data-image="images/projects/web.jpg" aria-label="View Online Food Web project">
+              <i class="fas fa-arrow-up-right-from-square"></i>
+            </button>
+          </div>
         </article>
-        <article class="archive-project-card">
+
+        <!-- Article 05 (Span 12) -->
+        <article class="archive-project-card project-card group">
           <img src="images/projects/web2.jpg" alt="ZHHRCar Web" />
-          <div><p class="project-number">05 / Web</p><h2>ZHHRCar Web</h2><p>Responsive landing page for a transportation service.</p></div>
+          <div class="project-card-overlay"></div>
+          
+          <div class="project-card-content">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-3 py-1 text-[10px] font-semibold tracking-wider text-sky-300 bg-slate-900/80 border border-sky-500/30 rounded-full backdrop-blur-md">Bootstrap</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">ZHHRCar Web</h3>
+            <p class="text-xs sm:text-sm text-slate-300 mt-1">Responsive landing page for a transportation service developed using Bootstrap.</p>
+            
+            <button class="project-view-button eye-icon" type="button" data-title="ZHHRCar Web" data-description="A responsive transportation service landing page built with HTML, CSS, JavaScript, and Bootstrap." data-image="images/projects/web2.jpg" aria-label="View ZHHRCar Web project">
+              <i class="fas fa-arrow-up-right-from-square"></i>
+            </button>
+          </div>
         </article>
+
       </section>
     </main>
+
+    <!-- Modal Project View -->
+    <div
+      id="modal"
+      class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center hidden z-50"
+    >
+      <div
+        class="bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl max-w-lg w-full relative overflow-hidden mx-4 text-white"
+      >
+        <button
+          id="closeModal"
+          class="absolute top-4 right-4 text-slate-400 hover:text-white transition transform hover:scale-110 text-xl font-bold z-10"
+        >
+          &times;
+        </button>
+        <img
+          id="modalImage"
+          src=""
+          alt="Project Image"
+          class="w-full rounded-t-2xl shadow-md object-cover max-h-72"
+        />
+        <div class="p-6">
+          <h2
+            id="modalTitle"
+            class="text-2xl font-bold text-white mb-2 text-center"
+          ></h2>
+          <p id="modalDescription" class="text-slate-300 text-center text-sm leading-relaxed"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/style.js"></script>
   </body>
 </html>

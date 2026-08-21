@@ -3,21 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome | Agung Rizki Saputra</title>
+    <title>Agung Rizki Saputra | Welcome</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   </head>
-  <body class="bg-[#050816] text-white flex items-center justify-center min-h-screen overflow-hidden">
-    <div id="intro-screen" class="relative z-10">
-      <div class="intro-content">
-        <span class="intro-kicker">Agung Rizki Saputra</span>
-        <h1>My Portfolio</h1>
-        <p>Digital ideas, crafted with purpose.</p>
-        <a href="main.html" class="intro-hint mt-8 inline-flex items-center gap-3">
-          Enter experience <span class="intro-arrow">→</span>
+  <body class="intro-page text-slate-100 min-h-screen flex items-center justify-center font-['Urbanist'] overflow-hidden relative selection:bg-cyan-400 selection:text-black antialiased">
+
+    <!-- Canvas Partikel Interaktif -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Cahaya Ambient Background -->
+    <div class="ambient-glow-1"></div>
+    <div class="ambient-glow-2"></div>
+
+    <!-- Konten Utama -->
+    <main class="relative z-10 w-full max-w-xl px-6 text-center">
+      
+      <!-- Badge Nama -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-900/90 border border-slate-800 text-slate-300 text-[11px] font-medium tracking-widest uppercase mb-8 backdrop-blur-md shadow-sm">
+        <span class="relative flex h-1.5 w-1.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-cyan-400"></span>
+        </span>
+        Agung Rizki Saputra
+      </div>
+
+      <!-- Judul Utama (Warna Cyan-Blue Cohesive) -->
+      <h1 class="text-6xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 leading-none">
+        <span class="portfolio-title-text">Portfolio</span>
+      </h1>
+
+      <!-- Tombol Launch System (Ukuran Ramping & Efek Hover Cyan/Blue) -->
+      <div>
+        <a href="main.html" class="glow-button group relative inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full text-slate-200 text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase shadow-[0_0_15px_rgba(34,211,238,0.15)] transition-all duration-300 hover:text-white hover:shadow-[0_0_25px_rgba(34,211,238,0.4)] hover:scale-105 active:scale-95">
+          <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#22d3ee] transition-all duration-300 group-hover:bg-blue-400 group-hover:shadow-[0_0_10px_#60a5fa]"></span>
+          <span class="relative z-10">LAUNCH SYSTEM</span>
+          <i class="fas fa-chevron-right text-[9px] text-cyan-400 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-blue-300"></i>
         </a>
       </div>
-    </div>
+
+    </main>
+
+    <script src="js/style.js" defer></script>
   </body>
 </html>
