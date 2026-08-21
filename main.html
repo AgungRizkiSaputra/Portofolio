@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agung Rizki Saputra | Creative Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      defer
+      src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#0b1120] text-slate-900 antialiased selection:bg-cyan-300 selection:text-slate-950">
+
+    <!-- Navbar Start -->
+    <nav
+      class="fixed w-full z-50 transition-all duration-300 bg-[#0b1120]/60 backdrop-blur-md border-b border-cyan-300/10"
+      id="navbar"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center max-w-7xl"
+      >
+        <a
+          href="#home"
+          id="brand-text"
+          class="text-2xl font-bold text-white tracking-widest transition duration-300 hover:text-blue-400 hover:scale-105"
+        >
+          <span
+            class="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
+          >
+            PORTFOLIO
+          </span>
+        </a>
+
+        <button
+          class="lg:hidden text-white focus:outline-none rounded-lg p-2 hover:bg-white/10 transition"
+          id="menu-toggle"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+        <!-- Menu untuk desktop -->
+        <div class="hidden lg:flex items-center gap-2" id="menu">
+          <a href="#home" class="nav-link text-white/80 hover:text-white hover:bg-white/10 rounded-full px-4 py-2 transition"
+            >Home</a
+          >
+          <a href="#about" class="nav-link text-white/80 hover:text-white hover:bg-white/10 rounded-full px-4 py-2 transition"
+            >About</a
+          >
+          <a href="#education" class="nav-link text-white/80 hover:text-white hover:bg-white/10 rounded-full px-4 py-2 transition"
+            >Education</a
+          >
+          <a href="#experience" class="nav-link text-white/80 hover:text-white hover:bg-white/10 rounded-full px-4 py-2 transition"
+            >Experience</a
+          >
+          <a href="#project" class="nav-link text-white/80 hover:text-white hover:bg-white/10 rounded-full px-4 py-2 transition"
+            >Project</a
+          >
+          <a href="#contact" class="nav-link text-white/80 hover:text-white hover:bg-white/10 rounded-full px-4 py-2 transition"
+            >Contact</a
+          >
+        </div>
+      </div>
+
+      <!-- Menu untuk mode mobile -->
+      <div
+        id="mobile-menu"
+        class="hidden fixed top-0 right-0 h-full w-3/4 max-w-sm bg-slate-950/95 backdrop-blur-xl flex flex-col items-center justify-center space-y-6 text-white shadow-2xl border-l border-white/10"
+      >
+        <a href="#home" class="text-xl hover:text-blue-500">Home</a>
+        <a href="#about" class="text-xl hover:text-blue-500">About</a>
+        <a href="#education" class="text-xl hover:text-blue-500">Education</a>
+        <a href="#experience" class="text-xl hover:text-blue-500">Experience</a>
+        <a href="#project" class="text-xl hover:text-blue-500">Project</a>
+        <a href="#contact" class="text-xl hover:text-blue-500">Contact</a>
+        <button id="close-menu" class="absolute top-6 right-6 text-2xl">
+          &times;
+        </button>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Home Start -->
+    <div
+      id="home"
+      class="light-motion-bg relative min-h-screen flex items-center justify-center bg-cover bg-center pt-20 overflow-hidden"
+    >
+      <div class="absolute inset-0 bg-gradient-to-br from-[#07111f]/95 via-slate-950/75 to-cyan-950/70"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-glow"></div>
+      <div class="hero-line top-[20%] left-0"></div>
+      <div class="hero-line hero-line-slow bottom-[22%] right-0"></div>
+      <span class="hero-particle hero-particle-one left-[12%] top-[68%]"></span>
+      <span class="hero-particle hero-particle-two left-[30%] top-[32%]"></span>
+      <span class="hero-particle hero-particle-three right-[18%] top-[72%]"></span>
+      <span class="hero-particle hero-particle-four right-[34%] top-[24%]"></span>
+      <div class="absolute top-1/4 right-1/4 w-3 h-3 rounded-full bg-blue-300 shadow-[0_0_25px_8px_rgba(96,165,250,0.5)] animate-ping"></div>
+      <div class="hero-ping-delay absolute bottom-1/3 left-1/4 w-2 h-2 rounded-full bg-purple-300 shadow-[0_0_20px_6px_rgba(192,132,252,0.5)] animate-ping"></div>
+      <div
+        class="relative text-center text-white px-6 max-w-4xl animate-fadeIn motion-safe:animate-[fadeIn_1s_ease-out]"
+      >
+        <p class="uppercase tracking-[0.35em] text-sm text-blue-300 mb-5">Creative developer & designer</p>
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold mb-6 tracking-tight leading-tight drop-shadow-lg hover:scale-[1.02] transition-transform duration-500">
+          Hello, I'm
+          <span
+            class="bg-gradient-to-r from-cyan-300 to-fuchsia-400 text-transparent bg-clip-text"
+          >
+            Agung Rizki Saputra
+          </span>
+        </h1>
+
+        <p class="inline-block text-lg sm:text-xl mb-8 max-w-2xl mx-auto italic text-slate-300 -rotate-2 hover:rotate-0 transition-transform duration-300">
+          "Welcome to My Personal Website🔥"
+        </p>
+        <h3 class="text-2xl sm:text-3xl font-semibold flex justify-center items-center">
+          <span class="mr-2">I'm a</span>
+          <span
+            id="dynamic-text"
+            class="font-bold text-cyan-300 text-3xl animate-pulse"
+          ></span>
+        </h3>
+      </div>
+    </div>
+    <!-- Home End -->
+
+    <!-- About Start -->
+    <div class="about about-section light-motion-bg bg-[#f8fafc] py-24 px-6 relative overflow-hidden" id="about">
+      <div
+          class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-14"
+      >
+        <!-- Bagian Gambar -->
+        <div class="w-full md:w-1/2 flex justify-center">
+          <div class="relative w-80 h-80 md:w-96 md:h-96 transition duration-700 hover:scale-105 hover:-rotate-2">
+            <svg
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute w-full h-full animate-[spin_18s_linear_infinite]"
+            >
+              <path
+                fill="url(#gradient)"
+                d="M42,-62.5C54.3,-54.9,65.3,-45.1,72.7,-32.8C80.2,-20.5,84,-5.8,82.4,9.1C80.8,24,73.9,38.9,62.5,48.7C51.1,58.6,35.2,63.5,20.2,65.7C5.2,68,-9,67.6,-23.2,63.8C-37.4,60.1,-51.5,53,-58.9,41.1C-66.4,29.3,-67.3,12.6,-68.8,-6.3C-70.4,-25.2,-72.6,-46.2,-62.7,-54.3C-52.8,-62.4,-30.9,-57.7,-14,-60.3C2.8,-62.9,21.5,-72.5,42,-62.5Z"
+                transform="translate(100 100)"
+              />
+              <defs>
+                <linearGradient id="gradient" gradientTransform="rotate(45)">
+                  <stop offset="0%" stop-color="#3b82f6" />
+                  <stop offset="100%" stop-color="#9333ea" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <img
+              src="images/p.jpg"
+              alt="Profile Image"
+              class="profile-image absolute inset-0 w-full h-full object-cover shadow-2xl border-8 border-gray-300 transition duration-700 hover:grayscale-0"
+            />
+
+            <svg width="0" height="0">
+              <defs>
+                <clipPath id="blob" clipPathUnits="objectBoundingBox">
+                  <path
+                    d="M0.42,-0.625C0.543,-0.549,0.653,-0.451,0.727,-0.328C0.802,-0.205,0.84,-0.058,0.824,0.091C0.808,0.24,0.739,0.389,0.625,0.487C0.511,0.586,0.352,0.635,0.202,0.657C0.052,0.68,-0.09,0.676,-0.232,0.638C-0.374,0.601,-0.515,0.53,-0.589,0.411C-0.664,0.293,-0.673,0.126,-0.688,-0.063C-0.704,-0.252,-0.726,-0.462,-0.627,-0.543C-0.528,-0.624,-0.309,-0.577,-0.14,-0.603C0.028,-0.629,0.215,-0.725,0.42,-0.625Z"
+                    transform="scale(1.1) translate(0.05, 0.05)"
+                  ></path>
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Bagian Deskripsi -->
+        <div class="about-copy w-full md:w-1/2 transition duration-700 hover:translate-x-2">
+          <p class="about-eyebrow">Profile</p>
+          <h2
+            class="text-4xl font-extrabold text-transparent bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text mb-6"
+          >
+            About Me
+          </h2>
+          <p class="about-lead text-slate-600 text-lg leading-relaxed mb-6">
+            A recent Bachelor’s degree graduate in Informatics Engineering with strong interests and skills in Web Development, UI/UX Design, and Cybersecurity. Experienced in developing responsive websites using HTML, CSS, JavaScript, PHP, and Flutter, as well as conducting system security testing. Combines web development knowledge with Secure Coding principles to build applications that are not only interactive and user-friendly but also secure. Proficient in using Figma to design wireframes and prototypes, as well as Tailwind CSS and Bootstrap to create consistent and responsive user interfaces.
+          </p>
+
+          <!-- Progress Bars -->
+
+          <!-- Ikon-ikon skill -->
+          <div class="about-skills flex flex-wrap gap-4 items-center">
+            <!-- HTML -->
+            <i class="fab fa-html5 text-orange-600 text-3xl transition duration-300 hover:-translate-y-2 hover:scale-125" title="HTML5"></i>
+
+            <!-- CSS -->
+            <i class="fab fa-css3-alt text-blue-600 text-3xl transition duration-300 hover:-translate-y-2 hover:scale-125" title="CSS3"></i>
+
+            <!-- PHP -->
+            <i class="fab fa-php text-indigo-600 text-3xl transition duration-300 hover:-translate-y-2 hover:scale-125" title="PHP"></i>
+
+            <!-- JavaScript -->
+            <i
+              class="fab fa-js-square text-yellow-500 text-3xl transition duration-300 hover:-translate-y-2 hover:scale-125"
+              title="JavaScript"
+            ></i>
+
+            <!-- Figma -->
+            <i class="fab fa-figma text-pink-500 text-3xl" title="Figma"></i>
+
+            <!-- Flutter -->
+            <img
+              src="https://img.icons8.com/color/48/flutter.png"
+              alt="Flutter"
+              class="w-8 h-8"
+              title="Flutter"
+            />
+
+            <!-- Tailwind CSS -->
+            <img
+              src="https://img.icons8.com/color/48/tailwindcss.png"
+              alt="Tailwind CSS"
+              class="w-8 h-8"
+              title="Tailwind CSS"
+            />
+
+            <!-- Bootstrap -->
+            <i
+              class="fab fa-bootstrap text-purple-600 text-3xl"
+              title="Bootstrap"
+            ></i>
+          </div>
+
+          <!-- Tombol Download CV -->
+          <a
+            href="https://drive.google.com/file/d/1ONIHtaVbg683YqaOGWCKaqO_KBvWZJly/view?usp=drive_link"
+            class="inline-block mt-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-8 rounded-full shadow-lg shadow-blue-500/25 hover:-translate-y-1 hover:scale-105 hover:shadow-xl transition duration-300"
+          >
+            Download CV
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Education Start -->
+    <section id="education" class="relative overflow-hidden bg-slate-950 px-6 py-24 text-white">
+      <div class="absolute -left-32 top-10 h-96 w-96 rounded-full bg-cyan-500/20 blur-3xl"></div>
+      <div class="absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-fuchsia-600/20 blur-3xl"></div>
+      <div class="relative mx-auto max-w-6xl">
+        <div class="mb-16 flex flex-col justify-between gap-8 md:flex-row md:items-end">
+          <div class="max-w-2xl">
+            <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">My education journey</p>
+            <h2 class="text-4xl font-extrabold leading-tight sm:text-5xl">Learn, grow,<br /><span class="bg-gradient-to-r from-cyan-300 to-fuchsia-400 bg-clip-text text-transparent">create impact.</span></h2>
+            <p class="mt-5 text-lg leading-relaxed text-slate-400">Each stage of my education has helped me turn curiosity into meaningful digital work.</p>
+          </div>
+          <div class="grid grid-cols-2 gap-3 sm:gap-5">
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur transition hover:border-cyan-300/50"><p class="text-3xl font-bold text-cyan-300">2026</p><p class="mt-1 text-sm text-slate-400">Graduation</p></div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur transition hover:border-fuchsia-300/50"><p class="text-3xl font-bold text-fuchsia-300">4</p><p class="mt-1 text-sm text-slate-400">Education stages</p></div>
+          </div>
+        </div>
+        <div class="grid gap-5 md:grid-cols-4">
+          <div class="group rounded-3xl border border-white/10 bg-white/[0.06] p-6 transition duration-500 hover:-translate-y-2 hover:border-cyan-400/60 hover:bg-cyan-400/10"><div class="mb-8 flex items-center justify-between"><span class="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-400/15 text-cyan-300"><i class="fas fa-seedling"></i></span><span class="text-sm font-bold text-cyan-300">01</span></div><p class="text-xs font-bold uppercase tracking-widest text-slate-500">2010 – 2016</p><h3 class="mt-2 text-xl font-bold">Elementary School</h3><p class="mt-3 text-sm leading-relaxed text-slate-400">Built my foundation, curiosity, discipline, and courage to try new things.</p></div>
+          <div class="group rounded-3xl border border-white/10 bg-white/[0.06] p-6 transition duration-500 hover:-translate-y-2 hover:border-blue-400/60 hover:bg-blue-400/10"><div class="mb-8 flex items-center justify-between"><span class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-400/15 text-blue-300"><i class="fas fa-compass"></i></span><span class="text-sm font-bold text-blue-300">02</span></div><p class="text-xs font-bold uppercase tracking-widest text-slate-500">2016 – 2019</p><h3 class="mt-2 text-xl font-bold">Junior High School</h3><p class="mt-3 text-sm leading-relaxed text-slate-400">Started exploring technology, coding, and creative problem-solving.</p></div>
+          <div class="group rounded-3xl border border-white/10 bg-white/[0.06] p-6 transition duration-500 hover:-translate-y-2 hover:border-fuchsia-400/60 hover:bg-fuchsia-400/10"><div class="mb-8 flex items-center justify-between"><span class="flex h-11 w-11 items-center justify-center rounded-xl bg-fuchsia-400/15 text-fuchsia-300"><i class="fas fa-rocket"></i></span><span class="text-sm font-bold text-fuchsia-300">03</span></div><p class="text-xs font-bold uppercase tracking-widest text-slate-500">2019 – 2022</p><h3 class="mt-2 text-xl font-bold">Vocational High School</h3><p class="mt-3 text-sm leading-relaxed text-slate-400">Developed practical skills in web development, design, and digital projects.</p></div>
+          <div class="group rounded-3xl border border-emerald-400/30 bg-gradient-to-br from-emerald-400/20 to-slate-900 p-6 transition duration-500 hover:-translate-y-2 hover:shadow-[0_0_35px_rgba(16,185,129,0.2)]"><div class="mb-8 flex items-center justify-between"><span class="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-400/20 text-emerald-300"><i class="fas fa-bullseye"></i></span><span class="text-sm font-bold text-emerald-300">04</span></div><p class="text-xs font-bold uppercase tracking-widest text-emerald-300">2022 – 2026</p><h3 class="mt-2 text-xl font-bold">College</h3><p class="mt-3 text-sm leading-relaxed text-slate-300">Continuing to grow through Web, Mobile, and UI/UX projects that create value.</p></div>
+        </div>
+      </div>
+    </section>
+    <!-- Education End -->
+
+    <!-- Experience Start -->
+    <section id="experience" class="experience-section relative overflow-hidden bg-slate-900 px-6 py-24 text-white">
+      <div class="experience-orb experience-orb-left"></div>
+      <div class="experience-orb experience-orb-right"></div>
+      <div class="relative mx-auto max-w-5xl">
+        <div class="mb-14 max-w-2xl">
+          <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">Project experience</p>
+          <h2 class="text-4xl font-extrabold leading-tight sm:text-5xl">Building ideas<br /><span class="bg-gradient-to-r from-cyan-300 to-fuchsia-400 bg-clip-text text-transparent">into useful products.</span></h2>
+          <p class="mt-5 text-lg leading-relaxed text-slate-400">Hands-on experience shaped through web, mobile, and interface projects.</p>
+        </div>
+
+        <div class="experience-timeline">
+          <article class="experience-item experience-item-cyan">
+            <div class="experience-marker"><i class="fas fa-shield-halved"></i></div>
+            <div class="experience-card">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <p class="experience-period">Feb 2026 — Jun 2026</p>
+                  <h3 class="mt-2 text-2xl font-bold">Security Intern</h3>
+                </div>
+                <span class="experience-tag">PT Secunity Mitra Teknologi</span>
+              </div>
+              <p class="mt-4 leading-relaxed text-slate-400">Performed penetration testing and vulnerability analysis on web applications and systems, identified security gaps, and prepared risk reports with improvement recommendations.</p>
+              <div class="experience-tools"><span>Penetration Testing</span><span>Vulnerability Analysis</span><span>Security Report</span><span>Web Security</span></div>
+            </div>
+          </article>
+
+          <article class="experience-item experience-item-fuchsia">
+            <div class="experience-marker"><i class="fas fa-chalkboard-user"></i></div>
+            <div class="experience-card">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <p class="experience-period">Sep 2025 — Nov 2025</p>
+                  <h3 class="mt-2 text-2xl font-bold">UI/UX Design Mentor</h3>
+                </div>
+                <span class="experience-tag">SMK MITRA PERMATA</span>
+              </div>
+              <p class="mt-4 leading-relaxed text-slate-400">Designed and delivered basic UI/UX lessons using Figma for Grade 10 vocational students, guided wireframes and interactive prototypes, and provided constructive feedback.</p>
+              <div class="experience-tools"><span>Figma</span><span>Wireframe</span><span>Prototype</span><span>Class Mentoring</span></div>
+            </div>
+          </article>
+
+          <article class="experience-item experience-item-emerald">
+            <div class="experience-marker"><i class="fas fa-tree"></i></div>
+            <div class="experience-card">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <p class="experience-period">May 2022 — Jul 2022</p>
+                  <h3 class="mt-2 text-2xl font-bold">Production Intern</h3>
+                </div>
+                <span class="experience-tag">PT Interkayu Nusantara</span>
+              </div>
+              <p class="mt-4 leading-relaxed text-slate-400">Participated directly in wood production, from raw material selection to processing and painting, while working with the production team to meet daily targets.</p>
+              <div class="experience-tools"><span>Production</span><span>Quality Process</span><span>Teamwork</span><span>Wood Processing</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- Experience End -->
+
+    <!-- Selected Work Start -->
+    <section id="project" class="selected-work-section relative overflow-hidden bg-slate-950 px-6 py-24 text-white">
+      <div class="selected-work-grid"></div>
+      <div class="relative mx-auto max-w-7xl">
+        <div class="mb-14 flex flex-col justify-between gap-8 md:flex-row md:items-end">
+          <div class="max-w-2xl">
+            <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">Selected work</p>
+            <h2 class="text-4xl font-extrabold leading-tight sm:text-5xl">Ideas with<br /><span class="bg-gradient-to-r from-cyan-300 to-fuchsia-400 bg-clip-text text-transparent">a point of view.</span></h2>
+          </div>
+          <p class="max-w-sm text-base leading-relaxed text-slate-400">A curated look at digital products, interfaces, and web experiences created throughout my journey.</p>
+        </div>
+
+        <div class="selected-work-layout">
+          <article class="project-feature-card project-card group">
+            <img src="images/projects/Frame1.png" alt="Online food app interface" />
+            <div class="project-card-overlay"></div>
+            <div class="project-card-content">
+              <p class="project-number">01 / Featured</p>
+              <h3>Online Food App</h3>
+              <p>Restaurant ordering experience crafted in Figma.</p>
+              <button class="project-view-button eye-icon" type="button" data-title="Online Food App" data-description="A complete mobile food ordering interface designed in Figma, covering user flows, wireframes, and interactive screens for a restaurant platform." data-image="images/projects/Frame1.png" aria-label="View Online Food App project"><i class="fas fa-arrow-up-right-from-square"></i></button>
+            </div>
+          </article>
+
+          <div class="selected-work-stack">
+            <article class="project-card project-card-compact group">
+              <img src="images/projects/Mockup2.png" alt="Headline Hub news app" />
+              <div class="project-card-overlay"></div>
+              <div class="project-card-content">
+                <p class="project-number">02 / Mobile</p>
+                <h3>Headline Hub</h3>
+                <p>Cross-platform news app concept with Flutter.</p>
+                <button class="project-view-button eye-icon" type="button" data-title="Headline Hub" data-description="A clean cross-platform news app concept developed with Flutter, designed around clear content hierarchy and a smooth reading experience." data-image="images/projects/Mockup2.png" aria-label="View Headline Hub project"><i class="fas fa-arrow-up-right-from-square"></i></button>
+              </div>
+            </article>
+
+            <article class="project-card project-card-compact group">
+              <img src="images/projects/web2.jpg" alt="ZHHRCar transportation website" />
+              <div class="project-card-overlay"></div>
+              <div class="project-card-content">
+                <p class="project-number">03 / Web</p>
+                <h3>ZHHRCar Web</h3>
+                <p>Responsive landing page for a transportation service.</p>
+                <button class="project-view-button eye-icon" type="button" data-title="ZHHRCar Web" data-description="A responsive transportation service landing page built with HTML, CSS, JavaScript, and Bootstrap." data-image="images/projects/web2.jpg" aria-label="View ZHHRCar Web project"><i class="fas fa-arrow-up-right-from-square"></i></button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="project-bottom-strip">
+          <span>Figma</span><span>Flutter</span><span>HTML / CSS</span><span>JavaScript</span><span>Bootstrap</span>
+        </div>
+        <div class="mt-10 text-center">
+          <a class="all-projects-link" href="all-projects.html">
+            View all projects <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div
+      id="modal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden"
+    >
+      <div
+        class="bg-white rounded-2xl shadow-2xl max-w-lg w-full relative overflow-hidden"
+      >
+        <button
+          id="closeModal"
+          class="absolute top-4 right-4 text-gray-600 hover:text-gray-900 transition transform hover:scale-110"
+        >
+          ✖
+        </button>
+        <img
+          id="modalImage"
+          src=""
+          alt="Project Image"
+          class="w-full rounded-t-2xl shadow-md"
+        />
+        <div class="p-4">
+          <h2
+            id="modalTitle"
+            class="text-2xl font-bold text-gray-800 mb-2 text-center"
+          ></h2>
+          <p id="modalDescription" class="text-gray-600 text-center"></p>
+          <!-- <div class="flex justify-center mt-4">
+            <button
+              id="modalAction"
+              class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full shadow-lg hover:opacity-80 transition"
+            >
+              Learn More
+            </button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <!-- Project End -->
+
+    <!-- Contact Start -->
+    <div
+      id="contact"
+      class="light-motion-bg relative bg-white py-24 px-6 md:px-12 lg:px-24 text-gray-900 overflow-hidden"
+    >
+      <div class="max-w-4xl mx-auto text-center">
+        <h2
+          class="text-4xl font-extrabold mb-4 text-transparent bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text tracking-wide"
+        >
+          Let's Connect
+        </h2>
+        <p class="text-lg mb-10 text-gray-600">
+          Reach me through the platforms below
+        </p>
+
+        <!-- Social Cards -->
+        <div class="flex flex-wrap justify-center gap-8">
+          <!-- GitHub -->
+          <a
+            href="https://github.com/AgungRizkiSaputra"
+            target="_blank"
+            class="group relative flex flex-col items-center p-6 bg-white shadow-xl border border-gray-300 rounded-2xl transition hover:scale-105 hover:shadow-2xl"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-14 h-14 mb-2 text-gray-800 transition group-hover:text-gray-600 group-hover:scale-110"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.1 6.9 9.4.5.1.7-.2.7-.5v-1.7c-2.8.6-3.5-1.3-3.5-1.3-.5-1.2-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1 .1 1.6 1.1 1.6 1.1 .9 1.6 2.4 1.1 3 .9 .1-.7.4-1.1.8-1.4-2.5-.3-5.1-1.2-5.1-5.5 0-1.2.4-2.2 1.1-3 .1-.2-.2-1.2.1-2.5 0 0 .9-.3 2.8 1.1a9.5 9.5 0 0 1 5 0c1.9-1.4 2.8-1.1 2.8-1.1 .3 1.3 0 2.3.1 2.5 .7 .8 1.1 1.8 1.1 3 0 4.3-2.6 5.2-5 5.5 .4 .3 .8 .9 .8 2v3c0 .3.2 .6.7 .5a10 10 0 0 0 6.8-9.5c0-5.5-4.5-10-10-10z"
+              ></path>
+            </svg>
+            <span class="text-md font-semibold tracking-wide text-gray-800"
+              >GitHub</span
+            >
+          </a>
+
+          <!-- LinkedIn -->
+          <a
+            href="https://www.linkedin.com/in/agung-rizki-saputra-06051a2a7/"
+            target="_blank"
+            class="group relative flex flex-col items-center p-6 bg-white shadow-xl border border-gray-300 rounded-2xl transition hover:scale-105 hover:shadow-2xl"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-14 h-14 mb-2 text-blue-600 transition group-hover:text-blue-500 group-hover:scale-110"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-12h4v1a4 4 0 0 1 2-1zM2 9h4v12H2V9zM4 4a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"
+              ></path>
+            </svg>
+            <span class="text-md font-semibold tracking-wide text-blue-600"
+              >LinkedIn</span
+            >
+          </a>
+
+          <!-- Instagram -->
+          <a
+            href="https://www.instagram.com/agunggrzksptra_/"
+            target="_blank"
+            class="group relative flex flex-col items-center p-6 bg-white shadow-xl border border-gray-300 rounded-2xl transition hover:scale-105 hover:shadow-2xl"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-14 h-14 mb-2 text-pink-500 transition group-hover:scale-110"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm0 2h10c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3zm10.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"
+              ></path>
+            </svg>
+            <span class="text-md font-semibold tracking-wide text-pink-500"
+              >Instagram</span
+            >
+          </a>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="mt-12 flex justify-center">
+          <div
+            class="relative bg-white shadow-xl border border-gray-300 rounded-2xl p-6 w-full max-w-lg text-center transition hover:scale-105 hover:shadow-2xl"
+          >
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 tracking-wide">
+              Get In Touch
+            </h3>
+
+            <div class="relative z-10">
+              <p class="text-lg text-gray-600">Email me at:</p>
+              <a
+                href="mailto:agungriskisaputra64@gmail.com"
+                class="text-blue-500 hover:text-blue-600 transition font-semibold text-lg underline underline-offset-4"
+              >
+                agungriskisaputra64@gmail.com
+              </a>
+
+              <div class="w-full h-px bg-gray-300 my-4"></div>
+
+              <p class="text-lg text-gray-600">Or call me at:</p>
+              <span class="text-xl font-bold text-gray-900 tracking-wide">
+                +62 8569 5869 850
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Contact End -->
+
+    <footer class="p-4 bg-gray-900 text-center text-gray-400">
+      &copy; 2026 Agung Rizki Saputra | All Rights Reserved.
+    </footer>
+    <a
+      href="#home"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <script src="js/style.js"></script>
+  </body>
+</html>

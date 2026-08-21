@@ -184,26 +184,6 @@ if (scrollTop) {
 }
 
 (() => {
-  const intro = document.getElementById("intro-screen");
-  const body = document.body;
-  let opening = false;
-  const openPortfolio = () => {
-    if (opening) return;
-    opening = true;
-    intro.classList.add("is-opening");
-    body.classList.remove("portfolio-locked");
-    body.classList.add("portfolio-entering");
-    setTimeout(() => body.classList.remove("portfolio-entering"), 1250);
-    setTimeout(() => {
-      intro.classList.remove("is-opening");
-      intro.classList.add("is-hidden");
-      setTimeout(() => intro.remove(), 750);
-    }, 1100);
-  };
-  intro.addEventListener("click", openPortfolio);
-  intro.addEventListener("keydown", (event) => {
-    if (event.key === "Enter" || event.key === " ") openPortfolio();
-  });
 
   const sections = document.querySelectorAll("#about, #education, #experience, #project, #contact");
   sections.forEach((section) => {
