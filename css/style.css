@@ -1126,6 +1126,97 @@ body {
   min-height: 40rem;
 }
 
+.project-feature-card .project-card-overlay {
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(11, 17, 32, 0.02) 0%, rgba(11, 17, 32, 0.02) 45%, rgba(11, 17, 32, 0.72) 72%, rgba(11, 17, 32, 0.98) 100%);
+}
+
+.project-mockup-stage {
+  position: absolute;
+  inset: 1.25rem 1.5rem 42%;
+  z-index: 2;
+  perspective: 1200px;
+  transform: rotateX(var(--mockup-tilt-x, 0deg)) rotateY(var(--mockup-tilt-y, 0deg));
+  transform-style: preserve-3d;
+  transition: transform 0.25s ease-out;
+  pointer-events: none;
+}
+
+.project-mockup-window {
+  position: absolute;
+  top: 8%;
+  width: 48%;
+  height: clamp(7rem, 22vw, 14rem);
+  padding: 1.55rem 0.45rem 0.45rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 1.5rem 3.5rem rgba(2, 6, 23, 0.32), 0 0 0 1px rgba(15, 23, 42, 0.08);
+  transition: transform 0.55s cubic-bezier(0.2, 0.75, 0.25, 1), box-shadow 0.55s ease;
+}
+
+.project-mockup-window::before {
+  position: absolute;
+  top: 0.58rem;
+  left: 0.65rem;
+  width: 0.42rem;
+  height: 0.42rem;
+  border-radius: 50%;
+  background: #fb7185;
+  box-shadow: 0.7rem 0 #fbbf24, 1.4rem 0 #34d399;
+  content: "";
+}
+
+.project-card .project-mockup-window img {
+  position: static;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.35rem;
+  object-fit: cover;
+  object-position: top center;
+  opacity: 1;
+  filter: none;
+  transform: none;
+}
+
+.project-mockup-window--left {
+  left: 1%;
+  transform: translate3d(8%, 12%, -100px) rotate(-12deg) scale(0.86);
+}
+
+.project-mockup-window--right {
+  right: 1%;
+  transform: translate3d(-8%, 12%, -100px) rotate(12deg) scale(0.86);
+}
+
+.project-mockup-window--front {
+  top: 2%;
+  left: 50%;
+  z-index: 1;
+  width: 52%;
+  transform: translateX(-50%) translateY(8%);
+}
+
+.project-feature-card .project-card-content {
+  z-index: 3;
+}
+
+.project-feature-card:hover .project-mockup-window--left {
+  transform: translate3d(-2%, 4%, -50px) rotate(-16deg) scale(0.9);
+  box-shadow: 0 2rem 4rem rgba(2, 6, 23, 0.38);
+}
+
+.project-feature-card:hover .project-mockup-window--right {
+  transform: translate3d(2%, 4%, -50px) rotate(16deg) scale(0.9);
+  box-shadow: 0 2rem 4rem rgba(2, 6, 23, 0.38);
+}
+
+.project-feature-card:hover .project-mockup-window--front {
+  transform: translateX(-50%) translateY(2%) scale(1.04);
+}
+
 .project-card-compact {
   min-height: 19.25rem;
 }
@@ -1150,6 +1241,12 @@ body {
   transform: scale(1.06);
   opacity: 0.96;
   filter: saturate(1.12);
+}
+
+.project-feature-card:hover .project-mockup-window img {
+  transform: none;
+  opacity: 1;
+  filter: none;
 }
 
 .project-card-overlay {
@@ -1273,6 +1370,28 @@ body {
   }
   .project-feature-card {
     min-height: 28rem;
+  }
+
+  .project-mockup-stage {
+    inset: 1rem 0.75rem 42%;
+  }
+
+  .project-mockup-window {
+    width: 48%;
+    padding: 1.25rem 0.35rem 0.35rem;
+    border-radius: 0.7rem;
+  }
+
+  .project-mockup-window--front {
+    width: 54%;
+  }
+
+  .project-mockup-window::before {
+    top: 0.45rem;
+    left: 0.55rem;
+    width: 0.32rem;
+    height: 0.32rem;
+    box-shadow: 0.55rem 0 #fbbf24, 1.1rem 0 #34d399;
   }
 }
 
@@ -1676,6 +1795,101 @@ body {
 .modal-dialog::-webkit-scrollbar-thumb {
   background-color: var(--border-medium);
   border-radius: 9999px;
+}
+
+.modal-preview {
+  isolation: isolate;
+}
+
+.modal-preview #modalImage {
+  position: absolute;
+  inset: 0;
+}
+
+.modal-preview.has-mockup #modalImage {
+  display: none;
+}
+
+.modal-mockup-stage {
+  display: none;
+  position: absolute;
+  inset: 5% 2% 12%;
+  perspective: 1200px;
+  transform: rotateX(var(--mockup-tilt-x, 0deg)) rotateY(var(--mockup-tilt-y, 0deg));
+  transform-style: preserve-3d;
+  transition: transform 0.25s ease-out;
+  pointer-events: none;
+}
+
+.modal-preview.has-mockup .modal-mockup-stage {
+  display: block;
+}
+
+.modal-mockup-window {
+  position: absolute;
+  top: 10%;
+  width: 48%;
+  aspect-ratio: 1.55;
+  padding: 1.4rem 0.4rem 0.4rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 1.5rem 3.5rem rgba(2, 6, 23, 0.35), 0 0 0 1px rgba(15, 23, 42, 0.08);
+  transition: transform 0.55s cubic-bezier(0.2, 0.75, 0.25, 1), box-shadow 0.55s ease;
+}
+
+.modal-mockup-window::before {
+  position: absolute;
+  top: 0.52rem;
+  left: 0.6rem;
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 50%;
+  background: #fb7185;
+  box-shadow: 0.65rem 0 #fbbf24, 1.3rem 0 #34d399;
+  content: "";
+}
+
+.modal-mockup-window img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.3rem;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.modal-mockup-window--left {
+  left: 1%;
+  transform: translate3d(8%, 12%, -100px) rotate(-12deg) scale(0.86);
+}
+
+.modal-mockup-window--right {
+  right: 1%;
+  transform: translate3d(-8%, 12%, -100px) rotate(12deg) scale(0.86);
+}
+
+.modal-mockup-window--front {
+  top: 2%;
+  left: 50%;
+  z-index: 1;
+  width: 52%;
+  transform: translateX(-50%) translateY(8%);
+}
+
+.modal-preview.has-mockup:hover .modal-mockup-window--left {
+  transform: translate3d(-2%, 4%, -50px) rotate(-16deg) scale(0.9);
+  box-shadow: 0 2rem 4rem rgba(2, 6, 23, 0.4);
+}
+
+.modal-preview.has-mockup:hover .modal-mockup-window--right {
+  transform: translate3d(2%, 4%, -50px) rotate(16deg) scale(0.9);
+  box-shadow: 0 2rem 4rem rgba(2, 6, 23, 0.4);
+}
+
+.modal-preview.has-mockup:hover .modal-mockup-window--front {
+  transform: translateX(-50%) translateY(2%) scale(1.04);
 }
 
 /* --------------------------------------------------------------------------

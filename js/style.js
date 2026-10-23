@@ -207,7 +207,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // 5. Project Modal Controller
   // --------------------------------------------------------------------------
   const modal = document.getElementById("modal");
+  const modalPreview = document.getElementById("modalPreview");
   const modalImage = document.getElementById("modalImage");
+  const modalMockupImages = document.querySelectorAll(".modal-mockup-window img");
   const modalTitle = document.getElementById("modalTitle");
   const modalDescription = document.getElementById("modalDescription");
   const modalCategory = document.getElementById("modalCategory");
@@ -226,6 +228,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const image = button.getAttribute("data-image") || "";
     const category = button.getAttribute("data-category") || "Featured Project";
     const tech = button.getAttribute("data-tech") || "";
+    const mockupLeft = button.getAttribute("data-mockup-left");
+    const mockupRight = button.getAttribute("data-mockup-right");
     const github = button.getAttribute("data-github");
     const live = button.getAttribute("data-live");
     const githubLabel = button.getAttribute("data-github-label") || "View Repository";
@@ -236,6 +240,30 @@ document.addEventListener("DOMContentLoaded", () => {
     if (modalImage) {
       modalImage.src = image;
       modalImage.alt = title;
+    }
+    if (modalPreview) {
+      const hasMockup = Boolean(mockupLeft && mockupRight);
+      modalPreview.classList.toggle("has-mockup", hasMockup);
+
+      if (hasMockup) {
+        const mockupScreens = [
+          { image: mockupLeft, label: "LMS Pintar teacher dashboard" },
+          { image: mockupRight, label: "LMS Pintar student dashboard" },
+          { image, label: "LMS Pintar administrator dashboard" }
+        ];
+
+        modalMockupImages.forEach((screen, index) => {
+          const mockupScreen = mockupScreens[index];
+          if (!mockupScreen) return;
+          screen.src = mockupScreen.image;
+          screen.alt = mockupScreen.label;
+        });
+      } else {
+        modalMockupImages.forEach((screen) => {
+          screen.removeAttribute("src");
+          screen.alt = "";
+        });
+      }
     }
     if (modalCategory) modalCategory.textContent = category;
     if (modalTech) modalTech.textContent = tech;
@@ -292,6 +320,32 @@ document.addEventListener("DOMContentLoaded", () => {
       openProjectModal(btn);
     });
   });
+
+  const featureCards = document.querySelectorAll(".project-feature-card");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  if (!reducedMotion.matches) {
+    const enableMockupTilt = (card) => {
+      card.addEventListener("pointermove", (event) => {
+        if (event.pointerType === "touch") return;
+
+        const bounds = card.getBoundingClientRect();
+        const horizontalPosition = (event.clientX - bounds.left) / bounds.width - 0.5;
+        const verticalPosition = (event.clientY - bounds.top) / bounds.height - 0.5;
+
+        card.style.setProperty("--mockup-tilt-x", `${-verticalPosition * 5}deg`);
+        card.style.setProperty("--mockup-tilt-y", `${horizontalPosition * 6}deg`);
+      });
+
+      card.addEventListener("pointerleave", () => {
+        card.style.removeProperty("--mockup-tilt-x");
+        card.style.removeProperty("--mockup-tilt-y");
+      });
+    };
+
+    featureCards.forEach(enableMockupTilt);
+    if (modalPreview) enableMockupTilt(modalPreview);
+  }
 
   if (closeModalBtn) {
     closeModalBtn.addEventListener("click", closeProjectModal);

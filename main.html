@@ -592,28 +592,40 @@
       <!-- 3 Featured Projects — 1 big featured card + 2 compact right stack -->
       <div class="selected-work-layout">
 
-        <!-- Featured Card: 01 — ZHresto (Live Web) -->
+        <!-- Featured Card: 01 — LMS Pintar (Live Web) -->
         <article class="project-feature-card project-card group">
-          <img src="images/projects/web1.png" alt="ZHresto Restaurant Web" loading="lazy" />
+          <div class="project-mockup-stage" role="group" aria-label="LMS Pintar dashboards for admin, teacher, and student">
+            <div class="project-mockup-window project-mockup-window--left">
+              <img src="images/projects/muweb/lms2.jpeg" alt="LMS Pintar teacher dashboard" loading="lazy" />
+            </div>
+            <div class="project-mockup-window project-mockup-window--right">
+              <img src="images/projects/muweb/lms3.jpeg" alt="LMS Pintar student dashboard" loading="lazy" />
+            </div>
+            <div class="project-mockup-window project-mockup-window--front">
+              <img src="images/projects/muweb/lms1.jpeg" alt="LMS Pintar administrator dashboard" loading="lazy" />
+            </div>
+          </div>
           <div class="project-card-overlay"></div>
           <div class="project-card-content">
             <div class="flex items-center justify-between mb-3">
               <span class="project-number text-[#93c5fd]">01 / Featured Web</span>
               <span class="px-3 py-1 text-[10px] font-mono font-semibold tracking-wider text-[#3457d5] bg-white/95 border border-[#3457d5]/30 rounded-full shadow-sm backdrop-blur-md">HTML5 &bull; CSS3 &bull; JS</span>
             </div>
-            <h3 class="group-hover:text-[#93c5fd] transition-colors duration-300">ZHresto Restaurant Platform</h3>
-            <p>Multi-device culinary platform dengan responsive layouts, dynamic menus, dan table booking — dibangun dengan vanilla web technologies.</p>
+            <h3 class="group-hover:text-[#93c5fd] transition-colors duration-300">LMS Pintar</h3>
+            <p>Portal akademik terpadu dengan dashboard khusus admin, guru, dan siswa untuk mengelola materi, kelas, tugas, ujian, dan progres belajar.</p>
             <button class="project-detail-btn project-view-trigger" type="button"
-              data-title="ZHresto Restaurant Web"
-              data-category="Web Development &bull; Multi-Device"
-              data-tech="HTML5, CSS3, JavaScript, Responsive Design"
-              data-description="Multi-device restaurant platform featuring interactive menus, responsive tablet & smartphone layouts, and smooth navigation built with vanilla web technologies."
-              data-image="images/projects/web1.png"
-              data-github="https://github.com/AgungRizkiSaputra/ZHresto"
+              data-title="LMS Pintar — Portal Manajemen Akademik"
+              data-category="Web Development &bull; Learning Management System"
+              data-tech="HTML5, CSS3, JavaScript"
+              data-description="Platform manajemen pembelajaran untuk sekolah dengan dashboard terpisah bagi admin, guru, dan siswa. Admin mengelola pengguna, kelas, mata pelajaran, jadwal, ujian, dan pengumuman; guru mengatur materi, tugas, serta penilaian; siswa mengakses materi, tugas, ujian, dan progres belajar dalam satu portal."
+              data-image="images/projects/muweb/lms1.jpeg"
+              data-mockup-left="images/projects/muweb/lms2.jpeg"
+              data-mockup-right="images/projects/muweb/lms3.jpeg"
+              data-github="https://github.com/AgungRizkiSaputra/LMS"
               data-github-label="GitHub Repository"
-              data-live="https://agungrizkisaputra.github.io/ZHresto/"
+              data-live="https://agungrizkisaputra.github.io/LMS/"
               data-live-label="Live Deployed Web"
-              aria-label="View ZHresto project details">
+              aria-label="View LMS Pintar project details">
               <span>View Project Details</span>
               <i class="fas fa-arrow-up-right-from-square"></i>
             </button>
@@ -1098,8 +1110,19 @@
     <div class="modal-dialog">
 
       <!-- Modal Header Image -->
-      <div class="relative w-full aspect-[16/10] bg-[#f0f0ee] overflow-hidden">
+      <div id="modalPreview" class="modal-preview relative w-full aspect-[16/10] bg-[#0b1120] overflow-hidden">
         <img id="modalImage" src="" alt="Project Preview" class="w-full h-full object-cover" />
+        <div class="modal-mockup-stage" role="group" aria-label="LMS Pintar dashboards for admin, teacher, and student">
+          <div class="modal-mockup-window modal-mockup-window--left">
+            <img src="" alt="" />
+          </div>
+          <div class="modal-mockup-window modal-mockup-window--right">
+            <img src="" alt="" />
+          </div>
+          <div class="modal-mockup-window modal-mockup-window--front">
+            <img src="" alt="" />
+          </div>
+        </div>
         <button id="closeModal"
           class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/90 hover:bg-[#171717] hover:text-white text-[#171717] shadow-md flex items-center justify-center transition-all text-xl font-bold cursor-pointer"
           aria-label="Close Project Modal">
