@@ -3,49 +3,277 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agung Rizki Saputra | Welcome</title>
+    <title>PORTFOLIO &bull; Agung Rizki Saputra</title>
+    <meta name="description" content="Portfolio of Agung Rizki Saputra — Creative Developer & UI/UX Designer. Fresh graduate in Informatics Engineering crafting clean, secure, and user-centric web applications." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/style.css" />
+    
+    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- Custom Design System Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      body.index-canvas {
+        background-color: #ffffff;
+        min-height: 100vh;
+        min-height: 100dvh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Subtle Editorial Architectural Crosshairs */
+      .editorial-crosshair {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        pointer-events: none;
+        opacity: 0.35;
+        z-index: 20;
+      }
+      .editorial-crosshair::before,
+      .editorial-crosshair::after {
+        content: '';
+        position: absolute;
+        background-color: #171717;
+      }
+      .editorial-crosshair::before {
+        top: 7px;
+        left: 0;
+        right: 0;
+        height: 1px;
+      }
+      .editorial-crosshair::after {
+        left: 7px;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+      }
+
+      /* Ultra-Impact Editorial Display Title */
+      .index-hero-title {
+        font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: clamp(3.4rem, 13.5vw, 10.5rem);
+        font-weight: 900;
+        letter-spacing: -0.04em;
+        line-height: 0.92;
+        color: #171717;
+        text-transform: uppercase;
+        margin: 0;
+        user-select: none;
+        position: relative;
+        display: inline-block;
+      }
+
+      /* Entrance Reveal for Title */
+      .reveal-title-track {
+        overflow: hidden;
+        display: block;
+        padding-bottom: 0.15em;
+      }
+      .reveal-title-text {
+        display: inline-block;
+        transform: translateY(115%);
+        opacity: 0;
+        animation: titleRevealUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+      }
+
+      @keyframes titleRevealUp {
+        0% { transform: translateY(115%); opacity: 0; }
+        100% { transform: translateY(0); opacity: 1; }
+      }
+
+      /* Prominent, Unmissable Enter Button */
+      .index-enter-btn {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.85rem;
+        background-color: #171717;
+        color: #ffffff !important;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 1.15rem 2.6rem;
+        border-radius: 9999px;
+        border: 1px solid #171717;
+        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
+        text-decoration: none;
+        cursor: pointer;
+        z-index: 50;
+        opacity: 0;
+        transform: translateY(24px);
+        animation: btnRevealFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.45s forwards;
+        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      @keyframes btnRevealFade {
+        0% { opacity: 0; transform: translateY(24px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+
+      .index-enter-btn:hover {
+        background-color: #3457d5;
+        border-color: #3457d5;
+        color: #ffffff !important;
+        box-shadow: 0 14px 45px rgba(52, 87, 213, 0.35), 0 4px 14px rgba(52, 87, 213, 0.2);
+        transform: translateY(-3px) scale(1.02);
+      }
+
+      .index-enter-btn:active {
+        transform: translateY(-1px) scale(0.99);
+      }
+
+      .index-enter-btn .btn-arrow-icon {
+        font-size: 0.95rem;
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .index-enter-btn:hover .btn-arrow-icon {
+        transform: translateX(6px);
+      }
+
+      /* Subtle Exit Transition Overlay */
+      #page-exit-curtain {
+        position: fixed;
+        inset: 0;
+        background-color: #ffffff;
+        z-index: 99999;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      #page-exit-curtain.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    </style>
   </head>
-  <body class="intro-page text-slate-100 min-h-screen flex items-center justify-center font-['Urbanist'] overflow-hidden relative selection:bg-cyan-400 selection:text-black antialiased">
+  <body class="index-canvas editorial-grid-clean antialiased selection:bg-[#3457d5] selection:text-white">
 
-    <!-- Canvas Partikel Interaktif -->
-    <canvas id="particleCanvas"></canvas>
+    <!-- Page Exit Curtain for Seamless Page Transition -->
+    <div id="page-exit-curtain"></div>
 
-    <!-- Cahaya Ambient Background -->
-    <div class="ambient-glow-1"></div>
-    <div class="ambient-glow-2"></div>
+    <!-- Interactive Constellation Canvas ("Rasi Bintang Engine") -->
+    <canvas id="constellationCanvas" aria-hidden="true"></canvas>
 
-    <!-- Konten Utama -->
-    <main class="relative z-10 w-full max-w-xl px-6 text-center">
+    <!-- Soft Glowing Celestial Nebulae -->
+    <div class="celestial-nebula celestial-nebula-blue" style="top: 10%; right: 10%; width: 520px; height: 520px;" aria-hidden="true"></div>
+    <div class="celestial-nebula celestial-nebula-purple" style="bottom: 10%; left: 10%; width: 550px; height: 550px;" aria-hidden="true"></div>
+
+    <!-- Orbital Cosmic Rings -->
+    <div class="celestial-orbit-ring w-[680px] h-[680px] -top-32 -right-32" aria-hidden="true"></div>
+    <div class="celestial-orbit-ring w-[480px] h-[480px] -bottom-24 -left-24" aria-hidden="true"></div>
+
+    <!-- Pulsing Constellation Beacons -->
+    <div class="constellation-beacon top-[18%] left-[12%]" aria-hidden="true"></div>
+    <div class="constellation-beacon top-[25%] right-[15%]" aria-hidden="true"></div>
+    <div class="constellation-beacon bottom-[20%] left-[20%]" aria-hidden="true"></div>
+    <div class="constellation-beacon bottom-[22%] right-[22%]" aria-hidden="true"></div>
+
+    <!-- Editorial Corner Crosshairs for Refined Framing -->
+    <div class="editorial-crosshair top-8 left-8 hidden sm:block"></div>
+    <div class="editorial-crosshair top-8 right-8 hidden sm:block"></div>
+    <div class="editorial-crosshair bottom-8 left-8 hidden sm:block"></div>
+    <div class="editorial-crosshair bottom-8 right-8 hidden sm:block"></div>
+
+    <!-- Corner Architectural Metadata Stamps -->
+    <div class="absolute top-8 left-14 font-mono text-[10px] text-[#737373] tracking-widest uppercase hidden lg:block z-20">
+      ARS // STUDIO &bull; 2026
+    </div>
+    <div class="absolute top-8 right-14 font-mono text-[10px] text-[#737373] tracking-widest uppercase hidden lg:block z-20">
+      INFORMATICS ENG. GRADUATE
+    </div>
+    <div class="absolute bottom-8 left-14 font-mono text-[10px] text-[#737373] tracking-widest uppercase hidden lg:block z-20">
+      JAKARTA, ID &bull; GMT+7
+    </div>
+    <div class="absolute bottom-8 right-14 font-mono text-[10px] text-emerald-600 font-semibold tracking-widest uppercase hidden lg:flex items-center gap-2 z-20">
+      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      AVAILABLE FOR WORK
+    </div>
+
+    <!-- Central Minimalist Presentation -->
+    <main class="relative z-10 flex flex-col items-center justify-center text-center px-6 py-12 max-w-5xl w-full">
       
-      <!-- Badge Nama -->
-      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-900/90 border border-slate-800 text-slate-300 text-[11px] font-medium tracking-widest uppercase mb-8 backdrop-blur-md shadow-sm">
-        <span class="relative flex h-1.5 w-1.5">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-cyan-400"></span>
-        </span>
-        Agung Rizki Saputra
+      <!-- Top Status Identity Pill -->
+      <div class="editorial-badge accent mb-6 tracking-widest text-[11px] shadow-sm">
+        <span class="status-indicator-dot"></span>
+        <span>Agung Rizki Saputra &bull; Creative Developer &bull; 2026</span>
       </div>
 
-      <!-- Judul Utama (Warna Cyan-Blue Cohesive) -->
-      <h1 class="text-6xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 leading-none">
-        <span class="portfolio-title-text">Portfolio</span>
+      <!-- Impact Display Title: PORTFOLIO -->
+      <h1 class="index-hero-title mb-4">
+        <span class="reveal-title-track">
+          <span class="reveal-title-text">PORTFOLIO<span class="text-[#3457d5]">.</span></span>
+        </span>
       </h1>
 
-      <!-- Tombol Launch System (Ukuran Ramping & Efek Hover Cyan/Blue) -->
-      <div>
-        <a href="main.html" class="glow-button group relative inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full text-slate-200 text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase shadow-[0_0_15px_rgba(34,211,238,0.15)] transition-all duration-300 hover:text-white hover:shadow-[0_0_25px_rgba(34,211,238,0.4)] hover:scale-105 active:scale-95">
-          <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#22d3ee] transition-all duration-300 group-hover:bg-blue-400 group-hover:shadow-[0_0_10px_#60a5fa]"></span>
-          <span class="relative z-10">LAUNCH SYSTEM</span>
-          <i class="fas fa-chevron-right text-[9px] text-cyan-400 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-blue-300"></i>
+      <!-- Architectural Subtitle -->
+      <p class="font-mono text-xs sm:text-sm text-[#737373] tracking-widest uppercase mb-10 max-w-xl leading-relaxed">
+        Web Development &bull; UI/UX Design &bull; Defensive Security Mindset
+      </p>
+
+      <!-- The Primary Enter Button -->
+      <div class="relative z-50 mb-8">
+        <a href="main.html" id="enter-portfolio-btn" class="index-enter-btn group" aria-label="Enter Portfolio">
+          <span class="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span>
+          <span>Explore Selected Works &bull; 2026</span>
+          <i class="fas fa-arrow-right btn-arrow-icon"></i>
+        </a>
+      </div>
+
+      <!-- Quick Fast Links Row -->
+      <div class="flex flex-wrap items-center justify-center gap-6 font-mono text-xs text-[#737373]">
+        <a href="all-projects.html" class="hover:text-[#3457d5] transition-colors flex items-center gap-1.5">
+          <i class="fas fa-layer-group text-[11px] text-[#3457d5]"></i>
+          <span>All Projects Archive (7)</span>
+        </a>
+        <span class="text-[#d4d4d4] hidden sm:inline">&bull;</span>
+        <a href="https://github.com/AgungRizkiSaputra" target="_blank" rel="noopener noreferrer" class="hover:text-[#171717] transition-colors flex items-center gap-1.5">
+          <i class="fab fa-github text-xs"></i>
+          <span>GitHub</span>
+        </a>
+        <span class="text-[#d4d4d4] hidden sm:inline">&bull;</span>
+        <a href="https://www.linkedin.com/in/agung-rizki-saputra-06051a2a7/" target="_blank" rel="noopener noreferrer" class="hover:text-[#3457d5] transition-colors flex items-center gap-1.5">
+          <i class="fab fa-linkedin text-xs text-[#3457d5]"></i>
+          <span>LinkedIn</span>
         </a>
       </div>
 
     </main>
 
+    <!-- Interactive Scripts (Constellation Engine & Transitions) -->
     <script src="js/style.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const enterBtn = document.getElementById("enter-portfolio-btn");
+        const curtain = document.getElementById("page-exit-curtain");
+
+        if (enterBtn && curtain) {
+          enterBtn.addEventListener("click", (e) => {
+            if (e.metaKey || e.ctrlKey || e.shiftKey || e.which === 2) return;
+
+            e.preventDefault();
+            curtain.classList.add("active");
+            setTimeout(() => {
+              window.location.href = enterBtn.getAttribute("href");
+            }, 350);
+          });
+        }
+      });
+    </script>
   </body>
 </html>

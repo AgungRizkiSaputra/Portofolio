@@ -1,720 +1,1153 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agung Rizki Saputra | Creative Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/style.css" />
-    <script
-      defer
-      src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body class="bg-[#0b1120] text-slate-900 antialiased selection:bg-cyan-300 selection:text-slate-950">
 
-    <!-- Navbar Start -->
-    <nav
-      class="fixed w-full z-50 transition-all duration-300 bg-[#0b1120]/60 backdrop-blur-md border-b border-cyan-300/10"
-      id="navbar"
-    >
-      <div
-        class="container mx-auto px-6 py-4 flex justify-between items-center max-w-7xl"
-      >
-        <a
-          href="#home"
-          id="brand-text"
-          class="text-2xl font-bold text-white tracking-widest transition duration-300 hover:text-blue-400 hover:scale-105"
-        >
-          <span
-            class="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text"
-          >
-            PORTFOLIO
-          </span>
-        </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agung Rizki Saputra | Creative Developer & UI/UX Designer</title>
+  <meta name="description"
+    content="Portfolio of Agung Rizki Saputra — Creative Developer and UI/UX Designer. Fresh graduate in Informatics Engineering crafting clean, secure, and user-centric web applications." />
 
-        <button
-          class="lg:hidden text-white focus:outline-none rounded-lg p-2 hover:bg-white/10 transition"
-          id="menu-toggle"
-        >
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            ></path>
-          </svg>
-        </button>
-        <!-- Menu untuk desktop -->
-        <div class="hidden lg:flex items-center gap-2" id="menu">
-          <a href="#home" class="nav-link text-white/80 hover:text-white hover:bg-white/10 rounded-full px-4 py-2 transition"
-            >Home</a
-          >
-          <a href="#about" class="nav-link text-white/80 hover:text-white hover:bg-white/10 rounded-full px-4 py-2 transition"
-            >About</a
-          >
-          <a href="#education" class="nav-link text-white/80 hover:text-white hover:bg-white/10 rounded-full px-4 py-2 transition"
-            >Education</a
-          >
-          <a href="#experience" class="nav-link text-white/80 hover:text-white hover:bg-white/10 rounded-full px-4 py-2 transition"
-            >Experience</a
-          >
-          <a href="#project" class="nav-link text-white/80 hover:text-white hover:bg-white/10 rounded-full px-4 py-2 transition"
-            >Project</a
-          >
-          <a href="#contact" class="nav-link text-white/80 hover:text-white hover:bg-white/10 rounded-full px-4 py-2 transition"
-            >Contact</a
-          >
-        </div>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Custom Design System Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-white text-[#171717] antialiased selection:bg-[#3457d5] selection:text-white">
+
+  <!-- ====================================================================
+         Navbar (Clean White Editorial)
+         ==================================================================== -->
+  <!-- ====================================================================
+         Navbar (Futuristic Glassmorphic Floating Island)
+         ==================================================================== -->
+  <nav id="navbar" class="transition-all duration-300" aria-label="Main Navigation">
+
+    <!-- Brand Monogram with Status Beacon -->
+    <a href="#home" class="brand-mark group" aria-label="Home">
+      <span class="brand-emblem">
+        <span>ARS</span>
+        <span class="brand-status-dot"></span>
+      </span>
+      <span class="font-['Space_Grotesk'] font-bold text-sm tracking-tight hidden sm:inline-block">
+        Agung Rizki Saputra<span class="text-[#3457d5]">.</span>
+      </span>
+    </a>
+
+    <!-- Modern Nav Links Cluster -->
+    <div class="hidden lg:flex items-center nav-links-cluster">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#project" class="nav-link">Projects</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <!-- <a href="#education" class="nav-link">Education</a> -->
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+
+    <!-- Right Quick CTA & Mobile Hamburger -->
+    <div class="flex items-center gap-2.5">
+      <a href="#contact" class="hidden sm:inline-flex nav-cta-btn">
+        <span>Let's Talk</span>
+        <i class="fas fa-arrow-right text-[10px]"></i>
+      </a>
+
+      <button id="menu-toggle"
+        class="lg:hidden p-2 rounded-full bg-[#f7f7f5] border border-[#e8e8e6] text-[#171717] hover:bg-[#eaeaea] transition-colors"
+        aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <i class="fas fa-bars-staggered text-sm"></i>
+      </button>
+    </div>
+
+  </nav>
+
+  <!-- Mobile Backdrop (Root Level — Strictly Hidden on Desktop) -->
+  <div id="mobile-backdrop" class="lg:hidden"></div>
+
+  <!-- Mobile Navigation Drawer (Root Level — Strictly Hidden on Desktop) -->
+  <aside id="mobile-menu" class="lg:hidden" aria-label="Mobile Navigation">
+    <div class="flex items-center justify-between border-b border-[#e8e8e6] pb-5 mb-8">
+      <div class="flex items-center gap-2.5">
+        <span
+          class="w-8 h-8 rounded-full bg-[#171717] text-white flex items-center justify-center font-mono font-bold text-xs">ARS</span>
+        <span class="font-['Space_Grotesk'] font-bold text-[#171717] text-lg">Agung Rizki Saputra</span>
       </div>
+      <button id="close-menu"
+        class="w-8 h-8 rounded-full bg-[#f7f7f5] text-[#737373] hover:text-[#171717] flex items-center justify-center text-xl transition-transform hover:rotate-90"
+        aria-label="Close Mobile Menu">
+        &times;
+      </button>
+    </div>
 
-      <!-- Menu untuk mode mobile -->
-      <div
-        id="mobile-menu"
-        class="hidden fixed top-0 right-0 h-full w-3/4 max-w-sm bg-slate-950/95 backdrop-blur-xl flex flex-col items-center justify-center space-y-6 text-white shadow-2xl border-l border-white/10"
-      >
-        <a href="#home" class="text-xl hover:text-blue-500">Home</a>
-        <a href="#about" class="text-xl hover:text-blue-500">About</a>
-        <a href="#education" class="text-xl hover:text-blue-500">Education</a>
-        <a href="#experience" class="text-xl hover:text-blue-500">Experience</a>
-        <a href="#project" class="text-xl hover:text-blue-500">Project</a>
-        <a href="#contact" class="text-xl hover:text-blue-500">Contact</a>
-        <button id="close-menu" class="absolute top-6 right-6 text-2xl">
-          &times;
-        </button>
-      </div>
+    <nav class="flex flex-col space-y-3 font-mono text-sm uppercase tracking-wider">
+      <a href="#home"
+        class="py-2.5 px-3 rounded-lg hover:bg-[#f7f7f5] text-[#737373] hover:text-[#171717] transition-colors">00.
+        Home</a>
+      <a href="#about"
+        class="py-2.5 px-3 rounded-lg hover:bg-[#f7f7f5] text-[#737373] hover:text-[#3457d5] transition-colors">01.
+        About Me</a>
+      <a href="#skills"
+        class="py-2.5 px-3 rounded-lg hover:bg-[#f7f7f5] text-[#737373] hover:text-[#3457d5] transition-colors">02.
+        Skills & Tech</a>
+      <a href="#project"
+        class="py-2.5 px-3 rounded-lg hover:bg-[#f7f7f5] text-[#737373] hover:text-[#3457d5] transition-colors">03.
+        Selected Work</a>
+      <a href="#experience"
+        class="py-2.5 px-3 rounded-lg hover:bg-[#f7f7f5] text-[#737373] hover:text-[#3457d5] transition-colors">04.
+        Experience</a>
+      <a href="#contact"
+        class="py-2.5 px-3 rounded-lg hover:bg-[#f7f7f5] text-[#737373] hover:text-[#3457d5] transition-colors">05.
+        Contact</a>
+      <a href="all-projects.html"
+        class="py-2.5 px-3 rounded-lg bg-[#f0f4ff] text-[#3457d5] font-semibold hover:bg-[#3457d5] hover:text-white transition-colors mt-4">
+        <i class="fas fa-layer-group mr-2"></i> All Projects Archive (7)
+      </a>
     </nav>
-    <!-- Navbar End -->
 
-    <!-- Home Start -->
-    <div
-      id="home"
-      class="light-motion-bg relative min-h-screen flex items-center justify-center bg-cover bg-center pt-20 overflow-hidden"
-    >
-      <div class="absolute inset-0 bg-gradient-to-br from-[#07111f]/95 via-slate-950/75 to-cyan-950/70"></div>
-      <div class="hero-grid"></div>
-      <div class="hero-glow"></div>
-      <div class="hero-line top-[20%] left-0"></div>
-      <div class="hero-line hero-line-slow bottom-[22%] right-0"></div>
-      <span class="hero-particle hero-particle-one left-[12%] top-[68%]"></span>
-      <span class="hero-particle hero-particle-two left-[30%] top-[32%]"></span>
-      <span class="hero-particle hero-particle-three right-[18%] top-[72%]"></span>
-      <span class="hero-particle hero-particle-four right-[34%] top-[24%]"></span>
-      <div class="absolute top-1/4 right-1/4 w-3 h-3 rounded-full bg-cyan-300 shadow-[0_0_25px_8px_rgba(34,211,238,0.5)] animate-ping"></div>
-      <div class="hero-ping-delay absolute bottom-1/3 left-1/4 w-2 h-2 rounded-full bg-blue-400 shadow-[0_0_20px_6px_rgba(59,130,246,0.5)] animate-ping"></div>
-      <div
-        class="relative text-center text-white px-6 max-w-4xl animate-fadeIn motion-safe:animate-[fadeIn_1s_ease-out]"
-      >
-        <p class="uppercase tracking-[0.35em] text-sm text-blue-300 mb-5">Creative developer & designer</p>
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold mb-6 tracking-tight leading-tight drop-shadow-lg hover:scale-[1.02] transition-transform duration-500">
-          Hello, I'm
-          <span
-            class="bg-gradient-to-r from-cyan-300 via-sky-300 to-blue-500 text-transparent bg-clip-text"
-          >
-            Agung Rizki Saputra
-          </span>
-        </h1>
-
-        <p class="inline-block text-lg sm:text-xl mb-8 max-w-2xl mx-auto italic text-slate-300 -rotate-2 hover:rotate-0 transition-transform duration-300">
-          "Welcome to My Personal Website🔥"
-        </p>
-        <h3 class="text-2xl sm:text-3xl font-semibold flex justify-center items-center">
-          <span class="mr-2">I'm a</span>
-          <span
-            id="dynamic-text"
-            class="font-bold text-cyan-300 text-3xl animate-pulse"
-          ></span>
-        </h3>
-      </div>
+    <div class="mt-auto pt-6 border-t border-[#e8e8e6] font-mono text-xs text-[#737373]">
+      <p class="mb-1.5 font-medium text-[#171717]">agungriskisaputra64@gmail.com</p>
+      <p class="text-[#a3a3a3]">&copy; 2026 Agung Rizki Saputra</p>
     </div>
-    <!-- Home End -->
+  </aside>
 
-    <!-- About Start -->
-    <div class="about about-section light-motion-bg bg-[#f8fafc] py-24 px-6 relative overflow-hidden" id="about">
-      <div
-          class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-14"
-      >
-        <!-- Bagian Gambar -->
-        <div class="w-full md:w-1/2 flex justify-center">
-          <div class="relative w-80 h-80 md:w-96 md:h-96 transition duration-700 hover:scale-105 hover:-rotate-2">
-            <svg
-              viewBox="0 0 200 200"
-              xmlns="http://www.w3.org/2000/svg"
-              class="absolute w-full h-full animate-[spin_18s_linear_infinite]"
-            >
-              <path
-                fill="url(#gradient)"
-                d="M42,-62.5C54.3,-54.9,65.3,-45.1,72.7,-32.8C80.2,-20.5,84,-5.8,82.4,9.1C80.8,24,73.9,38.9,62.5,48.7C51.1,58.6,35.2,63.5,20.2,65.7C5.2,68,-9,67.6,-23.2,63.8C-37.4,60.1,-51.5,53,-58.9,41.1C-66.4,29.3,-67.3,12.6,-68.8,-6.3C-70.4,-25.2,-72.6,-46.2,-62.7,-54.3C-52.8,-62.4,-30.9,-57.7,-14,-60.3C2.8,-62.9,21.5,-72.5,42,-62.5Z"
-                transform="translate(100 100)"
-              />
-              <defs>
-                <linearGradient id="gradient" gradientTransform="rotate(45)">
-                  <stop offset="0%" stop-color="#0284c7" />
-                  <stop offset="100%" stop-color="#2563eb" />
-                </linearGradient>
-              </defs>
-            </svg>
-            <img
-              src="images/p.jpg"
-              alt="Profile Image"
-              class="profile-image absolute inset-0 w-full h-full object-cover shadow-2xl border-8 border-gray-300 transition duration-700 hover:grayscale-0"
-            />
+  <!-- ====================================================================
+         Hero Section with Interactive Constellations ("Rasi Bintang")
+         ==================================================================== -->
+  <header id="home" class="hero-section editorial-grid-clean relative overflow-hidden">
 
-            <svg width="0" height="0">
-              <defs>
-                <clipPath id="blob" clipPathUnits="objectBoundingBox">
-                  <path
-                    d="M0.42,-0.625C0.543,-0.549,0.653,-0.451,0.727,-0.328C0.802,-0.205,0.84,-0.058,0.824,0.091C0.808,0.24,0.739,0.389,0.625,0.487C0.511,0.586,0.352,0.635,0.202,0.657C0.052,0.68,-0.09,0.676,-0.232,0.638C-0.374,0.601,-0.515,0.53,-0.589,0.411C-0.664,0.293,-0.673,0.126,-0.688,-0.063C-0.704,-0.252,-0.726,-0.462,-0.627,-0.543C-0.528,-0.624,-0.309,-0.577,-0.14,-0.603C0.028,-0.629,0.215,-0.725,0.42,-0.625Z"
-                    transform="scale(1.1) translate(0.05, 0.05)"
-                  ></path>
-                </clipPath>
-              </defs>
-            </svg>
+    <!-- Interactive Constellation Canvas ("Rasi Bintang Engine") -->
+    <canvas id="constellationCanvas" aria-hidden="true"></canvas>
+
+    <!-- Soft Glowing Celestial Nebulae -->
+    <div class="celestial-nebula celestial-nebula-blue" aria-hidden="true"></div>
+    <div class="celestial-nebula celestial-nebula-purple" aria-hidden="true"></div>
+
+    <!-- Orbital Rings & Constellation Beacons -->
+    <div class="celestial-orbit-ring w-[680px] h-[680px] -top-24 -right-24" aria-hidden="true"></div>
+    <div class="celestial-orbit-ring w-[440px] h-[440px] -bottom-20 -left-20" aria-hidden="true"></div>
+    <div class="constellation-beacon top-[22%] left-[10%]" aria-hidden="true"></div>
+    <div class="constellation-beacon top-[38%] right-[12%]" aria-hidden="true"></div>
+    <div class="constellation-beacon bottom-[24%] left-[42%]" aria-hidden="true"></div>
+
+    <div class="max-w-7xl mx-auto px-6 w-full relative z-10">
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+
+        <!-- Left Editorial Content (Span 7) -->
+        <div class="lg:col-span-7 flex flex-col items-start">
+
+          <!-- Availability Badge with Celestial Star -->
+          <div class="editorial-badge accent mb-6">
+            <span class="status-indicator-dot"></span>
+            <span>Available for Full-Time & Freelance &bull; 2026</span>
+          </div>
+
+          <!-- Primary Headline -->
+          <h1 class="hero-editorial-title mb-6">
+            Agung Rizki<br />
+            <span class="text-[#3457d5]">
+              Saputra.
+            </span>
+          </h1>
+
+          <!-- Dynamic Role Ticker -->
+          <div class="font-mono text-base sm:text-xl text-[#737373] mb-6 flex items-center flex-wrap gap-2">
+            <span>Specializing in</span>
+            <span id="dynamic-text" class="text-[#171717] font-bold border-b-2 border-[#3457d5] pb-0.5"></span>
+          </div>
+
+          <!-- Editorial Bio -->
+          <p class="text-[#737373] text-base sm:text-lg leading-relaxed max-w-2xl mb-8">
+            Fresh graduate in Informatics Engineering with strong focus on <strong
+              class="text-[#171717] font-semibold">Web Development</strong>, <strong
+              class="text-[#171717] font-semibold">UI/UX Design</strong>, and <strong
+              class="text-[#171717] font-semibold">Secure Coding principles</strong>. Building functional, responsive
+            web experiences with deliberate visual poise.
+          </p>
+
+          <!-- Actions CTA -->
+          <div class="flex flex-wrap items-center gap-4 mb-12">
+            <a href="#project" class="btn-primary">
+              <span>View Featured Work</span>
+              <i class="fas fa-arrow-down text-xs"></i>
+            </a>
+            <a href="https://drive.google.com/file/d/1ONIHtaVbg683YqaOGWCKaqO_KBvWZJly/view?usp=drive_link"
+              target="_blank" rel="noopener noreferrer" class="btn-secondary">
+              <i class="fas fa-file-arrow-down text-[#3457d5] text-xs"></i>
+              <span>Download CV</span>
+            </a>
+            <a href="#contact" class="btn-secondary">
+              <i class="far fa-envelope text-xs"></i>
+              <span>Get in Touch</span>
+            </a>
+          </div>
+
+          <!-- Stats Meta Bar -->
+          <div class="grid grid-cols-3 gap-6 pt-8 border-t border-[#e8e8e6] w-full max-w-xl font-mono text-xs">
+            <div>
+              <p class="font-['Space_Grotesk'] text-2xl sm:text-3xl font-extrabold text-[#171717]">07</p>
+              <p class="text-[#737373] uppercase tracking-wider mt-1">Projects Built</p>
+            </div>
+            <div>
+              <p class="font-['Space_Grotesk'] text-2xl sm:text-3xl font-extrabold text-[#3457d5]">2026</p>
+              <p class="text-[#737373] uppercase tracking-wider mt-1">B.Sc. Graduate</p>
+            </div>
+            <div>
+              <p class="font-['Space_Grotesk'] text-2xl sm:text-3xl font-extrabold text-[#171717]">3+</p>
+              <p class="text-[#737373] uppercase tracking-wider mt-1">Work Experiences</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Organic Blob Hero Photo (Reference Style) -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end">
+          <div class="hero-blob-stage" id="heroPhotoStage">
+            <div class="hero-blob-wrapper" id="heroArchWrapper">
+
+              <!-- Outer glow ring -->
+              <div class="hero-blob-glow" aria-hidden="true"></div>
+
+              <!-- Dashed orbit ring -->
+              <div class="hero-blob-orbit" aria-hidden="true"></div>
+
+              <!-- The main blob photo container (SVG clip + solid cobalt bg) -->
+              <div class="hero-blob-container">
+                <!-- SVG clip-path definition -->
+                <svg width="0" height="0" style="position:absolute;">
+                  <defs>
+                    <clipPath id="heroBlobClip" clipPathUnits="objectBoundingBox">
+                      <path d="M0.82,0.07 C0.96,0.18 1.02,0.38 0.97,0.58 C0.92,0.78 0.76,0.93 0.58,0.98 C0.40,1.03 0.20,0.97 0.08,0.83 C-0.03,0.69 -0.03,0.48 0.07,0.32 C0.17,0.16 0.38,0.05 0.56,0.02 C0.68,-0.01 0.74,0.01 0.82,0.07Z" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <!-- Cobalt background fill (matches blob shape) -->
+                <div class="hero-blob-bg" aria-hidden="true"></div>
+
+                <!-- Photo clipped to blob -->
+                <img src="images/a.jpg" alt="Agung Rizki Saputra" class="hero-blob-photo" id="heroMainPhoto" />
+              </div>
+
+              <!-- Floating Star Pins -->
+              <span class="hero-celestial-pin" style="top:-10px;left:10px;font-size:1rem;">✦</span>
+              <span class="hero-celestial-pin" style="top:20px;right:-8px;font-size:0.7rem;">✦</span>
+              <span class="hero-celestial-pin" style="bottom:40px;left:-10px;font-size:0.8rem;">✦</span>
+
+              <!-- Floating Signature Pill -->
+              <div class="hero-signature-pill">
+                <span class="w-2 h-2 rounded-full bg-[#3457d5] animate-pulse"></span>
+                <span class="font-mono text-[11px] font-bold text-[#171717] uppercase tracking-wider">Agung Rizki Saputra</span>
+                <span class="text-[#e8e8e6]">|</span>
+                <span class="font-mono text-[10px] text-[#737373] tracking-widest uppercase">Creative Dev &bull; 2026</span>
+              </div>
+
+            </div>
           </div>
         </div>
 
-        <!-- Bagian Deskripsi -->
-        <div class="about-copy w-full md:w-1/2 transition duration-700 hover:translate-x-2">
-          <p class="about-eyebrow">Profile</p>
-          <h2
-            class="text-4xl font-extrabold text-transparent bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text mb-6"
-          >
-            About Me
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ====================================================================
+         About Me Section (With Authentic Organic Blob & Scroll Expansion)
+         ==================================================================== -->
+  <section id="about" class="about-section py-28 px-6">
+
+    <!-- SVG Clip-Path & Aura Definition -->
+    <svg width="0" height="0" class="absolute pointer-events-none">
+      <defs>
+        <clipPath id="blob" clipPathUnits="objectBoundingBox">
+          <path
+            d="M0.42,-0.625C0.543,-0.549,0.653,-0.451,0.727,-0.328C0.802,-0.205,0.84,-0.058,0.824,0.091C0.808,0.24,0.739,0.389,0.625,0.487C0.511,0.586,0.352,0.635,0.202,0.657C0.052,0.68,-0.09,0.676,-0.232,0.638C-0.374,0.601,-0.515,0.53,-0.589,0.411C-0.664,0.293,-0.673,0.126,-0.688,-0.063C-0.704,-0.252,-0.726,-0.462,-0.627,-0.543C-0.528,-0.624,-0.309,-0.577,-0.14,-0.603C0.028,-0.629,0.215,-0.725,0.42,-0.625Z"
+            transform="scale(1.1) translate(0.05, 0.05)"></path>
+        </clipPath>
+        <linearGradient id="blobAuraGrad" gradientTransform="rotate(45)">
+          <stop offset="0%" stop-color="#3457d5" stop-opacity="0.8" />
+          <stop offset="100%" stop-color="#2563eb" stop-opacity="0.3" />
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Section Header -->
+      <div class="max-w-3xl mb-16">
+        <div class="editorial-badge mb-3">
+          <span>// 01 &bull; Profile & Philosophy</span>
+        </div>
+        <h2
+          class="font-['Space_Grotesk'] text-3xl sm:text-5xl font-extrabold text-[#171717] tracking-tight leading-tight">
+          Crafting digital products where aesthetic poise meets secure, functional engineering.
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+        <!-- Left Column: Scroll Expansion Media with Authentic Fluid Blob (Span 5) -->
+        <div class="lg:col-span-5 flex justify-center">
+
+          <div class="scroll-expansion-stage w-full">
+            <div id="scrollExpandMedia" class="scroll-expansion-media">
+
+              <!-- Rotating Ambient SVG Aura -->
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="blob-aura-svg">
+                <path fill="url(#blobAuraGrad)"
+                  d="M42,-62.5C54.3,-54.9,65.3,-45.1,72.7,-32.8C80.2,-20.5,84,-5.8,82.4,9.1C80.8,24,73.9,38.9,62.5,48.7C51.1,58.6,35.2,63.5,20.2,65.7C5.2,68,-9,67.6,-23.2,63.8C-37.4,60.1,-51.5,53,-58.9,41.1C-66.4,29.3,-67.3,12.6,-68.8,-6.3C-70.4,-25.2,-72.6,-46.2,-62.7,-54.3C-52.8,-62.4,-30.9,-57.7,-14,-60.3C2.8,-62.9,21.5,-72.5,42,-62.5Z"
+                  transform="translate(100 100)" />
+              </svg>
+
+              <!-- Profile Image with Organic Blob Clip-Path -->
+              <img src="images/p.jpg" alt="Agung Rizki Saputra Profile" class="profile-blob-image" />
+
+              <!-- Floating Parallax Badges (Responding to Scroll) -->
+              <div id="blobBadgeTop" class="blob-floating-badge -top-4 -right-2 sm:-right-4">
+                <span class="w-2 h-2 rounded-full bg-[#3457d5]"></span>
+                <span>Informatics Eng. '26</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Narrative & Pillars (Span 7) -->
+        <div class="lg:col-span-7 flex flex-col justify-between h-full">
+
+          <div class="space-y-6 text-[#737373] text-base sm:text-lg leading-relaxed font-normal">
+            <p>
+              I am a recent Bachelor’s degree graduate in <strong class="text-[#171717] font-semibold">Informatics
+                Engineering</strong> with a deep passion for Web Development, UI/UX Design, and Cybersecurity. My work
+              centers on creating web applications that are not merely interactive and aesthetically refined, but also
+              performant, responsive, and grounded in secure coding principles.
+            </p>
+            <p class="text-[#737373] text-base">
+              Having conducted vulnerability testing and web penetration testing during my security internship, I
+              approach every frontend architecture with heightened awareness of user data integrity, robust validation,
+              and clean information hierarchy.
+            </p>
+            <p class="text-[#737373] text-base">
+              I am experienced in turning complex workflows into intuitive wireframes and interactive prototypes with
+              <strong class="text-[#171717]">Figma</strong>, and translating them into responsive code using <strong
+                class="text-[#171717]">HTML5, CSS3, JavaScript, Tailwind CSS, Bootstrap, and PHP</strong>.
+            </p>
+          </div>
+
+          <!-- 3 Core Pillars -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 pt-8 border-t border-[#e8e8e6]">
+
+            <div class="p-5 rounded-2xl bg-white border border-[#e8e8e6] shadow-sm">
+              <div
+                class="w-10 h-10 rounded-xl bg-[#f0f4ff] border border-[#3457d5]/30 text-[#3457d5] flex items-center justify-center text-base mb-3">
+                <i class="fas fa-layer-group"></i>
+              </div>
+              <h3 class="font-bold text-[#171717] text-sm mb-1">Deliberate UI/UX</h3>
+              <p class="text-xs text-[#737373] leading-relaxed">User-first wireframes, interactive prototypes, and
+                design systems built in Figma.</p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white border border-[#e8e8e6] shadow-sm">
+              <div
+                class="w-10 h-10 rounded-xl bg-[#f0f4ff] border border-[#3457d5]/30 text-[#3457d5] flex items-center justify-center text-base mb-3">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3 class="font-bold text-[#171717] text-sm mb-1">Modern Web Craft</h3>
+              <p class="text-xs text-[#737373] leading-relaxed">Responsive layouts, clean semantic code, and lightweight
+                DOM interactions.</p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white border border-[#e8e8e6] shadow-sm">
+              <div
+                class="w-10 h-10 rounded-xl bg-[#ecfdf5] border border-emerald-500/30 text-emerald-600 flex items-center justify-center text-base mb-3">
+                <i class="fas fa-shield-halved"></i>
+              </div>
+              <h3 class="font-bold text-[#171717] text-sm mb-1">Security Mindset</h3>
+              <p class="text-xs text-[#737373] leading-relaxed">Practical penetration testing foundations and defensive
+                coding standards.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================================================
+         Skills & Technologies Matrix (Clean White)
+         ==================================================================== -->
+  <section id="skills" class="py-28 px-6 bg-white editorial-grid-clean relative overflow-hidden">
+    <!-- Interactive Constellation Canvas ("Rasi Bintang" on Grid Section) -->
+    <canvas class="constellation-bg-canvas" id="skillsConstellationCanvas" aria-hidden="true"></canvas>
+    <div class="celestial-nebula celestial-nebula-blue" style="top: 15%; right: -5%; width: 500px; height: 500px;"
+      aria-hidden="true"></div>
+    <div class="celestial-nebula celestial-nebula-purple" style="bottom: 10%; left: -5%; width: 480px; height: 480px;"
+      aria-hidden="true"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+        <div class="max-w-2xl">
+          <div class="editorial-badge mb-3">
+            <span>// 02 &bull; Technical Capabilities</span>
+          </div>
+          <h2 class="font-['Space_Grotesk'] text-3xl sm:text-5xl font-extrabold text-[#171717] tracking-tight">
+            Tools, technologies & <span class="text-[#3457d5]">engineering stack.</span>
           </h2>
-          <p class="about-lead text-slate-600 text-lg leading-relaxed mb-6">
-            A recent Bachelor’s degree graduate in Informatics Engineering with strong interests and skills in Web Development, UI/UX Design, and Cybersecurity. Experienced in developing responsive websites using HTML, CSS, JavaScript, PHP, and Flutter, as well as conducting system security testing. Combines web development knowledge with Secure Coding principles to build applications that are not only interactive and user-friendly but also secure. Proficient in using Figma to design wireframes and prototypes, as well as Tailwind CSS and Bootstrap to create consistent and responsive user interfaces.
-          </p>
+        </div>
+        <p class="max-w-md text-sm text-[#737373] leading-relaxed">
+          Proficiencies categorized by development lifecycle, from visual research and user flow prototyping to frontend
+          execution and security testing.
+        </p>
+      </div>
 
-          <!-- Ikon-ikon skill -->
-          <div class="about-skills flex flex-wrap gap-4 items-center">
-            <!-- HTML -->
-            <i class="fab fa-html5 text-orange-600 text-3xl transition duration-300 hover:-translate-y-2 hover:scale-125" title="HTML5"></i>
+      <!-- Skills: 2-row premium layout -->
 
-            <!-- CSS -->
-            <i class="fab fa-css3-alt text-blue-600 text-3xl transition duration-300 hover:-translate-y-2 hover:scale-125" title="CSS3"></i>
-
-            <!-- PHP -->
-            <i class="fab fa-php text-indigo-600 text-3xl transition duration-300 hover:-translate-y-2 hover:scale-125" title="PHP"></i>
-
-            <!-- JavaScript -->
-            <i
-              class="fab fa-js-square text-yellow-500 text-3xl transition duration-300 hover:-translate-y-2 hover:scale-125"
-              title="JavaScript"
-            ></i>
-
-            <!-- Figma -->
-            <i class="fab fa-figma text-sky-500 text-3xl" title="Figma"></i>
-
-            <!-- Flutter -->
-            <img
-              src="https://img.icons8.com/color/48/flutter.png"
-              alt="Flutter"
-              class="w-8 h-8"
-              title="Flutter"
-            />
-
-            <!-- Tailwind CSS -->
-            <img
-              src="https://img.icons8.com/color/48/tailwindcss.png"
-              alt="Tailwind CSS"
-              class="w-8 h-8"
-              title="Tailwind CSS"
-            />
-
-            <!-- Bootstrap -->
-            <i
-              class="fab fa-bootstrap text-blue-600 text-3xl"
-              title="Bootstrap"
-            ></i>
+      <!-- Row 1: Wide stats banner -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        <div class="bg-[#f7f7f5] border border-[#e8e8e6] rounded-2xl p-5 flex flex-col gap-1.5 group hover:border-[#3457d5]/30 hover:bg-[#f0f4ff] transition-all duration-300">
+          <span class="font-mono text-[10px] text-[#737373] uppercase tracking-widest">01 &bull; Proficiency</span>
+          <span class="font-['Space_Grotesk'] text-2xl font-extrabold text-[#171717]">Frontend</span>
+          <div class="flex gap-1 mt-1">
+            <span class="h-1.5 flex-1 rounded-full bg-[#3457d5]"></span>
+            <span class="h-1.5 flex-1 rounded-full bg-[#3457d5]"></span>
+            <span class="h-1.5 flex-1 rounded-full bg-[#3457d5]"></span>
+            <span class="h-1.5 flex-1 rounded-full bg-[#3457d5]"></span>
+            <span class="h-1.5 flex-1 rounded-full bg-[#e8e8e6]"></span>
           </div>
-
-          <!-- Tombol Download CV -->
-          <a
-            href="https://drive.google.com/file/d/1ONIHtaVbg683YqaOGWCKaqO_KBvWZJly/view?usp=drive_link"
-            class="inline-block mt-8 bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-8 rounded-full shadow-lg shadow-blue-500/25 hover:-translate-y-1 hover:scale-105 hover:shadow-xl transition duration-300"
-          >
-            Download CV
-          </a>
+          <span class="font-mono text-[10px] text-[#3457d5] mt-0.5">Advanced</span>
+        </div>
+        <div class="bg-[#f7f7f5] border border-[#e8e8e6] rounded-2xl p-5 flex flex-col gap-1.5 group hover:border-[#3457d5]/30 hover:bg-[#f0f4ff] transition-all duration-300">
+          <span class="font-mono text-[10px] text-[#737373] uppercase tracking-widest">02 &bull; Proficiency</span>
+          <span class="font-['Space_Grotesk'] text-2xl font-extrabold text-[#171717]">Backend</span>
+          <div class="flex gap-1 mt-1">
+            <span class="h-1.5 flex-1 rounded-full bg-[#3457d5]"></span>
+            <span class="h-1.5 flex-1 rounded-full bg-[#3457d5]"></span>
+            <span class="h-1.5 flex-1 rounded-full bg-[#3457d5]"></span>
+            <span class="h-1.5 flex-1 rounded-full bg-[#e8e8e6]"></span>
+            <span class="h-1.5 flex-1 rounded-full bg-[#e8e8e6]"></span>
+          </div>
+          <span class="font-mono text-[10px] text-[#3457d5] mt-0.5">Intermediate</span>
+        </div>
+        <div class="bg-[#f7f7f5] border border-[#e8e8e6] rounded-2xl p-5 flex flex-col gap-1.5 group hover:border-[#3457d5]/30 hover:bg-[#f0f4ff] transition-all duration-300">
+          <span class="font-mono text-[10px] text-[#737373] uppercase tracking-widest">03 &bull; Proficiency</span>
+          <span class="font-['Space_Grotesk'] text-2xl font-extrabold text-[#171717]">Mobile</span>
+          <div class="flex gap-1 mt-1">
+            <span class="h-1.5 flex-1 rounded-full bg-[#3457d5]"></span>
+            <span class="h-1.5 flex-1 rounded-full bg-[#3457d5]"></span>
+            <span class="h-1.5 flex-1 rounded-full bg-[#3457d5]"></span>
+            <span class="h-1.5 flex-1 rounded-full bg-[#e8e8e6]"></span>
+            <span class="h-1.5 flex-1 rounded-full bg-[#e8e8e6]"></span>
+          </div>
+          <span class="font-mono text-[10px] text-[#3457d5] mt-0.5">Intermediate</span>
+        </div>
+        <div class="bg-[#f7f7f5] border border-[#e8e8e6] rounded-2xl p-5 flex flex-col gap-1.5 group hover:border-[#3457d5]/30 hover:bg-[#f0f4ff] transition-all duration-300">
+          <span class="font-mono text-[10px] text-[#737373] uppercase tracking-widest">04 &bull; Proficiency</span>
+          <span class="font-['Space_Grotesk'] text-2xl font-extrabold text-[#171717]">UI/UX</span>
+          <div class="flex gap-1 mt-1">
+            <span class="h-1.5 flex-1 rounded-full bg-[#3457d5]"></span>
+            <span class="h-1.5 flex-1 rounded-full bg-[#3457d5]"></span>
+            <span class="h-1.5 flex-1 rounded-full bg-[#3457d5]"></span>
+            <span class="h-1.5 flex-1 rounded-full bg-[#3457d5]"></span>
+            <span class="h-1.5 flex-1 rounded-full bg-[#e8e8e6]"></span>
+          </div>
+          <span class="font-mono text-[10px] text-[#3457d5] mt-0.5">Advanced</span>
         </div>
       </div>
+
+      <!-- Row 2: Detailed skill cards grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+        <!-- Left column: Frontend + Mobile -->
+        <div class="flex flex-col gap-6">
+
+          <!-- Frontend Card -->
+          <div class="skills-category-card">
+            <div class="flex items-center gap-4 mb-5">
+              <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-orange-500/10 to-blue-500/10 border border-[#e8e8e6] flex items-center justify-center">
+                <i class="fas fa-laptop-code text-[#3457d5] text-lg"></i>
+              </div>
+              <div>
+                <span class="font-mono text-[10px] text-[#3457d5] font-bold uppercase tracking-widest">01 &bull; Frontend</span>
+                <h3 class="font-['Space_Grotesk'] text-lg font-bold text-[#171717] mt-0.5">Frontend Development</h3>
+              </div>
+            </div>
+            <p class="text-xs text-[#737373] leading-relaxed mb-5">Membangun antarmuka client yang semantic, responsif, dan aksesibel dengan teknologi web modern.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-pill"><i class="fab fa-html5 text-orange-500"></i> HTML5</span>
+              <span class="skill-pill"><i class="fab fa-css3-alt text-blue-500"></i> CSS3</span>
+              <span class="skill-pill"><i class="fab fa-js text-yellow-500"></i> JavaScript</span>
+              <span class="skill-pill"><img src="https://img.icons8.com/color/48/tailwindcss.png" alt="Tailwind CSS" /> Tailwind</span>
+              <span class="skill-pill"><i class="fab fa-bootstrap text-purple-600"></i> Bootstrap</span>
+            </div>
+          </div>
+
+          <!-- Mobile Card -->
+          <div class="skills-category-card">
+            <div class="flex items-center gap-4 mb-5">
+              <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-sky-500/10 to-cyan-500/10 border border-[#e8e8e6] flex items-center justify-center">
+                <i class="fas fa-mobile-screen text-sky-500 text-lg"></i>
+              </div>
+              <div>
+                <span class="font-mono text-[10px] text-[#3457d5] font-bold uppercase tracking-widest">03 &bull; Mobile</span>
+                <h3 class="font-['Space_Grotesk'] text-lg font-bold text-[#171717] mt-0.5">Mobile Development</h3>
+              </div>
+            </div>
+            <p class="text-xs text-[#737373] leading-relaxed mb-5">Mengembangkan aplikasi mobile cross-platform dengan Flutter dan Dart untuk Android & iOS.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-pill"><img src="https://img.icons8.com/color/48/flutter.png" alt="Flutter" /> Flutter</span>
+              <span class="skill-pill"><i class="fas fa-cube text-sky-500"></i> Dart</span>
+              <span class="skill-pill"><i class="fas fa-arrows-split-up-and-left text-[#3457d5]"></i> Cross-Platform</span>
+              <span class="skill-pill"><i class="fas fa-mobile text-[#737373]"></i> Mobile UX</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right column: Backend + Design/Security -->
+        <div class="flex flex-col gap-6">
+
+          <!-- Backend Card -->
+          <div class="skills-category-card">
+            <div class="flex items-center gap-4 mb-5">
+              <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-indigo-500/10 to-emerald-500/10 border border-[#e8e8e6] flex items-center justify-center">
+                <i class="fas fa-server text-indigo-500 text-lg"></i>
+              </div>
+              <div>
+                <span class="font-mono text-[10px] text-[#3457d5] font-bold uppercase tracking-widest">02 &bull; Systems</span>
+                <h3 class="font-['Space_Grotesk'] text-lg font-bold text-[#171717] mt-0.5">Backend & Database</h3>
+              </div>
+            </div>
+            <p class="text-xs text-[#737373] leading-relaxed mb-5">Mengelola logika server, skema database, dan routing aplikasi untuk sistem yang scalable.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-pill"><i class="fab fa-php text-indigo-600"></i> PHP</span>
+              <span class="skill-pill"><i class="fas fa-database text-sky-600"></i> MySQL / SQL</span>
+              <span class="skill-pill"><i class="fas fa-network-wired text-emerald-600"></i> RESTful APIs</span>
+              <span class="skill-pill"><i class="fas fa-server text-[#737373]"></i> Web Servers</span>
+            </div>
+          </div>
+
+          <!-- Design & Security Card -->
+          <div class="skills-category-card">
+            <div class="flex items-center gap-4 mb-5">
+              <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-[#e8e8e6] flex items-center justify-center">
+                <i class="fas fa-shield-halved text-purple-500 text-lg"></i>
+              </div>
+              <div>
+                <span class="font-mono text-[10px] text-[#3457d5] font-bold uppercase tracking-widest">04 &bull; Design &amp; Security</span>
+                <h3 class="font-['Space_Grotesk'] text-lg font-bold text-[#171717] mt-0.5">Design & Security</h3>
+              </div>
+            </div>
+            <p class="text-xs text-[#737373] leading-relaxed mb-5">Prototyping visual di Figma yang dipadukan dengan kesadaran uji penetrasi dan secure coding.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-pill"><i class="fab fa-figma text-purple-500"></i> Figma</span>
+              <span class="skill-pill"><i class="fas fa-pen-ruler text-pink-600"></i> Wireframing</span>
+              <span class="skill-pill"><i class="fas fa-bug text-emerald-600"></i> Pentesting</span>
+              <span class="skill-pill"><i class="fas fa-lock text-[#3457d5]"></i> Secure Coding</span>
+              <span class="skill-pill"><i class="fas fa-shield text-[#737373]"></i> OWASP</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
-    <!-- About End -->
+  </section>
 
-    <!-- Education Start -->
-    <section id="education" class="relative overflow-hidden bg-slate-950 px-6 py-24 text-white">
-      <div class="absolute -left-32 top-10 h-96 w-96 rounded-full bg-cyan-500/20 blur-3xl"></div>
-      <div class="absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-blue-600/20 blur-3xl"></div>
-      <div class="relative mx-auto max-w-6xl">
-        <div class="mb-16 flex flex-col justify-between gap-8 md:flex-row md:items-end">
-          <div class="max-w-2xl">
-            <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">My education journey</p>
-            <h2 class="text-4xl font-extrabold leading-tight sm:text-5xl">Learn, grow,<br /><span class="bg-gradient-to-r from-cyan-300 via-sky-300 to-blue-500 bg-clip-text text-transparent">create impact.</span></h2>
-            <p class="mt-5 text-lg leading-relaxed text-slate-400">Each stage of my education has helped me turn curiosity into meaningful digital work.</p>
+  <!-- ====================================================================
+         Featured Projects Section (Varied Editorial Showcase)
+         ==================================================================== -->
+  <section id="project" class="py-28 px-6 bg-[#f7f7f5] border-t border-b border-[#e8e8e6]">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+        <div class="max-w-2xl">
+          <div class="editorial-badge mb-3">
+            <span>// 03 &bull; Selected Work</span>
           </div>
-          <div class="grid grid-cols-2 gap-3 sm:gap-5">
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur transition hover:border-cyan-300/50"><p class="text-3xl font-bold text-cyan-300">2026</p><p class="mt-1 text-sm text-slate-400">Graduation</p></div>
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur transition hover:border-blue-300/50"><p class="text-3xl font-bold text-blue-300">4</p><p class="mt-1 text-sm text-slate-400">Education stages</p></div>
-          </div>
-        </div>
-        <div class="grid gap-5 md:grid-cols-4">
-          <div class="group rounded-3xl border border-white/10 bg-white/[0.06] p-6 transition duration-500 hover:-translate-y-2 hover:border-cyan-400/60 hover:bg-cyan-400/10"><div class="mb-8 flex items-center justify-between"><span class="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-400/15 text-cyan-300"><i class="fas fa-seedling"></i></span><span class="text-sm font-bold text-cyan-300">01</span></div><p class="text-xs font-bold uppercase tracking-widest text-slate-500">2010 – 2016</p><h3 class="mt-2 text-xl font-bold">Elementary School</h3><p class="mt-3 text-sm leading-relaxed text-slate-400">Built my foundation, curiosity, discipline, and courage to try new things.</p></div>
-          <div class="group rounded-3xl border border-white/10 bg-white/[0.06] p-6 transition duration-500 hover:-translate-y-2 hover:border-blue-400/60 hover:bg-blue-400/10"><div class="mb-8 flex items-center justify-between"><span class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-400/15 text-blue-300"><i class="fas fa-compass"></i></span><span class="text-sm font-bold text-blue-300">02</span></div><p class="text-xs font-bold uppercase tracking-widest text-slate-500">2016 – 2019</p><h3 class="mt-2 text-xl font-bold">Junior High School</h3><p class="mt-3 text-sm leading-relaxed text-slate-400">Started exploring technology, coding, and creative problem-solving.</p></div>
-          <div class="group rounded-3xl border border-white/10 bg-white/[0.06] p-6 transition duration-500 hover:-translate-y-2 hover:border-sky-400/60 hover:bg-sky-400/10"><div class="mb-8 flex items-center justify-between"><span class="flex h-11 w-11 items-center justify-center rounded-xl bg-sky-400/15 text-sky-300"><i class="fas fa-rocket"></i></span><span class="text-sm font-bold text-sky-300">03</span></div><p class="text-xs font-bold uppercase tracking-widest text-slate-500">2019 – 2022</p><h3 class="mt-2 text-xl font-bold">Vocational High School</h3><p class="mt-3 text-sm leading-relaxed text-slate-400">Developed practical skills in web development, design, and digital projects.</p></div>
-          <div class="group rounded-3xl border border-emerald-400/30 bg-gradient-to-br from-emerald-400/20 to-slate-900 p-6 transition duration-500 hover:-translate-y-2 hover:shadow-[0_0_35px_rgba(16,185,129,0.2)]"><div class="mb-8 flex items-center justify-between"><span class="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-400/20 text-emerald-300"><i class="fas fa-bullseye"></i></span><span class="text-sm font-bold text-emerald-300">04</span></div><p class="text-xs font-bold uppercase tracking-widest text-emerald-300">2022 – 2026</p><h3 class="mt-2 text-xl font-bold">College</h3><p class="mt-3 text-sm leading-relaxed text-slate-300">Continuing to grow through Web, Mobile, and UI/UX projects that create value.</p></div>
+          <h2 class="font-['Space_Grotesk'] text-3xl sm:text-5xl font-extrabold text-[#171717] tracking-tight">
+            Featured <span class="text-[#3457d5]">Projects.</span>
+          </h2>
         </div>
       </div>
-    </section>
-    <!-- Education End -->
 
-    <!-- Experience Start -->
-    <section id="experience" class="experience-section relative overflow-hidden bg-slate-900 px-6 py-24 text-white">
-      <div class="experience-orb experience-orb-left"></div>
-      <div class="experience-orb experience-orb-right"></div>
-      <div class="relative mx-auto max-w-5xl">
-        <div class="mb-14 max-w-2xl">
-          <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">Experience</p>
-          <h2 class="text-4xl font-extrabold leading-tight sm:text-5xl">Building ideas<br /><span class="bg-gradient-to-r from-cyan-300 via-sky-300 to-blue-500 bg-clip-text text-transparent">into useful products.</span></h2>
-          <p class="mt-5 text-lg leading-relaxed text-slate-400">Practical experience gained through various projects and internships.</p>
-        </div>
+      <!-- 3 Featured Projects — 1 big featured card + 2 compact right stack -->
+      <div class="selected-work-layout">
 
-        <div class="experience-timeline">
-          <article class="experience-item experience-item-cyan">
-            <div class="experience-marker"><i class="fas fa-shield-halved"></i></div>
-            <div class="experience-card">
-              <div class="flex flex-wrap items-start justify-between gap-3">
-                <div>
-                  <p class="experience-period">Feb 2026 — Jun 2026</p>
-                  <h3 class="mt-2 text-2xl font-bold">Security Intern</h3>
-                </div>
-                <span class="experience-tag">PT Secunity Mitra Teknologi</span>
-              </div>
-              <p class="mt-4 leading-relaxed text-slate-400">Performed penetration testing and vulnerability analysis on web applications and systems, identified security gaps, and prepared risk reports with improvement recommendations.</p>
-              <div class="experience-tools"><span>Penetration Testing</span><span>Vulnerability Analysis</span><span>Security Report</span><span>Web Security</span></div>
+        <!-- Featured Card: 01 — ZHresto (Live Web) -->
+        <article class="project-feature-card project-card group">
+          <img src="images/projects/web1.png" alt="ZHresto Restaurant Web" loading="lazy" />
+          <div class="project-card-overlay"></div>
+          <div class="project-card-content">
+            <div class="flex items-center justify-between mb-3">
+              <span class="project-number text-[#93c5fd]">01 / Featured Web</span>
+              <span class="px-3 py-1 text-[10px] font-mono font-semibold tracking-wider text-[#3457d5] bg-white/95 border border-[#3457d5]/30 rounded-full shadow-sm backdrop-blur-md">HTML5 &bull; CSS3 &bull; JS</span>
             </div>
-          </article>
-
-          <article class="experience-item experience-item-blue">
-            <div class="experience-marker"><i class="fas fa-chalkboard-user"></i></div>
-            <div class="experience-card">
-              <div class="flex flex-wrap items-start justify-between gap-3">
-                <div>
-                  <p class="experience-period">Sep 2025 — Nov 2025</p>
-                  <h3 class="mt-2 text-2xl font-bold">UI/UX Design Mentor</h3>
-                </div>
-                <span class="experience-tag">SMK MITRA PERMATA</span>
-              </div>
-              <p class="mt-4 leading-relaxed text-slate-400">Designed and delivered basic UI/UX lessons using Figma for Grade 10 vocational students, guided wireframes and interactive prototypes, and provided constructive feedback.</p>
-              <div class="experience-tools"><span>Figma</span><span>Wireframe</span><span>Prototype</span><span>Class Mentoring</span></div>
-            </div>
-          </article>
-
-          <article class="experience-item experience-item-emerald">
-            <div class="experience-marker"><i class="fas fa-tree"></i></div>
-            <div class="experience-card">
-              <div class="flex flex-wrap items-start justify-between gap-3">
-                <div>
-                  <p class="experience-period">May 2022 — Jul 2022</p>
-                  <h3 class="mt-2 text-2xl font-bold">Production Intern</h3>
-                </div>
-                <span class="experience-tag">PT Interkayu Nusantara</span>
-              </div>
-              <p class="mt-4 leading-relaxed text-slate-400">Participated directly in wood production, from raw material selection to processing and painting, while working with the production team to meet daily targets.</p>
-              <div class="experience-tools"><span>Production</span><span>Quality Process</span><span>Teamwork</span><span>Wood Processing</span></div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-    <!-- Experience End -->
-
-    <!-- Selected Work Start -->
-    <section id="project" class="selected-work-section relative overflow-hidden bg-slate-950 px-6 py-24 text-white">
-      <!-- Glow Orbs Kiri Atas & Kanan Bawah -->
-      <div class="absolute -left-32 top-10 h-96 w-96 rounded-full bg-cyan-500/20 blur-3xl pointer-events-none"></div>
-      <div class="absolute -right-32 bottom-10 h-96 w-96 rounded-full bg-blue-600/20 blur-3xl pointer-events-none"></div>
-
-      <div class="selected-work-grid"></div>
-      <div class="relative mx-auto max-w-7xl z-10">
-        
-        <!-- Section Header -->
-        <div class="mb-14 flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <div>
-            <p class="text-xs font-bold uppercase tracking-[0.3em] text-cyan-400 mb-1">Selected work</p>
-            <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
-              Featured <span class="bg-gradient-to-r from-cyan-300 via-sky-300 to-blue-500 bg-clip-text text-transparent">Projects.</span>
-            </h2>
+            <h3 class="group-hover:text-[#93c5fd] transition-colors duration-300">ZHresto Restaurant Platform</h3>
+            <p>Multi-device culinary platform dengan responsive layouts, dynamic menus, dan table booking — dibangun dengan vanilla web technologies.</p>
+            <button class="project-detail-btn project-view-trigger" type="button"
+              data-title="ZHresto Restaurant Web"
+              data-category="Web Development &bull; Multi-Device"
+              data-tech="HTML5, CSS3, JavaScript, Responsive Design"
+              data-description="Multi-device restaurant platform featuring interactive menus, responsive tablet & smartphone layouts, and smooth navigation built with vanilla web technologies."
+              data-image="images/projects/web1.png"
+              data-github="https://github.com/AgungRizkiSaputra/ZHresto"
+              data-github-label="GitHub Repository"
+              data-live="https://agungrizkisaputra.github.io/ZHresto/"
+              data-live-label="Live Deployed Web"
+              aria-label="View ZHresto project details">
+              <span>View Project Details</span>
+              <i class="fas fa-arrow-up-right-from-square"></i>
+            </button>
           </div>
+        </article>
 
-          <p class="max-w-md text-xs sm:text-sm text-slate-400 leading-relaxed mb-1">
-            A curated look at digital products, interfaces, and web experiences created throughout my journey.
-          </p>
-        </div>
+        <!-- Right Stack: 02 + 03 -->
+        <div class="selected-work-stack">
 
-        <!-- Project Grid Layout -->
-        <div class="selected-work-layout">
-          
-          <!-- Featured Project Card -->
-          <article class="project-feature-card project-card group">
-            <img src="images/projects/2.png" alt="Online food app interface" />
+          <!-- Compact: 02 — Online Food App (Figma) -->
+          <article class="project-card project-card-compact group">
+            <img src="images/projects/2.png" alt="Online Food App RzResto" loading="lazy" />
             <div class="project-card-overlay"></div>
-            
             <div class="project-card-content">
-              <div class="flex items-center justify-between mb-3">
-                <span class="project-number">01 / Featured</span>
-                <span class="px-3 py-1 text-[10px] font-semibold tracking-wider text-cyan-300 bg-slate-900/80 border border-cyan-500/30 rounded-full backdrop-blur-md">Figma UI/UX</span>
+              <div class="flex items-center justify-between mb-2">
+                <span class="project-number text-[#93c5fd]">02 / UI/UX</span>
+                <span class="px-2.5 py-0.5 text-[10px] font-mono font-semibold tracking-wider text-[#3457d5] bg-white/95 border border-[#3457d5]/30 rounded-full shadow-sm backdrop-blur-md">Figma UI/UX</span>
               </div>
-              <h3 class="group-hover:text-cyan-300 transition-colors duration-300">Online Food App</h3>
-              <p>Restaurant ordering experience crafted with interactive prototypes and user flows in Figma.</p>
-              
-              <button class="project-view-button eye-icon" type="button" data-title="Online Food App" data-description="A complete mobile food ordering interface designed in Figma, covering user flows, wireframes, and interactive screens for a restaurant platform." data-image="images/projects/2.png" aria-label="View Online Food App project">
+              <h3 class="group-hover:text-[#93c5fd] transition-colors duration-300">Online Food App (RzResto)</h3>
+              <p>Mobile food ordering interface didesain di Figma, lengkap dengan user flows dan interactive prototype.</p>
+              <button class="project-detail-btn project-view-trigger" type="button"
+                data-title="Online Food App (RzResto)"
+                data-category="Figma UI/UX &bull; Food Delivery Prototype"
+                data-tech="Figma, Wireframing, User Flow, Component Hierarchy"
+                data-description="A complete mobile food ordering interface designed in Figma, covering user flows, wireframes, and interactive screens for a restaurant platform."
+                data-image="images/projects/2.png"
+                data-github="https://github.com/AgungRizkiSaputra"
+                data-github-label="GitHub Profile"
+                data-live="https://www.figma.com/@AgungRizkiSaputra"
+                data-live-label="Open Figma Prototype"
+                aria-label="View Online Food App project details">
+                <span>View Details</span>
                 <i class="fas fa-arrow-up-right-from-square"></i>
               </button>
             </div>
           </article>
 
-          <!-- Stack Projects -->
-          <div class="selected-work-stack">
-            
-            <!-- Compact Card 1 -->
-            <article class="project-card project-card-compact group">
-              <img src="images/projects/3.png" alt="Headline Hub news app" />
-              <div class="project-card-overlay"></div>
-              
-              <div class="project-card-content">
-                <div class="flex items-center justify-between mb-2">
-                  <span class="project-number">02 / Mobile</span>
-                  <span class="px-2.5 py-0.5 text-[10px] font-semibold tracking-wider text-blue-300 bg-slate-900/80 border border-blue-500/30 rounded-full backdrop-blur-md">Flutter</span>
-                </div>
-                <h3 class="group-hover:text-cyan-300 transition-colors duration-300">Headline Hub</h3>
-                <p>Cross-platform news app concept with smooth reading experience.</p>
-                
-                <button class="project-view-button eye-icon" type="button" data-title="Headline Hub" data-description="A clean cross-platform news app concept developed with Flutter, designed around clear content hierarchy and a smooth reading experience." data-image="images/projects/3.png" aria-label="View Headline Hub project">
-                  <i class="fas fa-arrow-up-right-from-square"></i>
-                </button>
+          <!-- Compact: 03 — Headline Hub (Flutter) -->
+          <article class="project-card project-card-compact group">
+            <img src="images/projects/3.png" alt="Headline Hub News App" loading="lazy" />
+            <div class="project-card-overlay"></div>
+            <div class="project-card-content">
+              <div class="flex items-center justify-between mb-2">
+                <span class="project-number text-[#93c5fd]">03 / Mobile</span>
+                <span class="px-2.5 py-0.5 text-[10px] font-mono font-semibold tracking-wider text-[#3457d5] bg-white/95 border border-[#3457d5]/30 rounded-full shadow-sm backdrop-blur-md">Flutter Mobile</span>
               </div>
-            </article>
+              <h3 class="group-hover:text-[#93c5fd] transition-colors duration-300">Headline Hub</h3>
+              <p>Cross-platform news app built with Flutter — typografi bersih, filter kategori, dan smooth reading experience.</p>
+              <button class="project-detail-btn project-view-trigger" type="button"
+                data-title="Headline Hub"
+                data-category="Mobile Development &bull; Cross-Platform"
+                data-tech="Flutter, Dart, Mobile UI, State Handling"
+                data-description="Clean cross-platform news app concept developed with Flutter. Designed around clear typography, category browsing, and a smooth reading experience."
+                data-image="images/projects/3.png"
+                data-github="https://github.com/AgungRizkiSaputra/headline-hub"
+                data-github-label="Flutter Repository"
+                data-live="https://github.com/AgungRizkiSaputra/headline-hub/releases"
+                data-live-label="Download APK Release"
+                aria-label="View Headline Hub project details">
+                <span>View Details</span>
+                <i class="fas fa-arrow-up-right-from-square"></i>
+              </button>
+            </div>
+          </article>
 
-            <!-- Compact Card 2 -->
-            <article class="project-card project-card-compact group">
-              <img src="images/projects/web3.png" alt="ZHHRCar transportation website" />
-              <div class="project-card-overlay"></div>
-              
-              <div class="project-card-content">
-                <div class="flex items-center justify-between mb-2">
-                  <span class="project-number">03 / Web</span>
-                  <span class="px-2.5 py-0.5 text-[10px] font-semibold tracking-wider text-sky-300 bg-slate-900/80 border border-sky-500/30 rounded-full backdrop-blur-md">Bootstrap</span>
-                </div>
-                <h3 class="group-hover:text-cyan-300 transition-colors duration-300">ZHHRCar Web</h3>
-                <p>Responsive landing page for a transportation service.</p>
-                
-                <button class="project-view-button eye-icon" type="button" data-title="ZHHRCar Web" data-description="A responsive transportation service landing page built with HTML, CSS, JavaScript, and Bootstrap." data-image="images/projects/web3.png" aria-label="View ZHHRCar Web project">
-                  <i class="fas fa-arrow-up-right-from-square"></i>
-                </button>
-              </div>
-            </article>
+        </div>
+      </div>
 
+      <!-- Callout Banner to Archive -->
+      <div class="mt-10 p-8 rounded-2xl bg-white border border-[#e8e8e6] shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+        <div>
+          <h4 class="font-['Space_Grotesk'] font-bold text-[#171717] text-xl">Ada lebih banyak project menarik.</h4>
+          <p class="text-xs sm:text-sm text-[#737373] mt-1">Lihat semua 7 project — web, mobile, dan UI/UX dengan filter kategori.</p>
+        </div>
+        <a href="all-projects.html" class="btn-primary whitespace-nowrap">
+          <span>Explore All 7 Projects</span>
+          <i class="fas fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================================================
+         Experience & Education Section — Dramatic Visual Timeline
+         ==================================================================== -->
+  <section id="experience" class="py-28 px-6" style="background: linear-gradient(180deg, #fff 0%, #f7f7f5 100%);">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-20">
+        <div>
+          <div class="editorial-badge mb-3">
+            <span>// 04 &bull; Milestones &amp; Background</span>
+          </div>
+          <h2 class="font-['Space_Grotesk'] text-3xl sm:text-5xl font-extrabold text-[#171717] tracking-tight">
+            Career path &amp; <span class="text-[#3457d5]">academic journey.</span>
+          </h2>
+        </div>
+        <div class="flex gap-6 font-mono text-xs text-[#737373] shrink-0">
+          <div class="text-center">
+            <p class="font-['Space_Grotesk'] text-3xl font-extrabold text-[#3457d5]">3+</p>
+            <p class="uppercase tracking-widest mt-1">Experiences</p>
+          </div>
+          <div class="text-center">
+            <p class="font-['Space_Grotesk'] text-3xl font-extrabold text-[#171717]">4</p>
+            <p class="uppercase tracking-widest mt-1">Study Levels</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience: Full-width dramatic cards -->
+      <div class="mb-20">
+        <div class="flex items-center gap-4 mb-10">
+          <div class="w-12 h-12 rounded-2xl bg-[#3457d5] flex items-center justify-center shadow-lg shadow-[#3457d5]/25">
+            <i class="fas fa-briefcase text-white text-lg"></i>
+          </div>
+          <div>
+            <span class="font-mono text-[10px] text-[#3457d5] uppercase tracking-widest font-bold">Work History</span>
+            <h3 class="font-['Space_Grotesk'] text-2xl font-extrabold text-[#171717]">Professional Experience</h3>
           </div>
         </div>
 
-        <!-- Tech Stack Strip Inline (Tanpa Kotak) -->
-        <div class="project-bottom-strip mt-8 pt-6 border-t border-slate-800/80 flex flex-wrap gap-6 items-center transition-all duration-300">
-          <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest mr-1">Technologies:</span>
-          
-          <!-- 5 Teknologi Utama -->
-          <span class="inline-flex items-center gap-2 text-xs font-medium text-slate-300 hover:text-orange-400 transition-all duration-300 hover:scale-110 cursor-default">
-            <i class="fab fa-html5 text-orange-500 text-lg"></i> HTML5
-          </span>
-          <span class="inline-flex items-center gap-2 text-xs font-medium text-slate-300 hover:text-blue-400 transition-all duration-300 hover:scale-110 cursor-default">
-            <i class="fab fa-css3-alt text-blue-500 text-lg"></i> CSS3
-          </span>
-          <span class="inline-flex items-center gap-2 text-xs font-medium text-slate-300 hover:text-indigo-400 transition-all duration-300 hover:scale-110 cursor-default">
-            <i class="fab fa-php text-indigo-400 text-lg"></i> PHP
-          </span>
-          <span class="inline-flex items-center gap-2 text-xs font-medium text-slate-300 hover:text-yellow-400 transition-all duration-300 hover:scale-110 cursor-default">
-            <i class="fab fa-js-square text-yellow-400 text-lg"></i> JavaScript
-          </span>
-          <span class="inline-flex items-center gap-2 text-xs font-medium text-slate-300 hover:text-sky-400 transition-all duration-300 hover:scale-110 cursor-default">
-            <i class="fab fa-figma text-sky-400 text-lg"></i> Figma
-          </span>
+        <!-- Experience Cards — horizontal numbered layout -->
+        <div class="flex flex-col gap-5">
 
-          <!-- Teknologi Sisa yang Muncul Secara Inline saat Klik "..." -->
-          <div id="extraTech" class="hidden flex-wrap gap-6 items-center transition-all duration-300">
-            <span class="inline-flex items-center gap-2 text-xs font-medium text-slate-300 hover:text-cyan-300 transition-all duration-300 hover:scale-110 cursor-default">
-              <img src="https://img.icons8.com/color/48/flutter.png" alt="Flutter" class="w-5 h-5" /> Flutter
-            </span>
-            <span class="inline-flex items-center gap-2 text-xs font-medium text-slate-300 hover:text-cyan-400 transition-all duration-300 hover:scale-110 cursor-default">
-              <img src="https://img.icons8.com/color/48/tailwindcss.png" alt="Tailwind CSS" class="w-5 h-5" /> Tailwind CSS
-            </span>
-            <span class="inline-flex items-center gap-2 text-xs font-medium text-slate-300 hover:text-blue-500 transition-all duration-300 hover:scale-110 cursor-default">
-              <i class="fab fa-bootstrap text-blue-500 text-lg"></i> Bootstrap
-            </span>
+          <!-- EXP 01 -->
+          <div class="exp-dramatic-card group">
+            <div class="exp-card-number">01</div>
+            <div class="exp-card-accent" style="background:#3457d5;"></div>
+            <div class="exp-card-body">
+              <div class="flex flex-wrap items-start justify-between gap-4">
+                <div>
+                  <span class="font-mono text-[10px] text-[#3457d5] font-bold uppercase tracking-widest mb-1 block">Feb 2026 — Jun 2026 &bull; Fulltime Internship</span>
+                  <h4 class="font-['Space_Grotesk'] text-xl sm:text-2xl font-extrabold text-[#171717] group-hover:text-[#3457d5] transition-colors">Security Intern</h4>
+                  <p class="font-semibold text-sm text-[#737373] mt-0.5">PT Secunity Mitra Teknologi</p>
+                </div>
+                <span class="exp-role-badge bg-[#f0f4ff] text-[#3457d5] border-[#3457d5]/20"><i class="fas fa-shield-halved mr-1.5"></i>Cybersecurity</span>
+              </div>
+              <p class="text-sm text-[#737373] leading-relaxed mt-4 max-w-2xl">
+                Conducted penetration testing and vulnerability analysis on web applications and systems. Identified potential attack vectors and authored actionable risk reports with remediation recommendations.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span class="exp-tag">Penetration Testing</span>
+                <span class="exp-tag">Vulnerability Analysis</span>
+                <span class="exp-tag">Web Security</span>
+                <span class="exp-tag">Risk Reporting</span>
+              </div>
+            </div>
           </div>
 
-          <!-- Tombol ... Toggle Inline -->
-          <button id="toggleTechBtn" type="button" class="inline-flex items-center justify-center text-cyan-400 hover:text-cyan-200 text-sm font-bold tracking-widest transition-all duration-300 hover:scale-125 px-2 py-1 cursor-pointer" title="Tampilkan / sembunyikan semua teknologi">
-            <i id="techIcon" class="fas fa-ellipsis"></i>
-          </button>
+          <!-- EXP 02 -->
+          <div class="exp-dramatic-card group">
+            <div class="exp-card-number">02</div>
+            <div class="exp-card-accent" style="background:#7c3aed;"></div>
+            <div class="exp-card-body">
+              <div class="flex flex-wrap items-start justify-between gap-4">
+                <div>
+                  <span class="font-mono text-[10px] text-[#7c3aed] font-bold uppercase tracking-widest mb-1 block">Sep 2025 — Nov 2025 &bull; Mentorship</span>
+                  <h4 class="font-['Space_Grotesk'] text-xl sm:text-2xl font-extrabold text-[#171717] group-hover:text-[#7c3aed] transition-colors">UI/UX Design Mentor</h4>
+                  <p class="font-semibold text-sm text-[#737373] mt-0.5">SMK Mitra Permata</p>
+                </div>
+                <span class="exp-role-badge bg-purple-50 text-purple-700 border-purple-200"><i class="fab fa-figma mr-1.5"></i>UI/UX Design</span>
+              </div>
+              <p class="text-sm text-[#737373] leading-relaxed mt-4 max-w-2xl">
+                Formulated curriculum and guided Grade 10 vocational students in foundational UI/UX methodologies using Figma. Mentored through wireframing, component structuring, and interactive prototype delivery.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span class="exp-tag">Figma Mentoring</span>
+                <span class="exp-tag">Wireframing</span>
+                <span class="exp-tag">Design Systems</span>
+                <span class="exp-tag">Curriculum Design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- EXP 03 -->
+          <div class="exp-dramatic-card group">
+            <div class="exp-card-number">03</div>
+            <div class="exp-card-accent" style="background:#059669;"></div>
+            <div class="exp-card-body">
+              <div class="flex flex-wrap items-start justify-between gap-4">
+                <div>
+                  <span class="font-mono text-[10px] text-emerald-700 font-bold uppercase tracking-widest mb-1 block">May 2022 — Jul 2022 &bull; Industrial Internship</span>
+                  <h4 class="font-['Space_Grotesk'] text-xl sm:text-2xl font-extrabold text-[#171717] group-hover:text-emerald-700 transition-colors">Production Intern</h4>
+                  <p class="font-semibold text-sm text-[#737373] mt-0.5">PT Interkayu Nusantara</p>
+                </div>
+                <span class="exp-role-badge bg-emerald-50 text-emerald-700 border-emerald-200"><i class="fas fa-industry mr-1.5"></i>Manufacturing</span>
+              </div>
+              <p class="text-sm text-[#737373] leading-relaxed mt-4 max-w-2xl">
+                Actively participated in manufacturing operations from raw timber selection to quality finishing and coating, collaborating with floor teams to maintain target output and production standards.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span class="exp-tag">Operations</span>
+                <span class="exp-tag">Quality Control</span>
+                <span class="exp-tag">Team Coordination</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Education: 2-column asymmetric cards -->
+      <div id="education">
+        <div class="flex items-center gap-4 mb-10">
+          <div class="w-12 h-12 rounded-2xl bg-[#171717] flex items-center justify-center shadow-lg shadow-black/15">
+            <i class="fas fa-graduation-cap text-white text-lg"></i>
+          </div>
+          <div>
+            <span class="font-mono text-[10px] text-[#737373] uppercase tracking-widest font-bold">Academic Background</span>
+            <h3 class="font-['Space_Grotesk'] text-2xl font-extrabold text-[#171717]">Education History</h3>
+          </div>
         </div>
 
-        <!-- View All Link Button -->
-        <div class="mt-12 text-center">
-          <a class="all-projects-link group inline-flex items-center gap-3 px-8 py-3.5 rounded-full border border-cyan-500/40 bg-slate-900/60 text-cyan-300 text-xs font-bold tracking-[0.2em] uppercase backdrop-blur-md transition-all duration-300 hover:bg-cyan-400 hover:text-slate-950 hover:border-cyan-400 hover:shadow-[0_0_25px_rgba(34,211,238,0.4)] hover:scale-105 active:scale-95" href="all-projects.html">
-            <span>View all projects</span>
-            <i class="fas fa-arrow-right text-xs transition-transform duration-300 group-hover:translate-x-1.5"></i>
+        <!-- Education Grid — 2 big + 2 compact -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+          <!-- Univ (Large highlighted) -->
+          <div class="edu-card edu-card-featured md:col-span-2">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-[#3457d5] flex items-center justify-center shadow-lg shadow-[#3457d5]/30 shrink-0">
+                  <i class="fas fa-university text-white text-xl"></i>
+                </div>
+                <div>
+                  <span class="font-mono text-[10px] text-[#3457d5] font-bold uppercase tracking-widest">2022 — 2026</span>
+                  <h4 class="font-['Space_Grotesk'] text-xl sm:text-2xl font-extrabold text-[#171717] mt-0.5">Bachelor of Informatics Engineering</h4>
+                  <p class="text-sm text-[#737373] mt-0.5">S.Kom. &bull; University Level</p>
+                </div>
+              </div>
+              <span class="editorial-badge accent shrink-0"><i class="fas fa-star mr-1.5 text-[10px]"></i>Highest Degree</span>
+            </div>
+            <div class="mt-5 pt-5 border-t border-[#3457d5]/15 grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <div class="text-center p-3 rounded-xl bg-[#f0f4ff] border border-[#3457d5]/15">
+                <p class="font-mono text-[10px] text-[#3457d5] uppercase tracking-wider">Focus</p>
+                <p class="font-semibold text-sm text-[#171717] mt-1">Web Dev</p>
+              </div>
+              <div class="text-center p-3 rounded-xl bg-[#f0f4ff] border border-[#3457d5]/15">
+                <p class="font-mono text-[10px] text-[#3457d5] uppercase tracking-wider">Focus</p>
+                <p class="font-semibold text-sm text-[#171717] mt-1">Mobile Dev</p>
+              </div>
+              <div class="text-center p-3 rounded-xl bg-[#f0f4ff] border border-[#3457d5]/15">
+                <p class="font-mono text-[10px] text-[#3457d5] uppercase tracking-wider">Focus</p>
+                <p class="font-semibold text-sm text-[#171717] mt-1">UI/UX Design</p>
+              </div>
+              <div class="text-center p-3 rounded-xl bg-[#f0f4ff] border border-[#3457d5]/15">
+                <p class="font-mono text-[10px] text-[#3457d5] uppercase tracking-wider">Focus</p>
+                <p class="font-semibold text-sm text-[#171717] mt-1">Cybersecurity</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- SMK -->
+          <div class="edu-card">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-[#f7f7f5] border border-[#e8e8e6] flex items-center justify-center">
+                <i class="fas fa-school text-[#171717] text-base"></i>
+              </div>
+              <div>
+                <span class="font-mono text-[10px] text-[#737373] uppercase tracking-widest">2019 — 2022</span>
+                <h4 class="font-['Space_Grotesk'] text-lg font-bold text-[#171717]">Vocational High (SMK)</h4>
+              </div>
+            </div>
+            <p class="text-xs text-[#737373] leading-relaxed">Programming languages, web authoring, algorithmic problem solving, dan interface design foundations.</p>
+            <div class="flex flex-wrap gap-1.5 mt-3">
+              <span class="exp-tag">Web Authoring</span>
+              <span class="exp-tag">Algorithms</span>
+            </div>
+          </div>
+
+          <!-- SMP -->
+          <div class="edu-card">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-[#f7f7f5] border border-[#e8e8e6] flex items-center justify-center">
+                <i class="fas fa-book-open text-[#171717] text-base"></i>
+              </div>
+              <div>
+                <span class="font-mono text-[10px] text-[#737373] uppercase tracking-widest">2016 — 2019</span>
+                <h4 class="font-['Space_Grotesk'] text-lg font-bold text-[#171717]">Junior High (SMP)</h4>
+              </div>
+            </div>
+            <p class="text-xs text-[#737373] leading-relaxed">Rasa ingin tahu awal di komputer, digital media, dan eksplorasi teknologi kreatif dimulai di sini.</p>
+            <div class="flex flex-wrap gap-1.5 mt-3">
+              <span class="exp-tag">Digital Media</span>
+              <span class="exp-tag">Technology</span>
+            </div>
+          </div>
+
+          <!-- SD -->
+          <div class="edu-card md:col-span-2">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-[#f7f7f5] border border-[#e8e8e6] flex items-center justify-center shrink-0">
+                <i class="fas fa-child text-[#171717] text-base"></i>
+              </div>
+              <div>
+                <span class="font-mono text-[10px] text-[#737373] uppercase tracking-widest">2010 — 2016 &bull; Elementary School (SD)</span>
+                <p class="text-sm text-[#737373] mt-0.5">Disiplin, analytical thinking, dan semangat belajar yang dibangun sejak dini — fondasi dari segala hal yang datang berikutnya.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================================================
+         Contact Section (Clean White)
+         ==================================================================== -->
+  <section id="contact"
+    class="py-28 px-6 bg-[#f7f7f5] border-t border-[#e8e8e6] editorial-grid-clean relative overflow-hidden">
+    <!-- Interactive Constellation Canvas ("Rasi Bintang" on Grid Section) -->
+    <canvas class="constellation-bg-canvas" id="contactConstellationCanvas" aria-hidden="true"></canvas>
+    <div class="celestial-nebula celestial-nebula-blue" style="top: 20%; left: -5%; width: 500px; height: 500px;"
+      aria-hidden="true"></div>
+    <div class="celestial-nebula celestial-nebula-purple" style="bottom: 10%; right: -5%; width: 480px; height: 480px;"
+      aria-hidden="true"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <div class="editorial-badge accent mb-4">
+          <span class="status-indicator-dot"></span>
+          <span>Get in Touch &bull; Open for Collaboration</span>
+        </div>
+        <h2
+          class="font-['Space_Grotesk'] text-4xl sm:text-6xl font-extrabold text-[#171717] tracking-tight leading-tight">
+          Have a project or opportunity?<br />
+          <span class="text-[#3457d5]">
+            Let's build something remarkable.
+          </span>
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-[#737373] leading-relaxed max-w-xl mx-auto">
+          Currently available for full-time frontend and web development positions, UI/UX design contracts, or
+          interesting technical collaborations.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch max-w-5xl mx-auto">
+
+        <!-- Direct Email Box (Span 7) -->
+        <div class="lg:col-span-7 contact-card-main flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-6 text-xs font-mono text-emerald-600 font-medium">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <span>Fast response &bull; typically within 24 hours</span>
+            </div>
+
+            <h3 class="font-['Space_Grotesk'] text-2xl sm:text-3xl font-bold text-[#171717] mb-2">Send a Direct Message
+            </h3>
+            <p class="text-xs sm:text-sm text-[#737373] leading-relaxed mb-8">
+              Click to copy email address or open directly in your mail client:
+            </p>
+
+            <!-- Interactive Email Card -->
+            <div
+              class="p-4 sm:p-5 rounded-2xl bg-[#f7f7f5] border border-[#e8e8e6] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-10 h-10 rounded-xl bg-[#f0f4ff] border border-[#3457d5]/30 text-[#3457d5] flex items-center justify-center text-lg">
+                  <i class="far fa-envelope"></i>
+                </div>
+                <div>
+                  <p class="font-mono text-[10px] text-[#737373] uppercase tracking-widest font-semibold">Email Address
+                  </p>
+                  <a href="mailto:agungriskisaputra64@gmail.com"
+                    class="text-sm sm:text-base font-bold text-[#171717] hover:text-[#3457d5] transition-colors">
+                    agungriskisaputra64@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-2 w-full sm:w-auto">
+                <button type="button" onclick="copyToClipboard('agungriskisaputra64@gmail.com', this)"
+                  class="btn-secondary w-full sm:w-auto text-xs py-2.5 px-4 font-mono">
+                  <i class="far fa-copy text-xs"></i>
+                  <span>Copy</span>
+                </button>
+                <a href="mailto:agungriskisaputra64@gmail.com"
+                  class="btn-primary w-full sm:w-auto text-xs py-2.5 px-4 font-mono">
+                  <span>Send</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mt-8 pt-6 border-t border-[#e8e8e6] flex items-center justify-between font-mono text-xs text-[#737373]">
+            <span>Location: Indonesia 🇮🇩</span>
+            <span>Timezone: GMT+7</span>
+          </div>
+        </div>
+
+        <!-- Social Links (Span 5) -->
+        <div class="lg:col-span-5 flex flex-col justify-between gap-4">
+
+          <!-- GitHub Card -->
+          <a href="https://github.com/AgungRizkiSaputra" target="_blank" rel="noopener noreferrer"
+            class="social-action-card group">
+            <div class="flex items-center gap-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-[#f7f7f5] border border-[#e8e8e6] flex items-center justify-center text-2xl text-[#171717] group-hover:text-[#3457d5] transition-colors">
+                <i class="fab fa-github"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-[#171717] text-base group-hover:text-[#3457d5] transition-colors">GitHub</h4>
+                <p class="text-xs text-[#737373]">Repositories & code projects</p>
+              </div>
+            </div>
+            <i class="fas fa-arrow-right action-arrow text-sm"></i>
+          </a>
+
+          <!-- LinkedIn Card -->
+          <a href="https://www.linkedin.com/in/agung-rizki-saputra-06051a2a7/" target="_blank" rel="noopener noreferrer"
+            class="social-action-card group">
+            <div class="flex items-center gap-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-[#f0f4ff] border border-[#3457d5]/20 flex items-center justify-center text-2xl text-[#3457d5] group-hover:text-[#2643af] transition-colors">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-[#171717] text-base group-hover:text-[#3457d5] transition-colors">LinkedIn
+                </h4>
+                <p class="text-xs text-[#737373]">Professional network & profile</p>
+              </div>
+            </div>
+            <i class="fas fa-arrow-right action-arrow text-sm"></i>
+          </a>
+
+          <!-- Instagram Card -->
+          <a href="https://www.instagram.com/agunggrzksptra_/" target="_blank" rel="noopener noreferrer"
+            class="social-action-card group">
+            <div class="flex items-center gap-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-[#fdf2f8] border border-pink-500/20 flex items-center justify-center text-2xl text-pink-600 group-hover:text-[#3457d5] transition-colors">
+                <i class="fab fa-instagram"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-[#171717] text-base group-hover:text-[#3457d5] transition-colors">Instagram
+                </h4>
+                <p class="text-xs text-[#737373]">Creative visuals & updates</p>
+              </div>
+            </div>
+            <i class="fas fa-arrow-right action-arrow text-sm"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================================================
+         Footer (Clean White Minimalist)
+         ==================================================================== -->
+  <footer class="py-10 px-6 border-t border-[#e8e8e6] bg-white font-mono text-xs text-[#737373]">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <span
+          class="w-5 h-5 rounded bg-[#f0f4ff] text-[#3457d5] font-bold flex items-center justify-center text-[10px]">ARS</span>
+        <span class="text-[#171717] font-medium">&copy; 2026 Agung Rizki Saputra. All rights reserved.</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <span>HTML5 &bull; CSS3 &bull; JS</span>
+        <a href="#home" class="hover:text-[#3457d5] transition-colors">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Scroll-to-Top Button -->
+  <a href="#home" class="scroll-top" aria-label="Scroll back to top">
+    <i class="fas fa-arrow-up text-sm"></i>
+  </a>
+
+  <!-- ====================================================================
+         Project View Modal (Clean White Dialog)
+         ==================================================================== -->
+  <div id="modal" class="hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+
+      <!-- Modal Header Image -->
+      <div class="relative w-full aspect-[16/10] bg-[#f0f0ee] overflow-hidden">
+        <img id="modalImage" src="" alt="Project Preview" class="w-full h-full object-cover" />
+        <button id="closeModal"
+          class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/90 hover:bg-[#171717] hover:text-white text-[#171717] shadow-md flex items-center justify-center transition-all text-xl font-bold cursor-pointer"
+          aria-label="Close Project Modal">
+          &times;
+        </button>
+      </div>
+
+      <!-- Modal Content Body -->
+      <div class="p-6 sm:p-8">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+          <span id="modalCategory" class="editorial-badge accent text-[10px]"></span>
+          <span id="modalTech" class="font-mono text-xs text-[#737373]"></span>
+        </div>
+
+        <h3 id="modalTitle" class="font-['Space_Grotesk'] text-2xl sm:text-3xl font-extrabold text-[#171717] mb-4"></h3>
+
+        <p id="modalDescription" class="text-[#737373] text-sm sm:text-base leading-relaxed mb-6"></p>
+
+        <!-- Project External Links: Live Deployed & GitHub Repository -->
+        <div class="flex flex-wrap items-center gap-3 my-6 pt-5 border-t border-[#e8e8e6]">
+          <a id="modalLiveBtn" href="#" target="_blank" rel="noopener noreferrer"
+            class="btn-primary flex items-center gap-2 text-xs py-2.5 px-5 font-mono">
+            <i class="fas fa-arrow-up-right-from-square text-[11px]"></i>
+            <span id="modalLiveText">Live Preview / Deployed</span>
+          </a>
+
+          <a id="modalGithubBtn" href="#" target="_blank" rel="noopener noreferrer"
+            class="btn-secondary flex items-center gap-2 text-xs py-2.5 px-5 font-mono">
+            <i class="fab fa-github text-sm"></i>
+            <span id="modalGithubText">View on GitHub</span>
           </a>
         </div>
 
-      </div>
-    </section>
-    <!-- Selected Work End -->
-
-    <!-- Modal Project View -->
-    <div
-      id="modal"
-      class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center hidden z-50"
-    >
-      <div
-        class="bg-white rounded-2xl shadow-2xl max-w-lg w-full relative overflow-hidden mx-4"
-      >
-        <button
-          id="closeModal"
-          class="absolute top-4 right-4 text-gray-600 hover:text-gray-900 transition transform hover:scale-110"
-        >
-          ✖
-        </button>
-        <img
-          id="modalImage"
-          src=""
-          alt="Project Image"
-          class="w-full rounded-t-2xl shadow-md"
-        />
-        <div class="p-4">
-          <h2
-            id="modalTitle"
-            class="text-2xl font-bold text-gray-800 mb-2 text-center"
-          ></h2>
-          <p id="modalDescription" class="text-gray-600 text-center"></p>
+        <div class="pt-4 border-t border-[#e8e8e6] flex items-center justify-between">
+          <span class="font-mono text-xs text-[#a3a3a3]">Agung Rizki Saputra &bull; Portfolio 2026</span>
+          <button type="button"
+            onclick="document.getElementById('modal').classList.add('hidden'); document.body.style.overflow='';"
+            class="btn-secondary text-xs py-2 px-5 font-mono">
+            Close Preview
+          </button>
         </div>
       </div>
+
     </div>
+  </div>
 
-    <!-- Modal All Tech Stack Popup -->
-    <div id="techModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center hidden">
-      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 max-w-md w-full mx-4 shadow-2xl relative text-slate-100">
-        <button id="closeTechModal" type="button" class="absolute top-4 right-4 text-slate-400 hover:text-white transition text-2xl font-bold">&times;</button>
-        <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
-          <i class="fas fa-layer-group text-cyan-400"></i> All Technologies
-        </h3>
-        <p class="text-xs text-slate-400 mb-6">Daftar lengkap teknologi yang dikuasai sesuai dengan section About me.</p>
-        
-        <div class="grid grid-cols-2 gap-3">
-          <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/40 border border-slate-700/40 hover:border-orange-500/50 transition">
-            <i class="fab fa-html5 text-orange-500 text-2xl"></i>
-            <span class="text-sm font-semibold text-slate-200">HTML5</span>
-          </div>
-          <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/40 border border-slate-700/40 hover:border-blue-500/50 transition">
-            <i class="fab fa-css3-alt text-blue-500 text-2xl"></i>
-            <span class="text-sm font-semibold text-slate-200">CSS3</span>
-          </div>
-          <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/40 border border-slate-700/40 hover:border-indigo-500/50 transition">
-            <i class="fab fa-php text-indigo-400 text-2xl"></i>
-            <span class="text-sm font-semibold text-slate-200">PHP</span>
-          </div>
-          <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/40 border border-slate-700/40 hover:border-yellow-500/50 transition">
-            <i class="fab fa-js-square text-yellow-400 text-2xl"></i>
-            <span class="text-sm font-semibold text-slate-200">JavaScript</span>
-          </div>
-          <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/40 border border-slate-700/40 hover:border-sky-500/50 transition">
-            <i class="fab fa-figma text-sky-400 text-2xl"></i>
-            <span class="text-sm font-semibold text-slate-200">Figma</span>
-          </div>
-          <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/40 border border-slate-700/40 hover:border-cyan-500/50 transition">
-            <img src="https://img.icons8.com/color/48/flutter.png" alt="Flutter" class="w-6 h-6" />
-            <span class="text-sm font-semibold text-slate-200">Flutter</span>
-          </div>
-          <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/40 border border-slate-700/40 hover:border-cyan-400/50 transition">
-            <img src="https://img.icons8.com/color/48/tailwindcss.png" alt="Tailwind CSS" class="w-6 h-6" />
-            <span class="text-sm font-semibold text-slate-200">Tailwind CSS</span>
-          </div>
-          <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/40 border border-slate-700/40 hover:border-blue-600/50 transition">
-            <i class="fab fa-bootstrap text-blue-500 text-2xl"></i>
-            <span class="text-sm font-semibold text-slate-200">Bootstrap</span>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- Interactive Scripts -->
+  <script src="js/style.js" defer></script>
+</body>
 
-    <!-- Contact Start -->
-    <section
-      id="contact"
-      class="light-motion-bg relative bg-white py-24 px-6 md:px-12 lg:px-24 text-slate-900 overflow-hidden"
-    >
-      <!-- Background Ambient Soft Glow Orbs -->
-      <div class="absolute -left-40 top-1/4 h-96 w-96 rounded-full bg-cyan-400/10 blur-[120px] pointer-events-none"></div>
-      <div class="absolute -right-40 bottom-10 h-96 w-96 rounded-full bg-blue-500/10 blur-[120px] pointer-events-none"></div>
-
-      <div class="relative max-w-6xl mx-auto z-10">
-        <!-- Section Header -->
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-cyan-200 bg-cyan-50 text-cyan-700 text-xs font-semibold tracking-widest uppercase mb-4 shadow-sm">
-            <span class="w-2 h-2 rounded-full bg-cyan-500 animate-ping"></span>
-            <span>Let's Connect</span>
-          </div>
-          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-slate-900">
-            Have a project in mind?<br />
-            <span class="bg-gradient-to-r from-cyan-600 via-sky-600 to-blue-600 bg-clip-text text-transparent">
-              Let's build it together.
-            </span>
-          </h2>
-          <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
-            I'm currently available for freelance work, full-time positions, or open to discuss tech & design concepts.
-          </p>
-        </div>
-
-        <!-- Main Contact Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-
-          <!-- Left Box: Direct Contact & Status (Col Span 7) -->
-          <div class="lg:col-span-7 flex flex-col justify-between p-8 sm:p-10 rounded-3xl border border-slate-200 bg-slate-50/80 backdrop-blur-xl shadow-lg shadow-slate-100 relative overflow-hidden group">
-            <div class="absolute -right-16 -top-16 w-48 h-48 bg-cyan-400/10 rounded-full blur-2xl group-hover:bg-cyan-400/20 transition-all duration-500"></div>
-
-            <div>
-              <!-- Live Availability Tag -->
-              <div class="flex items-center gap-3 mb-8">
-                <span class="relative flex h-3 w-3">
-                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
-                </span>
-                <span class="text-xs font-bold tracking-wider text-emerald-600 uppercase">Available for new opportunities</span>
-              </div>
-
-              <h3 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">Get in Touch Directly</h3>
-              <p class="text-slate-600 text-sm mb-8">Feel free to send an email. I usually respond within 24 hours.</p>
-
-              <!-- Email Action Card -->
-              <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-5 sm:p-6 rounded-2xl border border-slate-200 bg-white hover:border-cyan-400 shadow-sm hover:shadow-md transition-all duration-300 gap-4">
-                <div class="flex items-center gap-4">
-                  <div class="w-12 h-12 rounded-xl bg-cyan-50 border border-cyan-200 flex items-center justify-center text-cyan-600 text-xl">
-                    <i class="far fa-envelope"></i>
-                  </div>
-                  <div>
-                    <p class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Email Address</p>
-                    <a href="mailto:agungriskisaputra64@gmail.com" class="text-sm sm:text-base font-bold text-slate-800 hover:text-cyan-600 transition-colors">
-                      agungriskisaputra64@gmail.com
-                    </a>
-                  </div>
-                </div>
-                <button onclick="copyToClipboard('agungriskisaputra64@gmail.com', this)" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-cyan-50 border border-slate-200 hover:border-cyan-300 text-xs font-semibold text-slate-700 hover:text-cyan-700 transition-all active:scale-95 cursor-pointer">
-                  <i class="far fa-copy"></i>
-                  <span>Copy</span>
-                </button>
-              </div>
-            </div>
-
-            <!-- Footer Meta Note -->
-            <div class="mt-10 pt-6 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500 font-medium">
-              <span>Location: Indonesia 🇮🇩</span>
-              <span>Timezone: GMT+7</span>
-            </div>
-          </div>
-
-          <!-- Right Box: Interactive Social Media Cards (Col Span 5) -->
-          <div class="lg:col-span-5 flex flex-col justify-between gap-4">
-            <!-- GitHub Card -->
-            <a
-              href="https://github.com/AgungRizkiSaputra"
-              target="_blank"
-              class="group relative flex items-center justify-between p-6 rounded-3xl border border-slate-200 bg-slate-50/80 hover:bg-white hover:border-slate-400 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl shadow-slate-200/50 overflow-hidden"
-            >
-              <div class="flex items-center gap-4 z-10">
-                <div class="w-14 h-14 rounded-2xl bg-white border border-slate-200 flex items-center justify-center text-slate-900 text-2xl group-hover:scale-110 shadow-sm transition-all duration-300">
-                  <i class="fab fa-github"></i>
-                </div>
-                <div>
-                  <h4 class="text-lg font-bold text-slate-900 group-hover:text-cyan-600 transition-colors">GitHub</h4>
-                  <p class="text-xs text-slate-500">Explore code repositories & work</p>
-                </div>
-              </div>
-              <div class="w-10 h-10 rounded-full border border-slate-200 bg-white flex items-center justify-center text-slate-400 group-hover:text-cyan-600 group-hover:border-cyan-400 group-hover:translate-x-1 transition-all shadow-sm">
-                <i class="fas fa-arrow-right text-xs"></i>
-              </div>
-            </a>
-
-            <!-- LinkedIn Card -->
-            <a
-              href="https://www.linkedin.com/in/agung-rizki-saputra-06051a2a7/"
-              target="_blank"
-              class="group relative flex items-center justify-between p-6 rounded-3xl border border-slate-200 bg-slate-50/80 hover:bg-white hover:border-blue-400 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl shadow-slate-200/50 overflow-hidden"
-            >
-              <div class="flex items-center gap-4 z-10">
-                <div class="w-14 h-14 rounded-2xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600 text-2xl group-hover:scale-110 shadow-sm transition-all duration-300">
-                  <i class="fab fa-linkedin-in"></i>
-                </div>
-                <div>
-                  <h4 class="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">LinkedIn</h4>
-                  <p class="text-xs text-slate-500">Connect professionally</p>
-                </div>
-              </div>
-              <div class="w-10 h-10 rounded-full border border-slate-200 bg-white flex items-center justify-center text-slate-400 group-hover:text-blue-600 group-hover:border-blue-400 group-hover:translate-x-1 transition-all shadow-sm">
-                <i class="fas fa-arrow-right text-xs"></i>
-              </div>
-            </a>
-
-            <!-- Instagram Card -->
-            <a
-              href="https://www.instagram.com/agunggrzksptra_/"
-              target="_blank"
-              class="group relative flex items-center justify-between p-6 rounded-3xl border border-slate-200 bg-slate-50/80 hover:bg-white hover:border-sky-400 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl shadow-slate-200/50 overflow-hidden"
-            >
-              <div class="flex items-center gap-4 z-10">
-                <div class="w-14 h-14 rounded-2xl bg-sky-50 border border-sky-200 flex items-center justify-center text-sky-500 text-2xl group-hover:scale-110 shadow-sm transition-all duration-300">
-                  <i class="fab fa-instagram"></i>
-                </div>
-                <div>
-                  <h4 class="text-lg font-bold text-slate-900 group-hover:text-sky-600 transition-colors">Instagram</h4>
-                  <p class="text-xs text-slate-500">Follow creative updates</p>
-                </div>
-              </div>
-              <div class="w-10 h-10 rounded-full border border-slate-200 bg-white flex items-center justify-center text-slate-400 group-hover:text-sky-600 group-hover:border-sky-400 group-hover:translate-x-1 transition-all shadow-sm">
-                <i class="fas fa-arrow-right text-xs"></i>
-              </div>
-            </a>
-
-          </div>
-
-        </div>
-      </div>
-    </section>
-    <!-- Contact End -->
-
-    <footer class="p-4 bg-gray-900 text-center text-gray-400">
-      &copy; 2026 Agung Rizki Saputra | All Rights Reserved.
-    </footer>
-    <a
-      href="#home"
-      class="scroll-top d-flex align-items-center justify-content-center"
-      ><i class="bi bi-arrow-up-short"></i
-    ></a>
-
-    <script src="js/style.js"></script>
-  </body>
 </html>
