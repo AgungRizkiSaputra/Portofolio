@@ -417,6 +417,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // --------------------------------------------------------------------------
   const filterButtons = document.querySelectorAll(".filter-btn");
   const projectItems = document.querySelectorAll(".masonry-item, .archive-card");
+  const archiveFeaturedLayout = document.querySelector(".archive-featured-layout");
+  const archiveProjectGrid = document.querySelector(".archive-project-grid");
+  const filterHideTimers = new WeakMap();
   if (filterButtons.length > 0 && projectItems.length > 0) {
     filterButtons.forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -424,7 +427,21 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.classList.add("active");
 
         const targetCategory = btn.getAttribute("data-filter");
+        if (archiveFeaturedLayout) {
+          archiveFeaturedLayout.classList.toggle("is-filtered-web", targetCategory === "web");
+          archiveFeaturedLayout.classList.toggle("is-filtered-mobile", targetCategory === "mobile");
+          archiveFeaturedLayout.classList.toggle("is-filtered-design", targetCategory === "design");
+        }
+        if (archiveProjectGrid) {
+          archiveProjectGrid.classList.toggle("is-filtered", targetCategory !== "all");
+        }
         projectItems.forEach((item) => {
+          const pendingHide = filterHideTimers.get(item);
+          if (pendingHide) {
+            clearTimeout(pendingHide);
+            filterHideTimers.delete(item);
+          }
+
           const itemCategory = item.getAttribute("data-category");
           if (targetCategory === "all" || itemCategory === targetCategory) {
             item.classList.remove("is-filtered-out");
@@ -436,10 +453,12 @@ document.addEventListener("DOMContentLoaded", () => {
           } else {
             item.style.opacity = "0";
             item.style.transform = "translateY(12px) scale(0.97)";
-            setTimeout(() => {
+            const hideTimer = setTimeout(() => {
               item.classList.add("is-filtered-out");
               item.style.display = "none";
+              filterHideTimers.delete(item);
             }, 250);
+            filterHideTimers.set(item, hideTimer);
           }
         });
       });
