@@ -1301,6 +1301,80 @@ body {
   margin-bottom: 1.25rem;
 }
 
+.project-type-badge {
+  padding: 0.3rem 0.75rem;
+  border: 1px solid rgba(52, 87, 213, 0.3);
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #3457d5;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.project-tech-tag {
+  padding: 0.15rem 0.625rem;
+  border-radius: 0.375rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.archive-project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.archive-featured-layout.is-filtered {
+  grid-template-columns: 1fr;
+}
+
+.archive-featured-layout.is-filtered-mobile .selected-work-stack {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.archive-project-card {
+  min-height: 40rem;
+}
+
+.archive-project-card .project-mockup-stage {
+  inset: 1.25rem 1.5rem 45%;
+}
+
+.project-mockup-stage--mobile .project-mockup-window {
+  top: 0;
+  width: 23%;
+  height: clamp(10rem, 24vw, 17rem);
+  padding: 1.25rem 0.3rem 0.3rem;
+  border-radius: 1rem;
+}
+
+.project-mockup-stage--mobile .project-mockup-window img {
+  object-fit: contain;
+  object-position: center;
+  border-radius: 0.5rem;
+  background: #ffffff;
+}
+
+.project-mockup-stage--mobile .project-mockup-window--left {
+  left: 12%;
+  top: 12%;
+}
+
+.project-mockup-stage--mobile .project-mockup-window--right {
+  right: 12%;
+  top: 12%;
+}
+
+.project-mockup-stage--mobile .project-mockup-window--front {
+  top: 0;
+  width: 25%;
+}
+
 /* Theme-Aligned View Details Button */
 .project-detail-btn {
   display: inline-flex;
@@ -1392,6 +1466,34 @@ body {
     width: 0.32rem;
     height: 0.32rem;
     box-shadow: 0.55rem 0 #fbbf24, 1.1rem 0 #34d399;
+  }
+
+  .archive-project-card {
+    min-height: 28rem;
+  }
+
+  .project-mockup-stage--mobile .project-mockup-window {
+    width: 22%;
+    height: clamp(8rem, 28vw, 12rem);
+    padding: 1.05rem 0.2rem 0.2rem;
+  }
+
+  .project-mockup-stage--mobile .project-mockup-window--front {
+    width: 24%;
+  }
+}
+
+@media (max-width: 640px) {
+  .archive-project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-featured-layout.is-filtered-mobile .selected-work-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-project-card {
+    min-height: 27rem;
   }
 }
 
@@ -1825,6 +1927,10 @@ body {
   display: block;
 }
 
+.modal-preview.has-mobile-mockup .modal-mockup-stage {
+  inset: 2% 8% 6%;
+}
+
 .modal-mockup-window {
   position: absolute;
   top: 10%;
@@ -1890,6 +1996,36 @@ body {
 
 .modal-preview.has-mockup:hover .modal-mockup-window--front {
   transform: translateX(-50%) translateY(2%) scale(1.04);
+}
+
+.modal-preview.has-mobile-mockup .modal-mockup-window {
+  top: 6%;
+  width: 23%;
+  aspect-ratio: 0.5;
+  padding: 1.2rem 0.25rem 0.25rem;
+  border-radius: 1rem;
+}
+
+.modal-preview.has-mobile-mockup .modal-mockup-window img {
+  object-fit: contain;
+  object-position: center;
+  border-radius: 0.55rem;
+  background: #ffffff;
+}
+
+.modal-preview.has-mobile-mockup .modal-mockup-window--left {
+  left: 12%;
+  top: 14%;
+}
+
+.modal-preview.has-mobile-mockup .modal-mockup-window--right {
+  right: 12%;
+  top: 14%;
+}
+
+.modal-preview.has-mobile-mockup .modal-mockup-window--front {
+  top: 4%;
+  width: 25%;
 }
 
 /* --------------------------------------------------------------------------

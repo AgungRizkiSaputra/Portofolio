@@ -207,7 +207,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // 5. Project Modal Controller
   // --------------------------------------------------------------------------
   const modal = document.getElementById("modal");
+  const modalDialog = modal && modal.querySelector(".modal-dialog");
   const modalPreview = document.getElementById("modalPreview");
+  const modalMockupStage = modalPreview && modalPreview.querySelector(".modal-mockup-stage");
   const modalImage = document.getElementById("modalImage");
   const modalMockupImages = document.querySelectorAll(".modal-mockup-window img");
   const modalTitle = document.getElementById("modalTitle");
@@ -230,6 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const tech = button.getAttribute("data-tech") || "";
     const mockupLeft = button.getAttribute("data-mockup-left");
     const mockupRight = button.getAttribute("data-mockup-right");
+    const isMobileMockup = button.getAttribute("data-mockup-type") === "mobile";
     const github = button.getAttribute("data-github");
     const live = button.getAttribute("data-live");
     const githubLabel = button.getAttribute("data-github-label") || "View Repository";
@@ -244,14 +247,18 @@ document.addEventListener("DOMContentLoaded", () => {
     if (modalPreview) {
       const hasMockup = Boolean(mockupLeft && mockupRight);
       modalPreview.classList.toggle("has-mockup", hasMockup);
+      modalPreview.classList.toggle("has-mobile-mockup", hasMockup && isMobileMockup);
 
       if (hasMockup) {
         const mockupScreens = [
-          { image: mockupLeft, label: "LMS Pintar teacher dashboard" },
-          { image: mockupRight, label: "LMS Pintar student dashboard" },
-          { image, label: "LMS Pintar administrator dashboard" }
+          { image: mockupLeft, label: `${title} screen preview` },
+          { image: mockupRight, label: `${title} screen preview` },
+          { image, label: `${title} screen preview` }
         ];
 
+        if (modalMockupStage) {
+          modalMockupStage.setAttribute("aria-label", `${title} screen previews`);
+        }
         modalMockupImages.forEach((screen, index) => {
           const mockupScreen = mockupScreens[index];
           if (!mockupScreen) return;
@@ -259,6 +266,9 @@ document.addEventListener("DOMContentLoaded", () => {
           screen.alt = mockupScreen.label;
         });
       } else {
+        if (modalMockupStage) {
+          modalMockupStage.setAttribute("aria-label", "Project interface previews");
+        }
         modalMockupImages.forEach((screen) => {
           screen.removeAttribute("src");
           screen.alt = "";
@@ -304,6 +314,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
+    if (modalDialog) modalDialog.scrollTop = 0;
     modal.classList.remove("hidden");
     document.body.style.overflow = "hidden";
   };
@@ -406,6 +417,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // --------------------------------------------------------------------------
   const filterButtons = document.querySelectorAll(".filter-btn");
   const projectItems = document.querySelectorAll(".masonry-item, .archive-card");
+  const archiveFeaturedLayout = document.querySelector(".archive-featured-layout");
 
   if (filterButtons.length > 0 && projectItems.length > 0) {
     filterButtons.forEach((btn) => {
@@ -414,6 +426,11 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.classList.add("active");
 
         const targetCategory = btn.getAttribute("data-filter");
+        if (archiveFeaturedLayout) {
+          const isFiltered = targetCategory !== "all";
+          archiveFeaturedLayout.classList.toggle("is-filtered", isFiltered);
+          archiveFeaturedLayout.classList.toggle("is-filtered-mobile", targetCategory === "mobile");
+        }
 
         projectItems.forEach((item) => {
           const itemCategory = item.getAttribute("data-category");

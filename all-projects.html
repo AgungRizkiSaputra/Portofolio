@@ -4,25 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All Projects | Agung Rizki Saputra</title>
-    <meta name="description" content="Complete project archive of Agung Rizki Saputra — UI/UX prototypes, responsive web applications, and Flutter mobile concepts." />
+    <meta name="description" content="Explore web and mobile projects by Agung Rizki Saputra, including learning platforms, mobile apps, and responsive websites." />
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
-    <!-- Custom Design System Stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="bg-white text-[#171717] antialiased selection:bg-[#3457d5] selection:text-white editorial-grid-clean min-h-screen">
-
-    <!-- Futuristic Glassmorphic Floating Header -->
     <header id="navbar" class="transition-all duration-300" aria-label="Archive Navigation">
       <a href="main.html" class="brand-mark group" aria-label="Back to Portfolio">
         <span class="w-7 h-7 rounded-full bg-[#f7f7f5] border border-[#e8e8e6] flex items-center justify-center text-[#171717] group-hover:bg-[#3457d5] group-hover:text-white transition-colors">
@@ -33,7 +24,6 @@
           <span class="sm:hidden">Portfolio</span>
         </span>
       </a>
-
       <div class="flex items-center gap-3">
         <span class="brand-emblem">
           <span>ARS</span>
@@ -44,282 +34,304 @@
     </header>
 
     <main class="max-w-7xl mx-auto px-6 pt-28 pb-20">
-      
-      <!-- Hero Page Heading -->
       <div class="border-b border-[#e8e8e6] pb-12 mb-12">
         <div class="editorial-badge mb-4">
           <span>// Curated Works Catalogue</span>
         </div>
-
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
             <h1 class="font-['Space_Grotesk'] text-4xl sm:text-6xl font-extrabold text-[#171717] tracking-tight leading-tight">
               All <span class="text-[#3457d5]">Projects.</span>
             </h1>
-            <p class="font-mono text-xs text-[#737373] mt-2 uppercase tracking-widest">
-              [ Total: 07 Academic, Independent & Client Projects ]
-            </p>
+            <p class="font-mono text-xs text-[#737373] mt-2 uppercase tracking-widest">[ Total: 09 Web &amp; Mobile Projects ]</p>
           </div>
-
           <p class="max-w-md text-[#737373] text-sm sm:text-base leading-relaxed">
-            A complete record of digital interfaces, mobile application prototypes, and responsive web platforms developed throughout my journey.
+            A collection of responsive websites and mobile app experiences, presented through selected screens from each project.
           </p>
         </div>
-
-        <!-- Interactive Category Filter Bar -->
         <div class="flex flex-wrap items-center gap-3 mt-10">
           <span class="font-mono text-xs text-[#737373] uppercase tracking-wider mr-2 hidden sm:inline-block">Filter By:</span>
-          <button type="button" class="filter-btn active" data-filter="all">All Projects (7)</button>
-          <button type="button" class="filter-btn" data-filter="ui-ux">UI/UX Design (3)</button>
-          <button type="button" class="filter-btn" data-filter="web">Web Development (3)</button>
-          <button type="button" class="filter-btn" data-filter="mobile">Mobile Apps (1)</button>
+          <button type="button" class="filter-btn active" data-filter="all">All Projects (9)</button>
+          <button type="button" class="filter-btn" data-filter="web">Web Projects (4)</button>
+          <button type="button" class="filter-btn" data-filter="mobile">Mobile Projects (5)</button>
         </div>
       </div>
 
-      <!-- Asymmetric "Ngacak tapi Rapih" Bento Layout — 3 Rows -->
-
-      <!-- ROW 1: Featured Left (Big) + Stack Right (2 Compact) -->
-      <div class="selected-work-layout mb-6">
-
-        <!-- Featured: 01 Online Food App (Figma) -->
-        <article class="project-feature-card project-card group archive-card" data-category="ui-ux">
-          <img src="images/projects/2.png" alt="Online Food App (RzResto)" loading="lazy" />
+      <div class="selected-work-layout archive-featured-layout mb-10">
+        <article class="project-feature-card project-card group archive-card" data-category="web">
+          <div class="project-mockup-stage" role="group" aria-label="LMS Pintar administrator, teacher, and student dashboards">
+            <div class="project-mockup-window project-mockup-window--left">
+              <img src="images/projects/muweb/lms/lms2.jpeg" alt="LMS Pintar teacher dashboard" loading="lazy" />
+            </div>
+            <div class="project-mockup-window project-mockup-window--right">
+              <img src="images/projects/muweb/lms/lms3.jpeg" alt="LMS Pintar student dashboard" loading="lazy" />
+            </div>
+            <div class="project-mockup-window project-mockup-window--front">
+              <img src="images/projects/muweb/lms/lms1.jpeg" alt="LMS Pintar administrator dashboard" loading="lazy" />
+            </div>
+          </div>
           <div class="project-card-overlay"></div>
           <div class="project-card-content">
             <div class="flex items-center justify-between mb-3">
-              <span class="project-number text-[#93c5fd]">01 / Featured &bull; UI/UX</span>
-              <span class="px-3 py-1 text-[10px] font-mono font-semibold tracking-wider text-[#3457d5] bg-white/95 border border-[#3457d5]/30 rounded-full shadow-sm backdrop-blur-md">Figma Prototype</span>
+              <span class="project-number text-[#93c5fd]">01 / Featured Web</span>
+              <span class="project-type-badge">Learning Platform</span>
             </div>
-            <h2 class="text-2xl sm:text-3xl font-extrabold text-white group-hover:text-[#93c5fd] transition-colors duration-300 mb-2">Online Food App (RzResto)</h2>
-            <p class="text-sm text-[#cbd5e1] max-w-xl mb-4">Interactive mobile restaurant ordering system designed in Figma. Complete user flows, categorized food browsing, checkout flows, and accessible culinary layout.</p>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white group-hover:text-[#93c5fd] transition-colors duration-300 mb-2">LMS Pintar</h2>
+            <p class="text-sm text-[#cbd5e1] max-w-xl mb-4">A school learning management platform with dedicated dashboards for administrators, teachers, and students to manage classes, coursework, exams, and learning progress.</p>
             <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-2.5 py-0.5 rounded-md bg-white/10 text-white/90 text-xs font-mono">Figma</span>
-              <span class="px-2.5 py-0.5 rounded-md bg-white/10 text-white/90 text-xs font-mono">Wireframing</span>
-              <span class="px-2.5 py-0.5 rounded-md bg-white/10 text-white/90 text-xs font-mono">Design System</span>
+              <span class="project-tech-tag">HTML5</span>
+              <span class="project-tech-tag">CSS3</span>
+              <span class="project-tech-tag">JavaScript</span>
             </div>
             <button class="project-detail-btn project-view-trigger" type="button"
-              data-title="Online Food App (RzResto)"
-              data-category="Figma UI/UX &bull; Food Delivery Prototype"
-              data-tech="Figma, Wireframing, User Flow, Component Hierarchy"
-              data-description="A complete mobile food ordering interface designed in Figma, covering user flows, wireframes, and interactive screens for a restaurant platform. Built with deliberate typographic hierarchy, warm culinary accents, and accessible tap targets."
-              data-image="images/projects/2.png"
-              data-github="https://github.com/AgungRizkiSaputra"
-              data-github-label="GitHub Profile"
-              data-live="https://www.figma.com/@AgungRizkiSaputra"
-              data-live-label="Open Figma Prototype"
-              aria-label="View Online Food App project details">
+              data-title="LMS Pintar — Academic Management Portal"
+              data-category="Web Development &bull; Learning Management System"
+              data-tech="HTML5, CSS3, JavaScript"
+              data-description="A school learning management platform with dedicated dashboards for administrators, teachers, and students. Administrators manage users, classes, subjects, schedules, exams, and announcements; teachers organize learning materials, assignments, and grades; students access lessons, coursework, exams, and learning progress in one portal."
+              data-image="images/projects/muweb/lms/lms1.jpeg"
+              data-mockup-left="images/projects/muweb/lms/lms2.jpeg"
+              data-mockup-right="images/projects/muweb/lms/lms3.jpeg"
+              data-github="https://github.com/AgungRizkiSaputra/lms-terpadu"
+              data-github-label="GitHub Repository"
+              data-live="https://lms-terpadu.netlify.app/"
+              data-live-label="Live Deployed Web"
+              aria-label="View LMS Pintar project details">
               <span>View Project Details</span>
               <i class="fas fa-arrow-up-right-from-square"></i>
             </button>
           </div>
         </article>
 
-        <!-- Stack Right: 02 + 03 -->
         <div class="selected-work-stack">
-
-          <!-- 02 Headline Hub (Flutter Mobile) -->
           <article class="project-card project-card-compact group archive-card" data-category="mobile">
-            <img src="images/projects/3.png" alt="Headline Hub News App" loading="lazy" />
+            <img src="images/projects/mumobile/qurban/q1.jpg" alt="QurbanQu livestock marketplace app" loading="lazy" />
             <div class="project-card-overlay"></div>
             <div class="project-card-content">
               <div class="flex items-center justify-between mb-2">
-                <span class="project-number text-[#93c5fd]">02 / Mobile Dev</span>
-                <span class="px-2.5 py-0.5 text-[10px] font-mono font-semibold tracking-wider text-[#3457d5] bg-white/95 border border-[#3457d5]/30 rounded-full shadow-sm backdrop-blur-md">Flutter</span>
+                <span class="project-number text-[#93c5fd]">02 / Mobile</span>
+                <span class="project-type-badge">Marketplace</span>
+              </div>
+              <h2 class="text-xl font-bold text-white group-hover:text-[#93c5fd] transition-colors duration-300 mb-2">QurbanQu Livestock</h2>
+              <p class="text-xs text-[#cbd5e1] mb-3">A livestock marketplace concept with verified weights, quality filters, transparent pricing, and a clear booking flow.</p>
+              <button class="project-detail-btn project-view-trigger" type="button"
+                data-title="QurbanQu Livestock"
+                data-category="Mobile Development &bull; Livestock Marketplace"
+                data-tech="Mobile UI, Product Discovery, Booking Flow"
+                data-description="A mobile livestock marketplace concept designed around a clear purchasing journey, with livestock discovery, transparent product details, and a focused booking experience."
+                data-image="images/projects/mumobile/qurban/q1.jpg"
+                data-mockup-left="images/projects/mumobile/qurban/q2.jpg"
+                data-mockup-right="images/projects/mumobile/qurban/q3.jpg"
+                data-mockup-type="mobile"
+                data-github="https://github.com/Gusnaldi99/qurbanku"
+                data-github-label="GitHub Repository"
+                data-live="https://www.figma.com/proto/Pb6H6GwnJpii4D6Z6dSINw/UI-PROJECT-3?node-id=0-1&t=AmooNPbdVSciI6OO-1"
+                data-live-label="Open Figma Prototype"
+                aria-label="View QurbanQu Livestock project details">
+                <span>View Details</span>
+                <i class="fas fa-arrow-up-right-from-square"></i>
+              </button>
+            </div>
+          </article>
+
+          <article class="project-card project-card-compact group archive-card" data-category="mobile">
+            <img src="images/projects/mumobile/news/3.png" alt="Headline Hub news app screens" loading="lazy" />
+            <div class="project-card-overlay"></div>
+            <div class="project-card-content">
+              <div class="flex items-center justify-between mb-2">
+                <span class="project-number text-[#93c5fd]">03 / Mobile</span>
+                <span class="project-type-badge">Flutter</span>
               </div>
               <h2 class="text-xl font-bold text-white group-hover:text-[#93c5fd] transition-colors duration-300 mb-2">Headline Hub</h2>
-              <p class="text-xs text-[#cbd5e1] mb-3">Cross-platform news app built with Flutter — crisp typography, category filters, dan fast rendering.</p>
-              <div class="flex flex-wrap gap-1.5 mb-4">
-                <span class="px-2 py-0.5 rounded bg-white/10 text-white/90 text-[11px] font-mono">Flutter</span>
-                <span class="px-2 py-0.5 rounded bg-white/10 text-white/90 text-[11px] font-mono">Dart</span>
-              </div>
+              <p class="text-xs text-[#cbd5e1] mb-3">A Flutter news app concept with clear typography, category browsing, and a smooth reading experience.</p>
               <button class="project-detail-btn project-view-trigger" type="button"
                 data-title="Headline Hub"
-                data-category="Mobile Development &bull; Flutter"
-                data-tech="Flutter, Dart, Cross-Platform Mobile Architecture"
-                data-description="A clean cross-platform news app concept developed with Flutter, designed around clear content hierarchy, fast article rendering, and smooth reading flow."
-                data-image="images/projects/3.png"
-                data-github="https://github.com/AgungRizkiSaputra/headline-hub"
-                data-github-label="Flutter Repository"
-                data-live="https://github.com/AgungRizkiSaputra/headline-hub/releases"
-                data-live-label="Download APK / Release"
+                data-category="Mobile Development &bull; News App"
+                data-tech="Flutter, Dart, Mobile UI"
+                data-description="A cross-platform news app concept developed with Flutter, designed around clear typography, category browsing, and an easy-to-follow reading experience."
+                data-image="images/projects/mumobile/news/3.png"
                 aria-label="View Headline Hub project details">
                 <span>View Details</span>
                 <i class="fas fa-arrow-up-right-from-square"></i>
               </button>
             </div>
           </article>
-
-          <!-- 03 The Global Vote (Figma Security) -->
-          <article class="project-card project-card-compact group archive-card" data-category="ui-ux">
-            <img src="images/projects/1.png" alt="The Global Vote" loading="lazy" />
-            <div class="project-card-overlay"></div>
-            <div class="project-card-content">
-              <div class="flex items-center justify-between mb-2">
-                <span class="project-number text-[#93c5fd]">03 / UI/UX</span>
-                <span class="px-2.5 py-0.5 text-[10px] font-mono font-semibold tracking-wider text-[#3457d5] bg-white/95 border border-[#3457d5]/30 rounded-full shadow-sm backdrop-blur-md">Security Flow</span>
-              </div>
-              <h2 class="text-xl font-bold text-white group-hover:text-[#93c5fd] transition-colors duration-300 mb-2">The Global Vote</h2>
-              <p class="text-xs text-[#cbd5e1] mb-3">Digital voting platform concept — transparent ballot verification and accessible tally screens di Figma.</p>
-              <button class="project-detail-btn project-view-trigger" type="button"
-                data-title="The Global Vote"
-                data-category="Figma UI/UX &bull; Secure Voting Concept"
-                data-tech="Figma, Wireframing, Security UX Flows"
-                data-description="Digital election platform concept focused on clear voting flows, ballot security verification, and accessible user experience across diverse demographics."
-                data-image="images/projects/1.png"
-                data-github="https://github.com/AgungRizkiSaputra"
-                data-github-label="Design Documentation"
-                data-live="https://www.figma.com/@AgungRizkiSaputra"
-                data-live-label="Open Figma Prototype"
-                aria-label="View The Global Vote project details">
-                <span>View Details</span>
-                <i class="fas fa-arrow-up-right-from-square"></i>
-              </button>
-            </div>
-          </article>
-
         </div>
       </div>
 
-      <!-- ROW 2: Stack Left (2 Compact) + Featured Right (Big) — Reverse -->
-      <div class="selected-work-layout reverse mb-6">
-
-        <!-- Stack Left: 04 + 05 -->
-        <div class="selected-work-stack">
-
-          <!-- 04 QurbanQu (Figma Marketplace) -->
-          <article class="project-card project-card-compact group archive-card" data-category="ui-ux">
-            <img src="images/projects/4.png" alt="QurbanQu Mobile Interface" loading="lazy" />
-            <div class="project-card-overlay"></div>
-            <div class="project-card-content">
-              <div class="flex items-center justify-between mb-2">
-                <span class="project-number text-[#93c5fd]">04 / UI/UX</span>
-                <span class="px-2.5 py-0.5 text-[10px] font-mono font-semibold tracking-wider text-[#3457d5] bg-white/95 border border-[#3457d5]/30 rounded-full shadow-sm backdrop-blur-md">Marketplace</span>
-              </div>
-              <h2 class="text-xl font-bold text-white group-hover:text-[#93c5fd] transition-colors duration-300 mb-2">QurbanQu Livestock</h2>
-              <p class="text-xs text-[#cbd5e1] mb-3">Mobile qurban purchasing concept — verified weights, tier filters, transparent pricing, dan instant receipt.</p>
-              <button class="project-detail-btn project-view-trigger" type="button"
-                data-title="QurbanQu Livestock App"
-                data-category="Figma UI/UX &bull; Mobile Marketplace"
-                data-tech="Figma, Prototype, E-Commerce Flows"
-                data-description="Modern livestock and qurban booking mobile platform designed in Figma. Features weight transparency, quality tiering, direct payment gateway simulation, and tracking."
-                data-image="images/projects/4.png"
-                data-github="https://github.com/AgungRizkiSaputra"
-                data-github-label="Design System"
-                data-live="https://www.figma.com/@AgungRizkiSaputra"
-                data-live-label="Open Figma Prototype"
-                aria-label="View QurbanQu project details">
-                <span>View Details</span>
-                <i class="fas fa-arrow-up-right-from-square"></i>
-              </button>
-            </div>
-          </article>
-
-          <!-- 05 ZHresto (Live Web) -->
-          <article class="project-card project-card-compact group archive-card" data-category="web">
-            <img src="images/projects/web1.png" alt="ZHresto Restaurant Web" loading="lazy" />
-            <div class="project-card-overlay"></div>
-            <div class="project-card-content">
-              <div class="flex items-center justify-between mb-2">
-                <span class="project-number text-[#93c5fd]">05 / Web Dev</span>
-                <span class="px-2.5 py-0.5 text-[10px] font-mono font-semibold tracking-wider text-[#3457d5] bg-white/95 border border-[#3457d5]/30 rounded-full shadow-sm backdrop-blur-md">HTML/CSS/JS</span>
-              </div>
-              <h2 class="text-xl font-bold text-white group-hover:text-[#93c5fd] transition-colors duration-300 mb-2">ZHresto Platform</h2>
-              <p class="text-xs text-[#cbd5e1] mb-3">Responsive multi-device restaurant website dengan dynamic menus dan table reservation flows.</p>
-              <button class="project-detail-btn project-view-trigger" type="button"
-                data-title="ZHresto Restaurant Web"
-                data-category="Web Development &bull; Multi-Device"
-                data-tech="HTML5, CSS3, JavaScript, Responsive Design"
-                data-description="Multi-device restaurant platform featuring interactive menus, responsive tablet & smartphone layouts, and smooth navigation built with vanilla web technologies."
-                data-image="images/projects/web1.png"
-                data-github="https://github.com/AgungRizkiSaputra/ZHresto"
-                data-github-label="GitHub Repository"
-                data-live="https://agungrizkisaputra.github.io/ZHresto/"
-                data-live-label="Live Deployed Web"
-                aria-label="View ZHresto project details">
-                <span>View Details</span>
-                <i class="fas fa-arrow-up-right-from-square"></i>
-              </button>
-            </div>
-          </article>
-
-        </div>
-
-        <!-- Featured Right: 06 SIMARTO (Live Web) -->
-        <article class="project-feature-card project-card group archive-card" data-category="web">
-          <img src="images/projects/web2.png" alt="SIMARTO Online Food Web" loading="lazy" />
+      <div class="archive-project-grid">
+        <article class="project-feature-card project-card group archive-card archive-project-card" data-category="mobile">
+          <div class="project-mockup-stage project-mockup-stage--mobile" role="group" aria-label="Global Vote mobile app screens">
+            <div class="project-mockup-window project-mockup-window--left"><img src="images/projects/mumobile/gv/gv2.jpg" alt="Global Vote candidate selection screen" loading="lazy" /></div>
+            <div class="project-mockup-window project-mockup-window--right"><img src="images/projects/mumobile/gv/gv3.jpg" alt="Global Vote voting screen" loading="lazy" /></div>
+            <div class="project-mockup-window project-mockup-window--front"><img src="images/projects/mumobile/gv/gv1.jpg" alt="Global Vote home screen" loading="lazy" /></div>
+          </div>
           <div class="project-card-overlay"></div>
           <div class="project-card-content">
             <div class="flex items-center justify-between mb-3">
-              <span class="project-number text-[#93c5fd]">06 / Featured Web</span>
-              <span class="px-3 py-1 text-[10px] font-mono font-semibold tracking-wider text-[#3457d5] bg-white/95 border border-[#3457d5]/30 rounded-full shadow-sm backdrop-blur-md">Food Web App</span>
+              <span class="project-number text-[#93c5fd]">04 / Mobile App</span>
+              <span class="project-type-badge">Digital Voting</span>
             </div>
-            <h2 class="text-2xl sm:text-3xl font-extrabold text-white group-hover:text-[#93c5fd] transition-colors duration-300 mb-2">SIMARTO Food Web</h2>
-            <p class="text-sm text-[#cbd5e1] max-w-xl mb-4">Dynamic food ordering website — interactive fast food menus, cart interactions, dan modern interface layout dengan vanilla web.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-2.5 py-0.5 rounded-md bg-white/10 text-white/90 text-xs font-mono">HTML5</span>
-              <span class="px-2.5 py-0.5 rounded-md bg-white/10 text-white/90 text-xs font-mono">CSS3</span>
-              <span class="px-2.5 py-0.5 rounded-md bg-white/10 text-white/90 text-xs font-mono">JavaScript</span>
-            </div>
+            <h2 class="text-2xl font-extrabold text-white group-hover:text-[#93c5fd] transition-colors mb-2">The Global Vote</h2>
+            <p class="text-sm text-[#cbd5e1] mb-4">A mobile voting experience focused on candidate discovery, clear ballot choices, and accessible election information.</p>
             <button class="project-detail-btn project-view-trigger" type="button"
-              data-title="SIMARTO Online Food Web"
-              data-category="Web Development &bull; Fast Food Platform"
-              data-tech="HTML5, CSS3, JavaScript, Interactive Menu"
-              data-description="Dynamic food ordering web application with interactive fast food menus, responsive cart interactions, and modern interface layout."
-              data-image="images/projects/web2.png"
-              data-github="https://github.com/AgungRizkiSaputra/SIMARTO"
-              data-github-label="GitHub Repository"
-              data-live="https://agungrizkisaputra.github.io/SIMARTO/"
-              data-live-label="Live Deployed Web"
-              aria-label="View SIMARTO project details">
-              <span>View Project Details</span>
-              <i class="fas fa-arrow-up-right-from-square"></i>
+              data-title="The Global Vote"
+              data-category="Mobile Development &bull; Digital Voting"
+              data-tech="Mobile UI, Voting Flow, Interface Design"
+              data-description="A digital voting app concept that helps voters explore candidates, review election information, and move through a clear ballot selection flow."
+              data-image="images/projects/mumobile/gv/gv1.jpg"
+              data-mockup-left="images/projects/mumobile/gv/gv2.jpg"
+              data-mockup-right="images/projects/mumobile/gv/gv3.jpg"
+              data-mockup-type="mobile"
+              aria-label="View The Global Vote project details">
+              <span>View Project Details</span><i class="fas fa-arrow-up-right-from-square"></i>
             </button>
           </div>
         </article>
 
-      </div>
-
-      <!-- ROW 3: Wide Single Card — 07 ZHHRCar -->
-      <div class="w-full" data-category="web">
-        <article class="project-card group archive-card" style="min-height: 26rem;">
-          <img src="images/projects/web3.png" alt="ZHHRCar Web" loading="lazy" />
+        <article class="project-feature-card project-card group archive-card archive-project-card" data-category="mobile">
+          <div class="project-mockup-stage project-mockup-stage--mobile" role="group" aria-label="RPS academic management app screens">
+            <div class="project-mockup-window project-mockup-window--left"><img src="images/projects/mumobile/rps/rps2.jpg" alt="RPS course approval overview" loading="lazy" /></div>
+            <div class="project-mockup-window project-mockup-window--right"><img src="images/projects/mumobile/rps/rps3.jpg" alt="RPS course plan list" loading="lazy" /></div>
+            <div class="project-mockup-window project-mockup-window--front"><img src="images/projects/mumobile/rps/rps1.jpg" alt="RPS academic dashboard" loading="lazy" /></div>
+          </div>
           <div class="project-card-overlay"></div>
           <div class="project-card-content">
             <div class="flex items-center justify-between mb-3">
-              <span class="project-number text-[#93c5fd]">07 / Web Dev &bull; Closing Project</span>
-              <span class="px-3 py-1 text-[10px] font-mono font-semibold tracking-wider text-[#3457d5] bg-white/95 border border-[#3457d5]/30 rounded-full shadow-sm backdrop-blur-md">Bootstrap</span>
+              <span class="project-number text-[#93c5fd]">05 / Featured Mobile</span>
+              <span class="project-type-badge">Academic Management</span>
             </div>
-            <h2 class="text-2xl sm:text-3xl font-extrabold text-white group-hover:text-[#93c5fd] transition-colors duration-300 mb-2">ZHHRCar Transportation</h2>
-            <p class="text-sm text-[#cbd5e1] max-w-2xl mb-4">Corporate landing page dan fleet catalog untuk rental & transportation service — dibangun menggunakan Bootstrap dengan responsive adaptive breakpoints.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-2.5 py-0.5 rounded-md bg-white/10 text-white/90 text-xs font-mono">HTML5</span>
-              <span class="px-2.5 py-0.5 rounded-md bg-white/10 text-white/90 text-xs font-mono">CSS3</span>
-              <span class="px-2.5 py-0.5 rounded-md bg-white/10 text-white/90 text-xs font-mono">Bootstrap</span>
-              <span class="px-2.5 py-0.5 rounded-md bg-white/10 text-white/90 text-xs font-mono">JavaScript</span>
-            </div>
+            <h2 class="text-2xl font-extrabold text-white group-hover:text-[#93c5fd] transition-colors mb-2">RPS Academic Management</h2>
+            <p class="text-sm text-[#cbd5e1] mb-4">A mobile academic planning app for managing semester course plans, approval status, and program-level learning outcomes.</p>
             <button class="project-detail-btn project-view-trigger" type="button"
-              data-title="ZHHRCar Transportation"
-              data-category="Web Development &bull; Bootstrap Landing Page"
-              data-tech="HTML5, CSS3, JavaScript, Bootstrap"
-              data-description="Responsive transportation service landing page featuring rental fleet catalogs, inquiry sections, and adaptive mobile layout built with Bootstrap."
-              data-image="images/projects/web3.png"
-              data-github="https://github.com/AgungRizkiSaputra/ZHHRCar"
-              data-github-label="GitHub Repository"
-              data-live="https://agungrizkisaputra.github.io/ZHHRCar/"
-              data-live-label="Live Deployed Web"
-              aria-label="View ZHHRCar project details">
-              <span>View Project Details</span>
-              <i class="fas fa-arrow-up-right-from-square"></i>
+              data-title="RPS Academic Management"
+              data-category="Mobile Development &bull; Academic Planning"
+              data-tech="Mobile UI, Academic Workflow, Dashboard Design"
+              data-description="A mobile interface for managing semester learning plans (RPS), including approval tracking, course plan lists, and an overview of program learning outcomes."
+              data-image="images/projects/mumobile/rps/rps1.jpg"
+              data-mockup-left="images/projects/mumobile/rps/rps2.jpg"
+              data-mockup-right="images/projects/mumobile/rps/rps3.jpg"
+              data-mockup-type="mobile"
+              aria-label="View RPS Academic Management project details">
+              <span>View Project Details</span><i class="fas fa-arrow-up-right-from-square"></i>
+            </button>
+          </div>
+        </article>
+
+        <article class="project-feature-card project-card group archive-card archive-project-card" data-category="mobile">
+          <div class="project-mockup-stage project-mockup-stage--mobile" role="group" aria-label="RzResto mobile app screens">
+            <div class="project-mockup-window project-mockup-window--left"><img src="images/projects/mumobile/rz/rz2.jpg" alt="RzResto sign-in screen" loading="lazy" /></div>
+            <div class="project-mockup-window project-mockup-window--right"><img src="images/projects/mumobile/rz/rz3.jpg" alt="RzResto restaurant menu screen" loading="lazy" /></div>
+            <div class="project-mockup-window project-mockup-window--front"><img src="images/projects/mumobile/rz/rz1.jpg" alt="RzResto welcome screen" loading="lazy" /></div>
+          </div>
+          <div class="project-card-overlay"></div>
+          <div class="project-card-content">
+            <div class="flex items-center justify-between mb-3">
+              <span class="project-number text-[#93c5fd]">06 / Mobile App</span>
+              <span class="project-type-badge">Restaurant Ordering</span>
+            </div>
+            <h2 class="text-2xl font-extrabold text-white group-hover:text-[#93c5fd] transition-colors mb-2">RzResto</h2>
+            <p class="text-sm text-[#cbd5e1] mb-4">A restaurant ordering app concept with a welcoming entry screen, account access, and a streamlined dining experience.</p>
+            <button class="project-detail-btn project-view-trigger" type="button"
+              data-title="RzResto"
+              data-category="Mobile Development &bull; Restaurant App"
+              data-tech="Mobile UI, Restaurant Ordering, User Flow"
+              data-description="A mobile restaurant app concept that introduces the RzResto brand and provides a simple path from sign-in to browsing the restaurant experience."
+              data-image="images/projects/mumobile/rz/rz1.jpg"
+              data-mockup-left="images/projects/mumobile/rz/rz2.jpg"
+              data-mockup-right="images/projects/mumobile/rz/rz3.jpg"
+              data-mockup-type="mobile"
+              aria-label="View RzResto project details">
+              <span>View Project Details</span><i class="fas fa-arrow-up-right-from-square"></i>
+            </button>
+          </div>
+        </article>
+
+        <article class="project-feature-card project-card group archive-card archive-project-card" data-category="web">
+          <div class="project-mockup-stage" role="group" aria-label="Fragrance Point website screens">
+            <div class="project-mockup-window project-mockup-window--left"><img src="images/projects/muweb/fp/fp2.jpeg" alt="Fragrance Point product page" loading="lazy" /></div>
+            <div class="project-mockup-window project-mockup-window--right"><img src="images/projects/muweb/fp/fp3.jpeg" alt="Fragrance Point website content section" loading="lazy" /></div>
+            <div class="project-mockup-window project-mockup-window--front"><img src="images/projects/muweb/fp/fp1.jpeg" alt="Fragrance Point home page" loading="lazy" /></div>
+          </div>
+          <div class="project-card-overlay"></div>
+          <div class="project-card-content">
+            <div class="flex items-center justify-between mb-3">
+              <span class="project-number text-[#93c5fd]">07 / Featured Web</span>
+              <span class="project-type-badge">Fragrance Storefront</span>
+            </div>
+            <h2 class="text-2xl font-extrabold text-white group-hover:text-[#93c5fd] transition-colors mb-2">Fragrance Point</h2>
+            <p class="text-sm text-[#cbd5e1] mb-4">A fragrance storefront concept showcasing perfume products, brand storytelling, and a polished browsing experience.</p>
+            <button class="project-detail-btn project-view-trigger" type="button"
+              data-title="Fragrance Point"
+              data-category="Web Development &bull; Fragrance Storefront"
+              data-tech="Responsive Web Design, HTML, CSS, JavaScript"
+              data-description="A responsive fragrance storefront concept that presents perfume products through editorial imagery, clear brand messaging, and intuitive website navigation."
+              data-image="images/projects/muweb/fp/fp1.jpeg"
+              data-mockup-left="images/projects/muweb/fp/fp2.jpeg"
+              data-mockup-right="images/projects/muweb/fp/fp3.jpeg"
+              aria-label="View Fragrance Point project details">
+              <span>View Project Details</span><i class="fas fa-arrow-up-right-from-square"></i>
+            </button>
+          </div>
+        </article>
+
+        <article class="project-feature-card project-card group archive-card archive-project-card" data-category="web">
+          <div class="project-mockup-stage" role="group" aria-label="Rekos boarding recommendation website screens">
+            <div class="project-mockup-window project-mockup-window--left"><img src="images/projects/muweb/rekos/rekos2.jpeg" alt="Rekos accommodation recommendations" loading="lazy" /></div>
+            <div class="project-mockup-window project-mockup-window--right"><img src="images/projects/muweb/rekos/rekos3.jpeg" alt="Rekos accommodation information" loading="lazy" /></div>
+            <div class="project-mockup-window project-mockup-window--front"><img src="images/projects/muweb/rekos/rekos1.jpeg" alt="Rekos home page" loading="lazy" /></div>
+          </div>
+          <div class="project-card-overlay"></div>
+          <div class="project-card-content">
+            <div class="flex items-center justify-between mb-3">
+              <span class="project-number text-[#93c5fd]">08 / Featured Web</span>
+              <span class="project-type-badge">Accommodation Finder</span>
+            </div>
+            <h2 class="text-2xl font-extrabold text-white group-hover:text-[#93c5fd] transition-colors mb-2">Rekos</h2>
+            <p class="text-sm text-[#cbd5e1] mb-4">A boarding house recommendation website that helps people compare accommodation using practical criteria and the Weight Product method.</p>
+            <button class="project-detail-btn project-view-trigger" type="button"
+              data-title="Rekos — Boarding House Finder"
+              data-category="Web Development &bull; Accommodation Recommendation"
+              data-tech="Responsive Web Design, Recommendation System, Weight Product"
+              data-description="A boarding house discovery and recommendation website that helps users compare accommodation options based on criteria such as price, comfort, location, and facilities, using the Weight Product method."
+              data-image="images/projects/muweb/rekos/rekos1.jpeg"
+              data-mockup-left="images/projects/muweb/rekos/rekos2.jpeg"
+              data-mockup-right="images/projects/muweb/rekos/rekos3.jpeg"
+              aria-label="View Rekos project details">
+              <span>View Project Details</span><i class="fas fa-arrow-up-right-from-square"></i>
+            </button>
+          </div>
+        </article>
+
+        <article class="project-feature-card project-card group archive-card archive-project-card" data-category="web">
+          <div class="project-mockup-stage" role="group" aria-label="Wedding invitation website screens">
+            <div class="project-mockup-window project-mockup-window--left"><img src="images/projects/muweb/ug/ug2.jpeg" alt="Wedding invitation details section" loading="lazy" /></div>
+            <div class="project-mockup-window project-mockup-window--right"><img src="images/projects/muweb/ug/ug3.jpeg" alt="Wedding invitation event information" loading="lazy" /></div>
+            <div class="project-mockup-window project-mockup-window--front"><img src="images/projects/muweb/ug/ug1.jpeg" alt="Wedding invitation opening screen" loading="lazy" /></div>
+          </div>
+          <div class="project-card-overlay"></div>
+          <div class="project-card-content">
+            <div class="flex items-center justify-between mb-3">
+              <span class="project-number text-[#93c5fd]">09 / Featured Web</span>
+              <span class="project-type-badge">Digital Invitation</span>
+            </div>
+            <h2 class="text-2xl font-extrabold text-white group-hover:text-[#93c5fd] transition-colors mb-2">Wedding Invitation Website</h2>
+            <p class="text-sm text-[#cbd5e1] mb-4">A responsive digital wedding invitation featuring an elegant visual theme, couple profiles, and event information.</p>
+            <button class="project-detail-btn project-view-trigger" type="button"
+              data-title="Wedding Invitation Website"
+              data-category="Web Development &bull; Digital Invitation"
+              data-tech="Responsive Web Design, HTML, CSS, JavaScript"
+              data-description="A responsive digital wedding invitation website with a refined visual theme, couple profiles, and event details presented in a simple, guest-friendly layout."
+              data-image="images/projects/muweb/ug/ug1.jpeg"
+              data-mockup-left="images/projects/muweb/ug/ug2.jpeg"
+              data-mockup-right="images/projects/muweb/ug/ug3.jpeg"
+              aria-label="View Wedding Invitation Website project details">
+              <span>View Project Details</span><i class="fas fa-arrow-up-right-from-square"></i>
             </button>
           </div>
         </article>
       </div>
-
-
-
     </main>
 
-    <!-- Footer (Clean White) -->
     <footer class="py-12 px-6 border-t border-[#e8e8e6] bg-white font-mono text-xs text-[#737373]">
       <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <div class="flex items-center gap-2.5">
@@ -333,56 +345,40 @@
       </div>
     </footer>
 
-    <!-- ====================================================================
-         Project View Modal (Clean White Dialog)
-         ==================================================================== -->
     <div id="modal" class="hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <div class="modal-dialog">
-        
-        <!-- Modal Header Image -->
-        <div class="relative w-full aspect-[16/10] bg-[#f0f0ee] overflow-hidden">
+        <div id="modalPreview" class="modal-preview relative w-full aspect-[16/10] bg-[#0b1120] overflow-hidden">
           <img id="modalImage" src="" alt="Project Preview" class="w-full h-full object-cover" />
-          <button id="closeModal" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/90 hover:bg-[#171717] hover:text-white text-[#171717] shadow-md flex items-center justify-center transition-all text-xl font-bold cursor-pointer" aria-label="Close Project Modal">
-            &times;
-          </button>
+          <div class="modal-mockup-stage" role="group" aria-label="Project interface previews">
+            <div class="modal-mockup-window modal-mockup-window--left"><img src="" alt="" /></div>
+            <div class="modal-mockup-window modal-mockup-window--right"><img src="" alt="" /></div>
+            <div class="modal-mockup-window modal-mockup-window--front"><img src="" alt="" /></div>
+          </div>
+          <button id="closeModal" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/90 hover:bg-[#171717] hover:text-white text-[#171717] shadow-md flex items-center justify-center transition-all text-xl font-bold cursor-pointer" aria-label="Close Project Modal">&times;</button>
         </div>
-
-        <!-- Modal Content Body -->
         <div class="p-6 sm:p-8">
           <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
             <span id="modalCategory" class="editorial-badge accent text-[10px]"></span>
             <span id="modalTech" class="font-mono text-xs text-[#737373]"></span>
           </div>
-
           <h3 id="modalTitle" class="font-['Space_Grotesk'] text-2xl sm:text-3xl font-extrabold text-[#171717] mb-4"></h3>
-          
           <p id="modalDescription" class="text-[#737373] text-sm sm:text-base leading-relaxed mb-6"></p>
-
-          <!-- Project External Links: Live Deployed & GitHub Repository -->
           <div class="flex flex-wrap items-center gap-3 my-6 pt-5 border-t border-[#e8e8e6]">
             <a id="modalLiveBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary flex items-center gap-2 text-xs py-2.5 px-5 font-mono">
-              <i class="fas fa-arrow-up-right-from-square text-[11px]"></i>
-              <span id="modalLiveText">Live Preview / Deployed</span>
+              <i class="fas fa-arrow-up-right-from-square text-[11px]"></i><span id="modalLiveText">Live Preview / Deployed</span>
             </a>
-
             <a id="modalGithubBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn-secondary flex items-center gap-2 text-xs py-2.5 px-5 font-mono">
-              <i class="fab fa-github text-sm"></i>
-              <span id="modalGithubText">View on GitHub</span>
+              <i class="fab fa-github text-sm"></i><span id="modalGithubText">View on GitHub</span>
             </a>
           </div>
-
           <div class="pt-4 border-t border-[#e8e8e6] flex items-center justify-between">
-            <span class="font-mono text-xs text-[#a3a3a3]">Agung Rizki Saputra &bull; Project Archive</span>
-            <button type="button" onclick="document.getElementById('modal').classList.add('hidden'); document.body.style.overflow='';" class="btn-secondary text-xs py-2 px-5 font-mono">
-              Close Preview
-            </button>
+            <span class="font-mono text-xs text-[#a3a3a3]">Agung Rizki Saputra &bull; Portfolio 2026</span>
+            <button type="button" onclick="document.getElementById('modal').classList.add('hidden'); document.body.style.overflow='';" class="btn-secondary text-xs py-2 px-5 font-mono">Close Preview</button>
           </div>
         </div>
-
       </div>
     </div>
 
-    <!-- Interactive Scripts -->
     <script src="js/style.js" defer></script>
   </body>
 </html>
