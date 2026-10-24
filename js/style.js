@@ -22,8 +22,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+  let scrollProgressFrame = 0;
+  const updatePageScrollProgress = () => {
+    if (scrollProgressFrame) return;
+    scrollProgressFrame = requestAnimationFrame(() => {
+      const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = scrollableHeight > 0 ? window.scrollY / scrollableHeight : 0;
+      document.documentElement.style.setProperty("--page-scroll-progress", `${(progress * 100).toFixed(2)}%`);
+      scrollProgressFrame = 0;
+    });
+  };
+
   window.addEventListener("scroll", handleNavbarScroll, { passive: true });
+  window.addEventListener("scroll", updatePageScrollProgress, { passive: true });
   handleNavbarScroll();
+  updatePageScrollProgress();
 
   // Scrollspy to highlight active nav link
   if (sections.length > 0 && navLinks.length > 0) {
@@ -142,6 +155,26 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     typeRole();
+  }
+
+  const heroEntranceSection = document.getElementById("home");
+  if (heroEntranceSection && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const heroEntranceElements = [
+      heroEntranceSection.querySelector(".editorial-badge"),
+      heroEntranceSection.querySelector(".hero-editorial-title"),
+      heroEntranceSection.querySelector("#dynamic-text")?.parentElement,
+      heroEntranceSection.querySelector(".hero-editorial-title")?.parentElement?.querySelector("p"),
+      heroEntranceSection.querySelector(".btn-primary")?.parentElement,
+      heroEntranceSection.querySelector(".hero-editorial-title")?.parentElement?.querySelector(".grid.grid-cols-3"),
+      heroEntranceSection.querySelector("#heroPhotoStage")
+    ].filter(Boolean);
+
+    heroEntranceElements.forEach((element, index) => {
+      element.style.setProperty("--hero-entrance-delay", `${index * 110}ms`);
+      element.classList.add("hero-entrance");
+    });
+
+    requestAnimationFrame(() => heroEntranceSection.classList.add("hero-is-ready"));
   }
 
   // --------------------------------------------------------------------------
@@ -396,7 +429,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 7. Section Reveal on Scroll
   // --------------------------------------------------------------------------
   const revealElements = document.querySelectorAll(
-    "header#home, main > section, main.archive-page-main > .border-b, " +
+    "section[id], main.archive-page-main > .border-b, " +
     "main.archive-page-main > .archive-featured-layout, " +
     "main.archive-page-main > .archive-project-grid, " +
     ".skills-category-card, .timeline-item, .contact-card-main, " +
@@ -486,19 +519,23 @@ document.addEventListener("DOMContentLoaded", () => {
   // 8b. Hero Arch Portal 3D Parallax Tilt Motion
   // --------------------------------------------------------------------------
   const heroPhotoStage = document.getElementById("heroPhotoStage");
-  const heroArchWrapper = document.getElementById("heroArchWrapper") || document.getElementById("heroFacetedWrapper");
-  if (heroPhotoStage && heroArchWrapper) {
-    heroPhotoStage.addEventListener("mousemove", (e) => {
+  const heroPhotoWrapper = document.getElementById("heroBlobWrapper") ||
+    document.getElementById("heroArchWrapper") ||
+    document.getElementById("heroFacetedWrapper");
+  if (heroPhotoStage && heroPhotoWrapper && !reducedMotion.matches) {
+    heroPhotoStage.addEventListener("pointermove", (event) => {
+      if (event.pointerType === "touch") return;
       const rect = heroPhotoStage.getBoundingClientRect();
-      const x = e.clientX - rect.left - rect.width / 2;
-      const y = e.clientY - rect.top - rect.height / 2;
-      const rotateX = (-y / (rect.height / 2)) * 8;
-      const rotateY = (x / (rect.width / 2)) * 8;
-      heroArchWrapper.style.transform = `rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateZ(12px)`;
+      const horizontalPosition = (event.clientX - rect.left) / rect.width - 0.5;
+      const verticalPosition = (event.clientY - rect.top) / rect.height - 0.5;
+      const rotateX = -verticalPosition * 10;
+      const rotateY = horizontalPosition * 10;
+      heroPhotoWrapper.style.transform =
+        `rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateZ(12px)`;
     });
 
-    heroPhotoStage.addEventListener("mouseleave", () => {
-      heroArchWrapper.style.transform = "rotateX(0deg) rotateY(0deg) translateZ(0px)";
+    heroPhotoStage.addEventListener("pointerleave", () => {
+      heroPhotoWrapper.style.transform = "rotateX(0deg) rotateY(0deg) translateZ(0px)";
     });
   }
 
