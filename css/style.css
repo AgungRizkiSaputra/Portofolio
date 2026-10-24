@@ -1391,26 +1391,68 @@ body {
   min-height: 27rem;
 }
 
-.archive-project-grid > .archive-card:nth-child(1),
-.archive-project-grid > .archive-card:nth-child(5) {
+.archive-project-grid > .archive-card[data-project-theme="voting"] {
+  order: 1;
   grid-column: span 4;
 }
 
-.archive-project-grid > .archive-card:nth-child(2),
-.archive-project-grid > .archive-card:nth-child(6) {
+.archive-project-grid > .archive-card[data-project-theme="academic"] {
+  order: 2;
   grid-column: span 8;
 }
 
-.archive-project-grid > .archive-card:nth-child(3) {
+.archive-project-grid > .archive-card[data-project-theme="fragrance"] {
+  order: 3;
   grid-column: span 7;
 }
 
-.archive-project-grid > .archive-card:nth-child(4) {
+.archive-project-grid > .archive-card[data-project-theme="accommodation"] {
+  order: 4;
   grid-column: span 5;
 }
 
+.archive-project-grid > .archive-card[data-project-theme="restaurant"] {
+  order: 5;
+  grid-column: span 4;
+}
+
+.archive-project-grid > .archive-card[data-project-theme="invitation"] {
+  order: 6;
+  grid-column: span 8;
+}
+
 .archive-featured-layout .project-card-compact {
-  min-height: 27rem;
+  min-height: 16rem;
+}
+
+.archive-featured-layout > .project-feature-card {
+  min-height: 37rem;
+}
+
+.archive-featured-layout > .project-feature-card .project-mockup-stage:not(.project-mockup-stage--mobile) .project-mockup-window {
+  height: clamp(9rem, 20vw, 15rem);
+}
+
+.archive-featured-layout .project-card-compact .project-card-content {
+  padding: 1.25rem;
+}
+
+.archive-featured-layout .project-card-compact .project-card-content p {
+  margin-bottom: 0.65rem;
+}
+
+.archive-featured-layout .project-card-compact .project-card-content > .flex.flex-wrap {
+  gap: 0.35rem;
+  margin-bottom: 0.65rem;
+}
+
+.archive-featured-layout .project-card-compact .project-tech-tag {
+  padding: 0.1rem 0.4rem;
+  font-size: 0.62rem;
+}
+
+.archive-featured-layout .project-mockup-stage--mobile.project-mockup-stage--compact {
+  bottom: 56%;
 }
 
 .archive-project-grid.is-filtered {
@@ -1628,18 +1670,18 @@ body {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .archive-project-grid > .archive-card:nth-child(1),
-  .archive-project-grid > .archive-card:nth-child(4) {
+  .archive-project-grid > .archive-card[data-project-theme="voting"],
+  .archive-project-grid > .archive-card[data-project-theme="fragrance"] {
     grid-column: span 2;
   }
 
-  .archive-project-grid > .archive-card:nth-child(2),
-  .archive-project-grid > .archive-card:nth-child(3) {
+  .archive-project-grid > .archive-card[data-project-theme="academic"],
+  .archive-project-grid > .archive-card[data-project-theme="accommodation"] {
     grid-column: span 4;
   }
 
-  .archive-project-grid > .archive-card:nth-child(5),
-  .archive-project-grid > .archive-card:nth-child(6) {
+  .archive-project-grid > .archive-card[data-project-theme="restaurant"],
+  .archive-project-grid > .archive-card[data-project-theme="invitation"] {
     grid-column: span 3;
   }
 
