@@ -1116,6 +1116,51 @@ body {
   justify-content: flex-end;
 }
 
+.project-card[data-project-theme="learning"] {
+  background-color: #12335b;
+  background-image: radial-gradient(ellipse at 72% 18%, rgba(56, 189, 248, 0.36), transparent 48%), linear-gradient(135deg, #102a4c, #1d4d78 58%, #152b54);
+}
+
+.project-card[data-project-theme="livestock"] {
+  background-color: #39452d;
+  background-image: radial-gradient(ellipse at 72% 18%, rgba(190, 166, 93, 0.4), transparent 48%), linear-gradient(135deg, #273a2b, #596344 58%, #473c2a);
+}
+
+.project-card[data-project-theme="news"] {
+  background-color: #183e61;
+  background-image: radial-gradient(ellipse at 72% 18%, rgba(56, 189, 248, 0.38), transparent 48%), linear-gradient(135deg, #102a45, #21618a 58%, #202c60);
+}
+
+.project-card[data-project-theme="voting"] {
+  background-color: #382a69;
+  background-image: radial-gradient(ellipse at 72% 18%, rgba(167, 139, 250, 0.4), transparent 48%), linear-gradient(135deg, #292454, #51418b 58%, #263c72);
+}
+
+.project-card[data-project-theme="academic"] {
+  background-color: #174c55;
+  background-image: radial-gradient(ellipse at 72% 18%, rgba(45, 212, 191, 0.34), transparent 48%), linear-gradient(135deg, #123b49, #216b70 58%, #244b68);
+}
+
+.project-card[data-project-theme="restaurant"] {
+  background-color: #683b2d;
+  background-image: radial-gradient(ellipse at 72% 18%, rgba(251, 146, 60, 0.42), transparent 48%), linear-gradient(135deg, #4c2b28, #81503a 58%, #513543);
+}
+
+.project-card[data-project-theme="fragrance"] {
+  background-color: #52334c;
+  background-image: radial-gradient(ellipse at 72% 18%, rgba(244, 114, 182, 0.32), transparent 48%), linear-gradient(135deg, #34263f, #70415f 58%, #3c365e);
+}
+
+.project-card[data-project-theme="accommodation"] {
+  background-color: #315343;
+  background-image: radial-gradient(ellipse at 72% 18%, rgba(134, 239, 172, 0.3), transparent 48%), linear-gradient(135deg, #203d39, #3c6952 58%, #384b62);
+}
+
+.project-card[data-project-theme="invitation"] {
+  background-color: #623b48;
+  background-image: radial-gradient(ellipse at 72% 18%, rgba(251, 191, 183, 0.36), transparent 48%), linear-gradient(135deg, #493044, #87515b 58%, #59435e);
+}
+
 .project-card:hover {
   transform: translateY(-5px);
   border-color: rgba(52, 87, 213, 0.5);
