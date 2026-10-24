@@ -418,6 +418,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const filterButtons = document.querySelectorAll(".filter-btn");
   const projectItems = document.querySelectorAll(".masonry-item, .archive-card");
   const archiveFeaturedLayout = document.querySelector(".archive-featured-layout");
+  const archiveProjectGrid = document.querySelector(".archive-project-grid");
 
   if (filterButtons.length > 0 && projectItems.length > 0) {
     filterButtons.forEach((btn) => {
@@ -430,6 +431,9 @@ document.addEventListener("DOMContentLoaded", () => {
           const isFiltered = targetCategory !== "all";
           archiveFeaturedLayout.classList.toggle("is-filtered", isFiltered);
           archiveFeaturedLayout.classList.toggle("is-filtered-mobile", targetCategory === "mobile");
+        }
+        if (archiveProjectGrid) {
+          archiveProjectGrid.classList.toggle("is-filtered-web", targetCategory === "web");
         }
 
         projectItems.forEach((item) => {
