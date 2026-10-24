@@ -6,6 +6,435 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
+  const languageCopy = {
+    "Agung Rizki Saputra | Creative Developer & UI/UX Designer": "Agung Rizki Saputra | Developer Kreatif & Desainer UI/UX",
+    "Portfolio of Agung Rizki Saputra — Creative Developer and UI/UX Designer. Fresh graduate in Informatics Engineering crafting clean, secure, and user-centric web applications.": "Portofolio Agung Rizki Saputra — Developer Kreatif dan Desainer UI/UX. Lulusan Teknik Informatika yang membangun aplikasi web yang rapi, aman, dan berpusat pada pengguna.",
+    "All Projects | Agung Rizki Saputra": "Semua Proyek | Agung Rizki Saputra",
+    "Explore web and mobile projects by Agung Rizki Saputra, including learning platforms, mobile apps, and responsive websites.": "Jelajahi proyek web dan aplikasi mobile Agung Rizki Saputra, termasuk platform pembelajaran, aplikasi mobile, dan situs web responsif.",
+    "Main Navigation": "Navigasi Utama",
+    "Home": "Beranda",
+    "About": "Tentang",
+    "About Me": "Tentang Saya",
+    "Skills": "Keahlian",
+    "Skills & Tech": "Keahlian & Teknologi",
+    "Projects": "Proyek",
+    "Selected Work": "Karya Pilihan",
+    "Experience": "Pengalaman",
+    "Contact": "Kontak",
+    "Let's Talk": "Mari Berbicara",
+    "Toggle Navigation Menu": "Buka/Tutup Menu Navigasi",
+    "Mobile Navigation": "Navigasi Mobile",
+    "Close Mobile Menu": "Tutup Menu Mobile",
+    "All Projects Archive (9)": "Arsip Semua Proyek (9)",
+    "Available for Full-Time & Freelance • 2026": "Terbuka untuk Kerja Penuh Waktu & Freelance • 2026",
+    "Specializing in": "Berfokus pada",
+    "Fresh graduate in Informatics Engineering with strong focus on": "Lulusan baru Teknik Informatika dengan fokus kuat pada",
+    "Web Development": "Pengembangan Web",
+    "UI/UX Design": "Desain UI/UX",
+    "Secure Coding principles": "Prinsip Secure Coding",
+    ". Building functional, responsive web experiences with deliberate visual poise.": ". Membangun pengalaman web yang fungsional, responsif, dan dirancang dengan cermat.",
+    "View Featured Work": "Lihat Karya Pilihan",
+    "Download CV": "Unduh CV",
+    "Get in Touch": "Hubungi Saya",
+    "Projects Built": "Proyek Dibuat",
+    "B.Sc. Graduate": "Lulusan S.Kom.",
+    "Work Experiences": "Pengalaman Kerja",
+    "Creative Dev • 2026": "Developer Kreatif • 2026",
+    "Scroll to About section": "Gulir ke bagian Tentang",
+    "Scroll to explore": "Gulir untuk menjelajah",
+    "// 01 • Profile & Philosophy": "// 01 • Profil & Filosofi",
+    "Crafting digital products where aesthetic poise meets secure, functional engineering.": "Menciptakan produk digital yang memadukan estetika, keamanan, dan rekayasa yang fungsional.",
+    "Agung Rizki Saputra Profile": "Profil Agung Rizki Saputra",
+    "Informatics Eng. '26": "Teknik Informatika '26",
+    "I am a recent Bachelor’s degree graduate in": "Saya baru saja lulus sebagai Sarjana",
+    "Informatics Engineering": "Teknik Informatika",
+    "with a deep passion for Web Development, UI/UX Design, and Cybersecurity. My work centers on creating web applications that are not merely interactive and aesthetically refined, but also performant, responsive, and grounded in secure coding principles.": "dengan minat besar pada Pengembangan Web, Desain UI/UX, dan Keamanan Siber. Saya berfokus menciptakan aplikasi web yang interaktif dan menarik, sekaligus berkinerja baik, responsif, serta menerapkan prinsip secure coding.",
+    "Having conducted vulnerability testing and web penetration testing during my security internship, I approach every frontend architecture with heightened awareness of user data integrity, robust validation, and clean information hierarchy.": "Pengalaman menguji kerentanan dan melakukan penetration testing web selama magang keamanan membuat saya lebih memperhatikan integritas data pengguna, validasi yang kuat, dan hierarki informasi yang jelas dalam setiap arsitektur frontend.",
+    "I am experienced in turning complex workflows into intuitive wireframes and interactive prototypes with": "Saya berpengalaman mengubah alur kerja yang kompleks menjadi wireframe intuitif dan prototipe interaktif menggunakan",
+    ", and translating them into responsive code using": ", lalu menerjemahkannya menjadi kode responsif menggunakan",
+    "Deliberate UI/UX": "UI/UX yang Terencana",
+    "User-first wireframes, interactive prototypes, and design systems built in Figma.": "Wireframe yang mengutamakan pengguna, prototipe interaktif, dan sistem desain yang dibuat di Figma.",
+    "Modern Web Craft": "Kreasi Web Modern",
+    "Responsive layouts, clean semantic code, and lightweight DOM interactions.": "Tata letak responsif, kode semantik yang rapi, dan interaksi DOM yang ringan.",
+    "Security Mindset": "Pola Pikir Keamanan",
+    "Practical penetration testing foundations and defensive coding standards.": "Dasar penetration testing praktis dan standar defensive coding.",
+    "// 02 • Technical Capabilities": "// 02 • Kemampuan Teknis",
+    "Tools, technologies &": "Perangkat, teknologi &",
+    "engineering stack.": "stack rekayasa perangkat lunak.",
+    "Proficiencies categorized by development lifecycle, from visual research and user flow prototyping to frontend execution and security testing.": "Keahlian dikelompokkan berdasarkan siklus pengembangan, mulai dari riset visual dan prototipe alur pengguna hingga implementasi frontend dan pengujian keamanan.",
+    "01 • Proficiency": "01 • Kemahiran",
+    "02 • Proficiency": "02 • Kemahiran",
+    "03 • Proficiency": "03 • Kemahiran",
+    "04 • Proficiency": "04 • Kemahiran",
+    "Advanced": "Mahir",
+    "Intermediate": "Menengah",
+    "01 • Frontend": "01 • Frontend",
+    "Frontend Development": "Pengembangan Frontend",
+    "03 • Mobile": "03 • Mobile",
+    "Mobile Development": "Pengembangan Mobile",
+    "Cross-Platform": "Lintas Platform",
+    "Mobile UX": "UX Mobile",
+    "02 • Systems": "02 • Sistem",
+    "Backend & Database": "Backend & Basis Data",
+    "RESTful APIs": "API RESTful",
+    "Web Servers": "Server Web",
+    "Local Persistence & Sync": "Penyimpanan Lokal & Sinkronisasi",
+    "04 • Design & Security": "04 • Desain & Keamanan",
+    "Design & Security": "Desain & Keamanan",
+    "Wireframing": "Pembuatan Wireframe",
+    "Pentesting": "Penetration Testing",
+    "Secure Coding": "Secure Coding",
+    "// 03 • Selected Work": "// 03 • Karya Pilihan",
+    "Featured": "Pilihan",
+    "Projects.": "Proyek.",
+    "LMS Pintar dashboards for admin, teacher, and student": "Dashboard LMS Pintar untuk admin, guru, dan siswa",
+    "LMS Pintar teacher dashboard": "Dashboard guru LMS Pintar",
+    "LMS Pintar student dashboard": "Dashboard siswa LMS Pintar",
+    "LMS Pintar administrator dashboard": "Dashboard administrator LMS Pintar",
+    "01 / Featured Web": "01 / Web Pilihan",
+    "LMS Pintar": "LMS Pintar",
+    "An integrated academic portal with dedicated dashboards for administrators, teachers, and students to manage courses, classes, assignments, exams, and learning progress.": "Portal akademik terpadu dengan dashboard khusus bagi administrator, guru, dan siswa untuk mengelola mata pelajaran, kelas, tugas, ujian, dan perkembangan belajar.",
+    "View LMS Pintar project details": "Lihat detail proyek LMS Pintar",
+    "View Project Details": "Lihat Detail Proyek",
+    "QurbanQu mobile app screens": "Layar aplikasi mobile QurbanQu",
+    "QurbanQu livestock browsing screen": "Layar penelusuran hewan ternak QurbanQu",
+    "QurbanQu payment details screen": "Layar detail pembayaran QurbanQu",
+    "QurbanQu welcome screen": "Layar sambutan QurbanQu",
+    "02 / Mobile": "02 / Aplikasi Mobile",
+    "QurbanQu Livestock": "QurbanQu Livestock",
+    "A livestock marketplace concept with verified weights, quality filters, transparent pricing, and a clear booking flow.": "Konsep marketplace hewan kurban dengan bobot terverifikasi, filter kualitas, harga transparan, dan alur pemesanan yang jelas.",
+    "View QurbanQu Livestock project details": "Lihat detail proyek QurbanQu Livestock",
+    "View Details": "Lihat Detail",
+    "Headline Hub news app screens": "Layar aplikasi berita Headline Hub",
+    "03 / Mobile": "03 / Aplikasi Mobile",
+    "Headline Hub": "Headline Hub",
+    "A Flutter news app concept with clear typography, category browsing, and a smooth reading experience.": "Konsep aplikasi berita Flutter dengan tipografi yang jelas, penelusuran kategori, dan pengalaman membaca yang nyaman.",
+    "View Headline Hub project details": "Lihat detail proyek Headline Hub",
+    "Explore more selected projects.": "Jelajahi karya pilihan lainnya.",
+    "Browse all 9 web and mobile projects, with filters to explore each category.": "Jelajahi 9 proyek web dan mobile, gunakan filter untuk melihat setiap kategori.",
+    "Explore All 9 Projects": "Jelajahi Semua 9 Proyek",
+    "// 04 • Milestones & Background": "// 04 • Perjalanan & Latar Belakang",
+    "Career path &": "Perjalanan karier &",
+    "academic journey.": "akademik.",
+    "Experiences": "Pengalaman",
+    "Study Levels": "Jenjang Pendidikan",
+    "Work History": "Riwayat Kerja",
+    "Professional Experience": "Pengalaman Profesional",
+    "Feb 2026 — Jun 2026 • Fulltime Internship": "Feb 2026 — Jun 2026 • Magang Penuh Waktu",
+    "Security Intern": "Intern Keamanan Siber",
+    "Cybersecurity": "Keamanan Siber",
+    "Conducted penetration testing and vulnerability analysis on web applications and systems. Identified potential attack vectors and authored actionable risk reports with remediation recommendations.": "Melakukan penetration testing dan analisis kerentanan pada aplikasi web dan sistem. Mengidentifikasi potensi jalur serangan serta menyusun laporan risiko dan rekomendasi perbaikan yang dapat ditindaklanjuti.",
+    "Penetration Testing": "Penetration Testing",
+    "Vulnerability Analysis": "Analisis Kerentanan",
+    "Web Security": "Keamanan Web",
+    "Risk Reporting": "Pelaporan Risiko",
+    "Sep 2025 — Nov 2025 • Mentorship": "Sep 2025 — Nov 2025 • Mentoring",
+    "UI/UX Design Mentor": "Mentor Desain UI/UX",
+    "Formulated curriculum and guided Grade 10 vocational students in foundational UI/UX methodologies using Figma. Mentored through wireframing, component structuring, and interactive prototype delivery.": "Menyusun kurikulum dan membimbing siswa SMK kelas 10 dalam dasar metodologi UI/UX menggunakan Figma, mulai dari wireframing, penyusunan komponen, hingga pembuatan prototipe interaktif.",
+    "Figma Mentoring": "Mentoring Figma",
+    "Design Systems": "Sistem Desain",
+    "Curriculum Design": "Perancangan Kurikulum",
+    "May 2022 — Jul 2022 • Industrial Internship": "Mei 2022 — Jul 2022 • Magang Industri",
+    "Production Intern": "Intern Produksi",
+    "Manufacturing": "Manufaktur",
+    "Actively participated in manufacturing operations from raw timber selection to quality finishing and coating, collaborating with floor teams to maintain target output and production standards.": "Berpartisipasi dalam operasional manufaktur, mulai dari pemilihan kayu hingga finishing dan pelapisan, serta berkolaborasi menjaga target produksi dan standar kualitas.",
+    "Operations": "Operasional",
+    "Quality Control": "Kontrol Kualitas",
+    "Team Coordination": "Koordinasi Tim",
+    "Academic Background": "Latar Belakang Akademik",
+    "Education History": "Riwayat Pendidikan",
+    "Bachelor of Informatics Engineering": "Sarjana Teknik Informatika",
+    "S.Kom. • University Level": "S.Kom. • Tingkat Universitas",
+    "Highest Degree": "Pendidikan Tertinggi",
+    "Focus": "Fokus",
+    "Web Dev": "Pengembangan Web",
+    "Mobile Dev": "Pengembangan Mobile",
+    "Vocational High (SMK)": "Sekolah Menengah Kejuruan (SMK)",
+    "Programming languages, web authoring, algorithmic problem solving, dan interface design foundations.": "Dasar bahasa pemrograman, pembuatan web, pemecahan masalah algoritmik, dan desain antarmuka.",
+    "Web Authoring": "Pembuatan Web",
+    "Algorithms": "Algoritma",
+    "Junior High (SMP)": "Sekolah Menengah Pertama (SMP)",
+    "Digital Media": "Media Digital",
+    "Elementary School (SD)": "Sekolah Dasar (SD)",
+    "Get in Touch • Open for Collaboration": "Hubungi Saya • Terbuka untuk Kolaborasi",
+    "Have a project or opportunity?": "Punya proyek atau peluang?",
+    "Let's build something remarkable.": "Mari ciptakan sesuatu yang istimewa.",
+    "Currently available for full-time frontend and web development positions, UI/UX design contracts, or interesting technical collaborations.": "Saat ini terbuka untuk posisi frontend dan pengembangan web penuh waktu, kontrak desain UI/UX, atau kolaborasi teknis yang menarik.",
+    "Fast response • typically within 24 hours": "Respons cepat • biasanya dalam 24 jam",
+    "Send a Direct Message": "Kirim Pesan Langsung",
+    "Click to copy email address or open directly in your mail client:": "Klik untuk menyalin alamat email atau membukanya di aplikasi email:",
+    "Email Address": "Alamat Email",
+    "Copy": "Salin",
+    "Send": "Kirim",
+    "Location: Indonesia 🇮🇩": "Lokasi: Indonesia 🇮🇩",
+    "Timezone: GMT+7": "Zona Waktu: GMT+7",
+    "Repositories & code projects": "Repositori & proyek kode",
+    "Professional network & profile": "Jaringan & profil profesional",
+    "Creative visuals & updates": "Karya visual & pembaruan",
+    "All rights reserved.": "Hak cipta dilindungi.",
+    "Back to top ↑": "Kembali ke atas ↑",
+    "Scroll back to top": "Gulir kembali ke atas",
+    "Project Preview": "Pratinjau Proyek",
+    "Close Project Modal": "Tutup Jendela Proyek",
+    "Live Preview / Deployed": "Pratinjau Langsung / Terpasang",
+    "View on GitHub": "Lihat di GitHub",
+    "Agung Rizki Saputra • Portfolio 2026": "Agung Rizki Saputra • Portofolio 2026",
+    "Close Preview": "Tutup Pratinjau",
+    "Project Showcase": "Sorotan Proyek",
+    "Featured Project": "Proyek Pilihan",
+    "View Repository": "Lihat Repositori",
+    "Open Figma Prototype": "Buka Prototipe Figma",
+    "Live Deployed Web": "Situs Web Aktif",
+    "Download APK Release": "Unduh Rilis APK",
+    "Flutter Repository": "Repositori Flutter",
+    "GitHub Repository": "Repositori GitHub",
+    "GitHub Profile": "Profil GitHub",
+    "View Project Screen": "Lihat Tampilan Proyek",
+    "Web Development": "Pengembangan Web",
+    "Mobile Development": "Pengembangan Mobile",
+    "Learning Management System": "Sistem Manajemen Pembelajaran",
+    "Livestock Marketplace": "Marketplace Hewan Ternak",
+    "Cross-Platform": "Lintas Platform",
+    "News App": "Aplikasi Berita",
+    "Academic Management": "Manajemen Akademik",
+    "Digital Voting": "Pemungutan Suara Digital",
+    "Restaurant Ordering": "Pemesanan Restoran",
+    "Fragrance Storefront": "Etalase Parfum",
+    "Accommodation Finder": "Pencari Hunian",
+    "Digital Invitation": "Undangan Digital",
+    "Learning Platform": "Platform Pembelajaran",
+    "Marketplace": "Marketplace",
+    "Interface Design": "Desain Antarmuka",
+    "A school learning management platform with dedicated dashboards for administrators, teachers, and students to manage classes, coursework, exams, and learning progress.": "Platform manajemen pembelajaran sekolah dengan dashboard khusus bagi administrator, guru, dan siswa untuk mengelola kelas, materi, ujian, dan perkembangan belajar.",
+    "A school learning management platform with dedicated dashboards for administrators, teachers, and students. Administrators manage users, classes, subjects, schedules, exams, and announcements; teachers organize learning materials, assignments, and grades; students access lessons, coursework, exams, and learning progress in one portal.": "Platform manajemen pembelajaran sekolah dengan dashboard khusus bagi administrator, guru, dan siswa. Administrator mengelola pengguna, kelas, mata pelajaran, jadwal, ujian, dan pengumuman; guru mengatur materi, tugas, dan nilai; siswa mengakses pelajaran, tugas, ujian, serta perkembangan belajar dalam satu portal.",
+    "A mobile livestock marketplace concept designed around a clear purchasing journey, with livestock discovery, transparent product details, and a focused booking experience.": "Konsep marketplace hewan ternak dengan alur pembelian yang jelas, pencarian ternak, detail produk transparan, dan pengalaman pemesanan yang terarah.",
+    "A cross-platform news app concept developed with Flutter, designed around clear typography, category browsing, and an easy-to-follow reading experience.": "Konsep aplikasi berita lintas platform yang dibuat dengan Flutter, dengan tipografi jelas, penelusuran kategori, dan pengalaman membaca yang mudah diikuti.",
+    "A digital voting app concept that helps voters explore candidates, review election information, and move through a clear ballot selection flow.": "Konsep aplikasi pemungutan suara digital yang membantu pemilih mengenal kandidat, meninjau informasi pemilu, dan memilih melalui alur yang jelas.",
+    "A mobile interface for managing semester learning plans (RPS), including approval tracking, course plan lists, and an overview of program learning outcomes.": "Antarmuka mobile untuk mengelola Rencana Pembelajaran Semester (RPS), termasuk pelacakan persetujuan, daftar rencana mata kuliah, dan ringkasan capaian pembelajaran program.",
+    "A restaurant ordering app concept with a welcoming entry screen, account access, and a streamlined dining experience.": "Konsep aplikasi pemesanan restoran dengan layar pembuka yang ramah, akses akun, dan pengalaman bersantap yang praktis.",
+    "A fragrance storefront concept showcasing perfume products, brand storytelling, and a polished browsing experience.": "Konsep etalase parfum yang menampilkan produk, cerita merek, dan pengalaman penelusuran yang menarik.",
+    "A boarding house recommendation website that helps people compare accommodation using practical criteria and the Weight Product method.": "Situs rekomendasi kos yang membantu pengguna membandingkan hunian berdasarkan kriteria praktis dan metode Weighted Product.",
+    "A responsive digital wedding invitation featuring an elegant visual theme, couple profiles, and event information.": "Undangan pernikahan digital responsif dengan tema visual elegan, profil pasangan, dan informasi acara.",
+    "LMS Pintar — Academic Management Portal": "LMS Pintar — Portal Manajemen Akademik",
+    "QurbanQu mobile app screens": "Layar aplikasi mobile QurbanQu",
+    "Headline Hub news app mockup": "Mockup aplikasi berita Headline Hub",
+    "Global Vote mobile app screens": "Layar aplikasi mobile Global Vote",
+    "Global Vote candidate selection screen": "Layar pemilihan kandidat Global Vote",
+    "Global Vote voting screen": "Layar pemungutan suara Global Vote",
+    "Global Vote home screen": "Layar beranda Global Vote",
+    "RPS academic management app screens": "Layar aplikasi manajemen akademik RPS",
+    "RPS course approval overview": "Ringkasan persetujuan mata kuliah RPS",
+    "RPS course plan list": "Daftar rencana mata kuliah RPS",
+    "RPS academic dashboard": "Dashboard akademik RPS",
+    "RzResto mobile app screens": "Layar aplikasi mobile RzResto",
+    "RzResto sign-in screen": "Layar masuk RzResto",
+    "RzResto restaurant menu screen": "Layar menu restoran RzResto",
+    "RzResto welcome screen": "Layar sambutan RzResto",
+    "Fragrance Point website screens": "Layar situs web Fragrance Point",
+    "Fragrance Point product page": "Halaman produk Fragrance Point",
+    "Fragrance Point website content section": "Bagian konten situs Fragrance Point",
+    "Fragrance Point home page": "Halaman utama Fragrance Point",
+    "Rekos boarding recommendation website screens": "Layar situs rekomendasi kos Rekos",
+    "Rekos accommodation recommendations": "Rekomendasi hunian Rekos",
+    "Rekos accommodation information": "Informasi hunian Rekos",
+    "Rekos home page": "Halaman utama Rekos",
+    "Wedding invitation website screens": "Layar situs undangan pernikahan",
+    "Wedding invitation details section": "Bagian detail undangan pernikahan",
+    "Wedding invitation event information": "Informasi acara undangan pernikahan",
+    "Wedding invitation opening screen": "Layar pembuka undangan pernikahan",
+    "All Projects | Agung Rizki Saputra": "Semua Proyek | Agung Rizki Saputra",
+    "Archive Navigation": "Navigasi Arsip",
+    "Back to Portfolio": "Kembali ke Portofolio",
+    "Back to Main Portfolio": "Kembali ke Halaman Utama",
+    "Portfolio": "Portofolio",
+    "Curated Works Archive • 2026": "Arsip Karya Pilihan • 2026",
+    "// Curated Works Catalogue": "// Katalog Karya Pilihan",
+    "All": "Semua",
+    "All.": "Semua.",
+    "[ Total: 09 Web, Mobile & UI/UX Projects ]": "[ Total: 09 Proyek Web, Mobile & UI/UX ]",
+    "Explore web development, cross-platform mobile apps, and UI/UX design work with the technology foundation behind each project.": "Jelajahi karya pengembangan web, aplikasi mobile lintas platform, dan desain UI/UX beserta teknologi yang digunakan.",
+    "Filter By:": "Filter:",
+    "All Projects (9)": "Semua Proyek (9)",
+    "Web Development (4)": "Pengembangan Web (4)",
+    "Mobile Apps (3)": "Aplikasi Mobile (3)",
+    "UI/UX Design (2)": "Desain UI/UX (2)",
+    "React Server/Client": "React Server/Client",
+    "Supabase & PostgreSQL": "Supabase & PostgreSQL",
+    "Flutter": "Flutter",
+    "Dart": "Dart",
+    "Mobile UI": "UI Mobile",
+    "News API": "API Berita",
+    "Figma": "Figma",
+    "Next.js App Router": "Next.js App Router",
+    "Tailwind CSS": "Tailwind CSS",
+    "TypeScript": "TypeScript",
+    "Local Persistence & Sync": "Penyimpanan Lokal & Sinkronisasi",
+    "HTML": "HTML",
+    "CSS": "CSS",
+    "JavaScript": "JavaScript",
+    "MySQL": "MySQL",
+    "Laravel": "Laravel",
+    "PHP": "PHP",
+    "Bootstrap": "Bootstrap",
+    "Composer": "Composer",
+    "Project interface previews": "Pratinjau antarmuka proyek",
+    "Main Portfolio": "Portofolio Utama",
+    "Choose language": "Pilih bahasa",
+    "Archive Navigation": "Navigasi Arsip",
+    "Open Figma": "Buka Figma",
+    "Web Development • Learning Management System": "Pengembangan Web • Sistem Manajemen Pembelajaran",
+    "Mobile Development • Livestock Marketplace": "Pengembangan Mobile • Marketplace Hewan Ternak",
+    "Mobile Development • Cross-Platform": "Pengembangan Mobile • Lintas Platform",
+    "Mobile Development • News App": "Pengembangan Mobile • Aplikasi Berita",
+    "Mobile Development • Digital Voting": "Pengembangan Mobile • Pemungutan Suara Digital",
+    "Mobile Development • Academic Planning": "Pengembangan Mobile • Perencanaan Akademik",
+    "Mobile Development • Restaurant App": "Pengembangan Mobile • Aplikasi Restoran",
+    "Web Development • Fragrance Storefront": "Pengembangan Web • Etalase Parfum",
+    "Web Development • Accommodation Recommendation": "Pengembangan Web • Rekomendasi Hunian",
+    "Web Development • Digital Invitation": "Pengembangan Web • Undangan Digital",
+    "Academic Planning": "Perencanaan Akademik",
+    "Restaurant App": "Aplikasi Restoran",
+    "Fragrance Storefront": "Etalase Parfum",
+    "Accommodation Recommendation": "Rekomendasi Hunian",
+    "A mobile restaurant app concept that introduces the RzResto brand and provides a simple path from sign-in to browsing the restaurant experience.": "Konsep aplikasi restoran mobile yang memperkenalkan merek RzResto dan menyediakan alur sederhana dari masuk hingga menjelajahi pengalaman restoran.",
+    "A responsive fragrance storefront concept that presents perfume products through editorial imagery, clear brand messaging, and intuitive website navigation.": "Konsep etalase parfum responsif yang menampilkan produk melalui visual editorial, pesan merek yang jelas, dan navigasi situs yang intuitif.",
+    "A boarding house discovery and recommendation website that helps users compare accommodation options based on criteria such as price, comfort, location, and facilities, using the Weight Product method.": "Situs pencarian dan rekomendasi kos yang membantu pengguna membandingkan hunian berdasarkan harga, kenyamanan, lokasi, dan fasilitas menggunakan metode Weighted Product.",
+    "A responsive digital wedding invitation website with a refined visual theme, couple profiles, and event details presented in a simple, guest-friendly layout.": "Situs undangan pernikahan digital responsif dengan tema visual elegan, profil pasangan, dan detail acara dalam tata letak sederhana yang ramah bagi tamu.",
+    "Rekos — Boarding House Finder": "Rekos — Pencari Hunian Kos",
+    "The Global Vote": "The Global Vote",
+    "RPS Academic Management": "Manajemen Akademik RPS",
+    "RzResto": "RzResto",
+    "Fragrance Point": "Fragrance Point",
+    "Wedding Invitation Website": "Situs Undangan Pernikahan",
+    "A digital voting app concept that helps voters explore candidates, review election information, and move through a clear ballot selection flow.": "Konsep aplikasi pemungutan suara digital yang membantu pemilih menjelajahi kandidat, meninjau informasi pemilu, dan memilih melalui alur surat suara yang jelas.",
+    "A cross-platform news app concept developed with Flutter, designed around clear typography, category browsing, and an easy-to-follow reading experience.": "Konsep aplikasi berita lintas platform yang dikembangkan dengan Flutter, dengan tipografi yang jelas, penelusuran kategori, dan pengalaman membaca yang mudah diikuti.",
+    "A mobile livestock marketplace concept designed around a clear purchasing journey, with livestock discovery, transparent product details, and a focused booking experience.": "Konsep marketplace hewan ternak dengan alur pembelian yang jelas, pencarian ternak, detail produk transparan, dan pengalaman pemesanan yang terarah.",
+    "Project screen previews": "Pratinjau layar proyek",
+    "Academic Management": "Manajemen Akademik",
+    "Digital Voting": "Pemungutan Suara Digital",
+    "Restaurant Ordering": "Pemesanan Restoran",
+    "Accommodation Finder": "Pencari Hunian",
+    "Fragrance Storefront": "Etalase Parfum",
+    "Digital Invitation": "Undangan Digital",
+    "01 / Featured Web": "01 / Web Pilihan",
+    "04 / UI/UX Design": "04 / Desain UI/UX",
+    "05 / Featured Mobile": "05 / Mobile Pilihan",
+    "06 / Featured Web": "06 / Web Pilihan",
+    "07 / Featured Web": "07 / Web Pilihan",
+    "08 / UI/UX Design": "08 / Desain UI/UX",
+    "09 / Featured Web": "09 / Web Pilihan",
+    "Total: 09 Web, Mobile & UI/UX Projects": "Total: 09 Proyek Web, Mobile & UI/UX",
+    "All rights reserved.": "Hak cipta dilindungi.",
+    "Repositories & code projects": "Repositori & proyek kode",
+    "Professional network & profile": "Jaringan & profil profesional",
+    "Creative visuals & updates": "Karya visual & pembaruan",
+    "Copied!": "Tersalin!",
+    "A cross-platform news app concept developed with Flutter. Designed around clear typography, category browsing, and a smooth reading experience.": "Konsep aplikasi berita lintas platform yang dikembangkan dengan Flutter. Dirancang dengan tipografi jelas, penelusuran kategori, dan pengalaman membaca yang nyaman.",
+    "A mobile interface for managing semester learning plans (RPS), including approval tracking, course plan lists, and an overview of program learning outcomes.": "Antarmuka mobile untuk mengelola Rencana Pembelajaran Semester (RPS), termasuk pelacakan persetujuan, daftar rencana mata kuliah, dan ringkasan capaian pembelajaran program.",
+    "A digital voting app concept that helps voters explore candidates, review election information, and move through a clear ballot selection flow.": "Konsep aplikasi pemungutan suara digital yang membantu pemilih menjelajahi kandidat, meninjau informasi pemilu, dan memilih melalui alur surat suara yang jelas.",
+    "A mobile restaurant app concept that introduces the RzResto brand and provides a simple path from sign-in to browsing the restaurant experience.": "Konsep aplikasi restoran mobile yang memperkenalkan merek RzResto dan menyediakan alur sederhana dari masuk hingga menjelajahi pengalaman restoran.",
+    "A responsive fragrance storefront concept that presents perfume products through editorial imagery, clear brand messaging, and intuitive website navigation.": "Konsep etalase parfum responsif yang menampilkan produk melalui visual editorial, pesan merek yang jelas, dan navigasi situs yang intuitif.",
+    "A boarding house discovery and recommendation website that helps users compare accommodation options based on criteria such as price, comfort, location, and facilities, using the Weight Product method.": "Situs pencarian dan rekomendasi kos yang membantu pengguna membandingkan hunian berdasarkan harga, kenyamanan, lokasi, dan fasilitas menggunakan metode Weighted Product.",
+    "A responsive digital wedding invitation website with a refined visual theme, couple profiles, and event details presented in a simple, guest-friendly layout.": "Situs undangan pernikahan digital responsif dengan tema visual elegan, profil pasangan, dan detail acara dalam tata letak sederhana yang ramah bagi tamu.",
+    "Web Development • Learning Management System": "Pengembangan Web • Sistem Manajemen Pembelajaran",
+    "Mobile Development • Livestock Marketplace": "Pengembangan Mobile • Marketplace Hewan Ternak",
+    "Mobile Development • Cross-Platform": "Pengembangan Mobile • Lintas Platform",
+    "Mobile Development • News App": "Pengembangan Mobile • Aplikasi Berita",
+    "Mobile Development • Digital Voting": "Pengembangan Mobile • Pemungutan Suara Digital",
+    "Mobile Development • Academic Planning": "Pengembangan Mobile • Perencanaan Akademik",
+    "Mobile Development • Restaurant App": "Pengembangan Mobile • Aplikasi Restoran",
+    "Web Development • Fragrance Storefront": "Pengembangan Web • Etalase Parfum",
+    "Web Development • Accommodation Recommendation": "Pengembangan Web • Rekomendasi Hunian",
+    "Web Development • Digital Invitation": "Pengembangan Web • Undangan Digital",
+    "screen preview": "pratinjau layar",
+    "Choose language": "Pilih bahasa"
+  };
+  const translations = {
+    id: languageCopy,
+    en: {
+      ...Object.fromEntries(Object.entries(languageCopy).map(([english, indonesian]) => [indonesian, english])),
+      "Programming languages, web authoring, algorithmic problem solving, dan interface design foundations.": "Programming languages, web authoring, algorithmic problem solving, and interface design foundations.",
+      "Membangun antarmuka client yang semantic, responsif, dan aksesibel dengan teknologi web modern.": "Building semantic, responsive, and accessible client interfaces with modern web technologies.",
+      "Mengembangkan aplikasi mobile cross-platform dengan Flutter dan Dart untuk Android & iOS.": "Developing cross-platform mobile apps with Flutter and Dart for Android & iOS.",
+      "Mengelola logika aplikasi, database, API, serta alur penyimpanan lokal dan cloud.": "Managing application logic, databases, APIs, and local and cloud persistence workflows.",
+      "Prototyping visual di Figma yang dipadukan dengan kesadaran uji penetrasi dan secure coding.": "Visual prototyping in Figma combined with penetration testing awareness and secure coding.",
+      "Rasa ingin tahu awal di komputer, digital media, dan eksplorasi teknologi kreatif dimulai di sini.": "My early curiosity about computers, digital media, and creative technology exploration began here.",
+      "Disiplin, analytical thinking, dan semangat belajar yang dibangun sejak dini — fondasi dari segala hal yang datang berikutnya.": "Discipline, analytical thinking, and a love of learning built early — a foundation for everything that followed."
+    }
+  };
+  let currentLanguage = localStorage.getItem("portfolio-language") === "id" ? "id" : "en";
+  const originalTextNodes = new WeakMap();
+  const originalAttributes = new WeakMap();
+  let activeProjectTrigger = null;
+
+  const translateValue = (value, language) => {
+    const normalized = value.trim().replace(/\s+/g, " ");
+    const translated = translations[language][normalized];
+    if (!translated) return value;
+    const leadingSpace = value.match(/^\s*/)?.[0] || "";
+    const trailingSpace = value.match(/\s*$/)?.[0] || "";
+    return `${leadingSpace}${translated}${trailingSpace}`;
+  };
+
+  const applyLanguage = (language) => {
+    currentLanguage = language;
+    document.documentElement.lang = language;
+    document.title = translateValue(
+      document.querySelector("title")?.textContent || document.title,
+      language
+    );
+
+    const description = document.querySelector('meta[name="description"]');
+    if (description) {
+      const original = description.dataset.originalContent || description.content;
+      description.dataset.originalContent = original;
+      description.content = translateValue(original, language);
+    }
+
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    let textNode = walker.nextNode();
+    while (textNode) {
+      const parentTag = textNode.parentElement?.tagName;
+      if (parentTag !== "SCRIPT" && parentTag !== "STYLE" && parentTag !== "NOSCRIPT") {
+        if (!originalTextNodes.has(textNode)) originalTextNodes.set(textNode, textNode.nodeValue || "");
+        textNode.nodeValue = translateValue(originalTextNodes.get(textNode), language);
+      }
+      textNode = walker.nextNode();
+    }
+
+    document.querySelectorAll("[aria-label], img[alt], input[placeholder], button[title]").forEach((element) => {
+      ["aria-label", "alt", "placeholder", "title"].forEach((attribute) => {
+        if (!element.hasAttribute(attribute)) return;
+        let originals = originalAttributes.get(element);
+        if (!originals) {
+          originals = {};
+          originalAttributes.set(element, originals);
+        }
+        if (!(attribute in originals)) originals[attribute] = element.getAttribute(attribute);
+        element.setAttribute(attribute, translateValue(originals[attribute], language));
+      });
+    });
+
+    document.querySelectorAll("[data-language-toggle]").forEach((button) => {
+      button.setAttribute("aria-pressed", String(button.dataset.languageToggle === language));
+    });
+
+    const openModal = document.querySelector("#modal:not(.hidden)");
+    if (activeProjectTrigger && openModal) {
+      openProjectModal(activeProjectTrigger);
+    }
+  };
+
+  document.querySelectorAll("[data-language-toggle]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const language = button.dataset.languageToggle;
+      localStorage.setItem("portfolio-language", language);
+      applyLanguage(language);
+      document.dispatchEvent(new CustomEvent("portfolio-language-change", { detail: { language } }));
+    });
+  });
+  applyLanguage(currentLanguage);
+
   // --------------------------------------------------------------------------
   // 1. Navigation & Scrollspy
   // --------------------------------------------------------------------------
@@ -125,13 +554,18 @@ document.addEventListener("DOMContentLoaded", () => {
       "Creative Frontend Engineer",
       "Informatics Graduate"
     ];
+    const localizedRoles = {
+      en: roles,
+      id: ["Pengembang Web", "Desainer UI/UX", "Insinyur Frontend Kreatif", "Lulusan Teknik Informatika"]
+    };
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
     let typeSpeed = 90;
+    let typingTimer;
 
     const typeRole = () => {
-      const currentRole = roles[roleIndex];
+      const currentRole = localizedRoles[currentLanguage][roleIndex];
       if (isDeleting) {
         dynamicText.textContent = currentRole.substring(0, charIndex - 1);
         charIndex--;
@@ -147,12 +581,21 @@ document.addEventListener("DOMContentLoaded", () => {
         isDeleting = true;
       } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
-        roleIndex = (roleIndex + 1) % roles.length;
+        roleIndex = (roleIndex + 1) % localizedRoles[currentLanguage].length;
         typeSpeed = 400; // Pause before typing new word
       }
 
-      setTimeout(typeRole, typeSpeed);
+      typingTimer = setTimeout(typeRole, typeSpeed);
     };
+
+    document.addEventListener("portfolio-language-change", () => {
+      roleIndex = 0;
+      charIndex = 0;
+      isDeleting = false;
+      clearTimeout(typingTimer);
+      dynamicText.textContent = "";
+      typeRole();
+    });
 
     typeRole();
   }
@@ -258,18 +701,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const openProjectModal = (button) => {
     if (!modal) return;
-    const title = button.getAttribute("data-title") || "Project Showcase";
-    const desc = button.getAttribute("data-description") || "";
+    activeProjectTrigger = button;
+    const title = translateValue(button.getAttribute("data-title") || "Project Showcase", currentLanguage);
+    const desc = translateValue(button.getAttribute("data-description") || "", currentLanguage);
     const image = button.getAttribute("data-image") || "";
-    const category = button.getAttribute("data-category") || "Featured Project";
+    const category = translateValue(button.getAttribute("data-category") || "Featured Project", currentLanguage);
     const tech = button.getAttribute("data-tech") || "";
     const mockupLeft = button.getAttribute("data-mockup-left");
     const mockupRight = button.getAttribute("data-mockup-right");
     const isMobileMockup = button.getAttribute("data-mockup-type") === "mobile";
     const github = button.getAttribute("data-github");
     const live = button.getAttribute("data-live");
-    const githubLabel = button.getAttribute("data-github-label") || "View Repository";
-    const liveLabel = button.getAttribute("data-live-label") || (category.toLowerCase().includes("figma") ? "Open Figma Prototype" : "Live Preview / Deployed");
+    const githubLabel = translateValue(button.getAttribute("data-github-label") || "View Repository", currentLanguage);
+    const originalCategory = button.getAttribute("data-category") || "Featured Project";
+    const originalLiveLabel = button.getAttribute("data-live-label") ||
+      (originalCategory.toLowerCase().includes("figma") ? "Open Figma Prototype" : "Live Preview / Deployed");
+    const liveLabel = translateValue(originalLiveLabel, currentLanguage);
 
     if (modalTitle) modalTitle.textContent = title;
     if (modalDescription) modalDescription.textContent = desc;
@@ -284,13 +731,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (hasMockup) {
         const mockupScreens = [
-          { image: mockupLeft, label: `${title} screen preview` },
-          { image: mockupRight, label: `${title} screen preview` },
-          { image, label: `${title} screen preview` }
+          { image: mockupLeft, label: `${title} - ${translateValue("screen preview", currentLanguage)}` },
+          { image: mockupRight, label: `${title} - ${translateValue("screen preview", currentLanguage)}` },
+          { image, label: `${title} - ${translateValue("screen preview", currentLanguage)}` }
         ];
 
         if (modalMockupStage) {
-          modalMockupStage.setAttribute("aria-label", `${title} screen previews`);
+          modalMockupStage.setAttribute("aria-label", translateValue("Project screen previews", currentLanguage));
         }
         modalMockupImages.forEach((screen, index) => {
           const mockupScreen = mockupScreens[index];
@@ -336,7 +783,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (liveIcon) {
           if (live.includes("figma.com")) {
             liveIcon.className = "fab fa-figma text-[11px]";
-          } else if (liveLabel.toLowerCase().includes("apk") || liveLabel.toLowerCase().includes("release") || liveLabel.toLowerCase().includes("download")) {
+          } else if (originalLiveLabel.toLowerCase().includes("apk") || originalLiveLabel.toLowerCase().includes("release") || originalLiveLabel.toLowerCase().includes("download")) {
             liveIcon.className = "fas fa-download text-[11px]";
           } else {
             liveIcon.className = "fas fa-arrow-up-right-from-square text-[11px]";
@@ -933,7 +1380,8 @@ function fallbackCopyText(text, btnElement) {
 function showCopiedFeedback(btnElement) {
   if (!btnElement) return;
   const originalHTML = btnElement.innerHTML;
-  btnElement.innerHTML = `<i class="fas fa-check text-emerald-600"></i> <span class="text-emerald-700 font-bold">Copied!</span>`;
+  const copiedLabel = document.documentElement.lang === "id" ? "Tersalin!" : "Copied!";
+  btnElement.innerHTML = `<i class="fas fa-check text-emerald-600"></i> <span class="text-emerald-700 font-bold">${copiedLabel}</span>`;
   btnElement.style.borderColor = "#10b981";
   btnElement.style.backgroundColor = "#ecfdf5";
 
