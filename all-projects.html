@@ -33,7 +33,7 @@
       </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-6 pt-28 pb-20">
+    <main class="archive-page-main max-w-7xl mx-auto px-6 pt-28 pb-20">
       <div class="border-b border-[#e8e8e6] pb-12 mb-12">
         <div class="editorial-badge mb-4">
           <span>// Curated Works Catalogue</span>
@@ -43,21 +43,23 @@
             <h1 class="font-['Space_Grotesk'] text-4xl sm:text-6xl font-extrabold text-[#171717] tracking-tight leading-tight">
               All <span class="text-[#3457d5]">Projects.</span>
             </h1>
-            <p class="font-mono text-xs text-[#737373] mt-2 uppercase tracking-widest">[ Total: 09 Web &amp; Mobile Projects ]</p>
+            <p class="font-mono text-xs text-[#737373] mt-2 uppercase tracking-widest">[ Total: 09 Web, Mobile &amp; UI/UX Projects ]</p>
           </div>
           <p class="max-w-md text-[#737373] text-sm sm:text-base leading-relaxed">
-            A collection of responsive websites and mobile app experiences, presented through selected screens from each project.
+            Explore web development, cross-platform mobile apps, and UI/UX design work with the technology foundation behind each project.
           </p>
         </div>
         <div class="flex flex-wrap items-center gap-3 mt-10">
           <span class="font-mono text-xs text-[#737373] uppercase tracking-wider mr-2 hidden sm:inline-block">Filter By:</span>
           <button type="button" class="filter-btn active" data-filter="all">All Projects (9)</button>
-          <button type="button" class="filter-btn" data-filter="web">Web Projects (4)</button>
-          <button type="button" class="filter-btn" data-filter="mobile">Mobile Projects (5)</button>
+          <button type="button" class="filter-btn" data-filter="web">Web Development (4)</button>
+          <button type="button" class="filter-btn" data-filter="mobile">Mobile Apps (3)</button>
+          <button type="button" class="filter-btn" data-filter="design">UI/UX Design (2)</button>
         </div>
       </div>
 
-      <div class="selected-work-layout archive-featured-layout mb-10">
+      <canvas id="archiveConstellationCanvas" class="constellation-bg-canvas archive-constellation-canvas" aria-hidden="true"></canvas>
+      <div class="archive-project-grid">
         <article class="project-feature-card project-card group archive-card" data-category="web" data-project-theme="learning">
           <div class="project-mockup-stage" role="group" aria-label="LMS Pintar administrator, teacher, and student dashboards">
             <div class="project-mockup-window project-mockup-window--left">
@@ -105,12 +107,12 @@
           </div>
         </article>
 
-        <div class="selected-work-stack">
           <article class="project-card project-card-compact group archive-card" data-category="mobile" data-project-theme="livestock">
             <div class="project-mockup-stage project-mockup-stage--mobile project-mockup-stage--compact" role="group" aria-label="QurbanQu mobile app screens">
               <div class="project-mockup-window project-mockup-window--left">
                 <img src="images/projects/mumobile/qurban/q2.jpg" alt="QurbanQu livestock browsing screen" loading="lazy" />
               </div>
+
               <div class="project-mockup-window project-mockup-window--right">
                 <img src="images/projects/mumobile/qurban/q3.jpg" alt="QurbanQu payment details screen" loading="lazy" />
               </div>
@@ -153,7 +155,11 @@
           </article>
 
           <article class="project-card project-card-compact group archive-card" data-category="mobile" data-project-theme="news">
-            <img src="images/projects/mumobile/news/3.png" alt="Headline Hub news app screens" loading="lazy" />
+            <div class="project-mockup-stage project-mockup-stage--mobile project-mockup-stage--compact" role="group" aria-label="Headline Hub mobile app screen">
+              <div class="project-mockup-window project-mockup-window--front">
+                <img src="images/projects/mumobile/news/3.png" alt="Headline Hub news app screens" loading="lazy" />
+              </div>
+            </div>
             <div class="project-card-overlay"></div>
             <div class="project-card-content">
               <div class="flex items-center justify-between mb-2">
@@ -184,11 +190,7 @@
               </button>
             </div>
           </article>
-        </div>
-      </div>
-
-      <div class="archive-project-grid">
-        <article class="project-feature-card project-card group archive-card archive-project-card" data-category="mobile" data-project-theme="voting">
+        <article class="project-feature-card project-card group archive-card archive-project-card" data-category="design" data-project-theme="voting">
           <div class="project-mockup-stage project-mockup-stage--mobile project-mockup-stage--compact" role="group" aria-label="Global Vote mobile app screens">
             <div class="project-mockup-window project-mockup-window--left"><img src="images/projects/mumobile/gv/gv2.jpg" alt="Global Vote candidate selection screen" loading="lazy" /></div>
             <div class="project-mockup-window project-mockup-window--right"><img src="images/projects/mumobile/gv/gv3.jpg" alt="Global Vote voting screen" loading="lazy" /></div>
@@ -197,7 +199,7 @@
           <div class="project-card-overlay"></div>
           <div class="project-card-content">
             <div class="flex items-center justify-between mb-3">
-              <span class="project-number text-[#93c5fd]">04 / Mobile App</span>
+              <span class="project-number text-[#93c5fd]">04 / UI/UX Design</span>
               <span class="project-type-badge">Digital Voting</span>
             </div>
             <h2 class="text-2xl font-extrabold text-white group-hover:text-[#93c5fd] transition-colors mb-2">The Global Vote</h2>
@@ -265,7 +267,7 @@
           </div>
         </article>
 
-        <article class="project-feature-card project-card group archive-card archive-project-card" data-category="mobile" data-project-theme="restaurant">
+        <article class="project-feature-card project-card group archive-card archive-project-card" data-category="design" data-project-theme="restaurant">
           <div class="project-mockup-stage project-mockup-stage--mobile project-mockup-stage--compact" role="group" aria-label="RzResto mobile app screens">
             <div class="project-mockup-window project-mockup-window--left"><img src="images/projects/mumobile/rz/rz2.jpg" alt="RzResto sign-in screen" loading="lazy" /></div>
             <div class="project-mockup-window project-mockup-window--right"><img src="images/projects/mumobile/rz/rz3.jpg" alt="RzResto restaurant menu screen" loading="lazy" /></div>
@@ -274,7 +276,7 @@
           <div class="project-card-overlay"></div>
           <div class="project-card-content">
             <div class="flex items-center justify-between mb-3">
-              <span class="project-number text-[#93c5fd]">06 / Mobile App</span>
+              <span class="project-number text-[#93c5fd]">06 / UI/UX Design</span>
               <span class="project-type-badge">Restaurant Ordering</span>
             </div>
             <h2 class="text-2xl font-extrabold text-white group-hover:text-[#93c5fd] transition-colors mb-2">RzResto</h2>

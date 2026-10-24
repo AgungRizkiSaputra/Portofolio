@@ -417,9 +417,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // --------------------------------------------------------------------------
   const filterButtons = document.querySelectorAll(".filter-btn");
   const projectItems = document.querySelectorAll(".masonry-item, .archive-card");
-  const archiveFeaturedLayout = document.querySelector(".archive-featured-layout");
-  const archiveProjectGrid = document.querySelector(".archive-project-grid");
-
   if (filterButtons.length > 0 && projectItems.length > 0) {
     filterButtons.forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -427,15 +424,6 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.classList.add("active");
 
         const targetCategory = btn.getAttribute("data-filter");
-        if (archiveFeaturedLayout) {
-          const isFiltered = targetCategory !== "all";
-          archiveFeaturedLayout.classList.toggle("is-filtered", isFiltered);
-          archiveFeaturedLayout.classList.toggle("is-filtered-mobile", targetCategory === "mobile");
-        }
-        if (archiveProjectGrid) {
-          archiveProjectGrid.classList.toggle("is-filtered-web", targetCategory === "web");
-        }
-
         projectItems.forEach((item) => {
           const itemCategory = item.getAttribute("data-category");
           if (targetCategory === "all" || itemCategory === targetCategory) {
@@ -734,6 +722,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const contactSection = document.getElementById("contact");
   if (contactCanvas && contactSection) {
     setupConstellationEngine(contactCanvas, contactSection);
+  }
+
+  const archiveCanvas = document.getElementById("archiveConstellationCanvas");
+  const archiveSection = document.querySelector(".archive-page-main");
+  if (archiveCanvas && archiveSection) {
+    setupConstellationEngine(archiveCanvas, archiveSection);
   }
 
   // --------------------------------------------------------------------------
