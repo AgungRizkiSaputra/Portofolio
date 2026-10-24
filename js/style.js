@@ -395,8 +395,25 @@ document.addEventListener("DOMContentLoaded", () => {
   // --------------------------------------------------------------------------
   // 7. Section Reveal on Scroll
   // --------------------------------------------------------------------------
-  const revealElements = document.querySelectorAll(".reveal-on-scroll");
-  if (revealElements.length > 0) {
+  const revealElements = document.querySelectorAll(
+    "header#home, main > section, main.archive-page-main > .border-b, " +
+    "main.archive-page-main > .archive-featured-layout, " +
+    "main.archive-page-main > .archive-project-grid, " +
+    ".skills-category-card, .timeline-item, .contact-card-main, " +
+    ".social-action-card, .project-card, .reveal-on-scroll"
+  );
+  if (revealElements.length > 0 && (reducedMotion.matches || !("IntersectionObserver" in window))) {
+    revealElements.forEach((el) => el.classList.add("is-visible"));
+  } else if (revealElements.length > 0) {
+    const revealDelays = new Map();
+    revealElements.forEach((el) => {
+      const parent = el.parentElement;
+      const siblingIndex = revealDelays.get(parent) || 0;
+      revealDelays.set(parent, siblingIndex + 1);
+      el.style.setProperty("--reveal-delay", `${(siblingIndex % 4) * 75}ms`);
+      el.classList.add("reveal-on-scroll");
+    });
+
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
